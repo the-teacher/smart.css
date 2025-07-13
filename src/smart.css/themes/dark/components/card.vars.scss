@@ -1,0 +1,8 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// === CARD VARIABLES ===
+// card.scss
+:root {
+  --color-light-border: #{color.scale($color-light, $lightness: 10%)};
+}

@@ -1,0 +1,75 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// INFO BLOCKS | src/ui-kit/info-blocks.scss
+// ------------------------------------------------------------
+// Info Block variables according to formula: --info-{variant}-{property}-{modifier}
+:root {
+  // Base info block
+  --info-base-bg-color: #{color.scale($color-light, $lightness: 10%)};
+  --info-base-border-color: #{color.scale($color-light, $lightness: 20%)};
+
+  // Primary info block
+  --info-primary-bg-color: #{color.scale(
+      $color-primary,
+      $lightness: -70%,
+      $alpha: -20%
+    )};
+  --info-primary-border-color: #{$color-primary};
+  --info-primary-text-color: #{color.scale($color-primary, $lightness: 20%)};
+
+  // Secondary info block
+  --info-secondary-bg-color: #{color.scale(
+      $color-secondary,
+      $lightness: -60%,
+      $alpha: -20%
+    )};
+  --info-secondary-border-color: #{$color-secondary};
+  --info-secondary-text-color: #{color.scale($color-secondary, $lightness: 30%)};
+
+  // Success info block
+  --info-success-bg-color: #{color.scale(
+      $color-success,
+      $lightness: -70%,
+      $alpha: -20%
+    )};
+  --info-success-border-color: #{$color-success};
+  --info-success-text-color: #{color.scale($color-success, $lightness: 20%)};
+
+  // Danger info block
+  --info-danger-bg-color: #{color.scale(
+      $color-danger,
+      $lightness: -70%,
+      $alpha: -20%
+    )};
+  --info-danger-border-color: #{$color-danger};
+  --info-danger-text-color: #{color.scale($color-danger, $lightness: 20%)};
+
+  // Warning info block
+  --info-warning-bg-color: #{color.scale(
+      $color-warning,
+      $lightness: -80%,
+      $alpha: -20%
+    )};
+  --info-warning-border-color: #{$color-warning};
+  --info-warning-text-color: #{color.scale($color-warning, $lightness: 10%)};
+
+  // Light info block (using info color for better contrast in dark theme)
+  --info-light-bg-color: #{color.scale(
+      $color-info,
+      $lightness: -70%,
+      $alpha: -20%
+    )};
+  --info-light-border-color: #{$color-info};
+  --info-light-text-color: #{color.scale($color-info, $lightness: 20%)};
+
+  // Dark info block (lighter in dark theme for contrast)
+  --info-dark-bg-color: #{color.scale($color-light, $lightness: 30%)};
+  --info-dark-border-color: #{color.scale($color-light, $lightness: 40%)};
+  --info-dark-text-color: #{$color-text};
+
+  // Close button (adapted for dark theme)
+  --info-close-bg-color: rgba(255, 255, 255, 0.1);
+  --info-close-bg-color-hover: rgba(255, 255, 255, 0.2);
+}

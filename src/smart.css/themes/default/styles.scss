@@ -1,13 +1,18 @@
-@use './components/button.vars';
-@use './components/card.vars';
-@use './components/checkboxes.vars';
 @use './components/color.vars';
+
+@use './components/links.vars';
+@use './components/button.vars';
+
+@use './components/card.vars';
+@use './components/info-blocks.vars';
 @use './components/data-display.vars';
+
 @use './components/form-groups.vars';
 @use './components/form-inputs.vars';
-@use './components/info-blocks.vars';
-@use './components/links.vars';
+
+@use './components/checkboxes.vars';
 @use './components/switches.vars';
+
 @use './components/text-styles.vars';
 
 @use './custom';

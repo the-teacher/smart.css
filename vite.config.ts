@@ -5,6 +5,7 @@ import path from 'path';
 const cssFileNames = [
   { match: 'theme-gold', output: 'theme-gold.css' },
   { match: 'theme-default', output: 'theme-default.css' },
+  { match: 'theme-dark', output: 'theme-dark.css' },
   { match: 'blocks', output: 'blocks.css' },
   { match: 'controls', output: 'controls.css' },
   { match: 'forms', output: 'forms.css' },
@@ -32,6 +33,7 @@ export default defineConfig({
           __dirname,
           'src/css-build/theme-default.scss'
         ),
+        'theme-dark': path.resolve(__dirname, 'src/css-build/theme-dark.scss'),
         blocks: path.resolve(__dirname, 'src/css-build/blocks.scss'),
         controls: path.resolve(__dirname, 'src/css-build/controls.scss'),
         forms: path.resolve(__dirname, 'src/css-build/forms.scss'),

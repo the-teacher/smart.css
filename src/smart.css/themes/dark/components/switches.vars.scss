@@ -1,0 +1,36 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// SWITCHES | src/ui-kit/switches.scss
+// ------------------------------------------------------------
+// Switch variables according to formula: --switch-{variant}-{property}-{modifier}
+:root {
+  // Base switch colors
+  --switch-base-bg-color: #{color.scale($color-disabled, $lightness: 20%)};
+  --switch-base-bg-color-checked: #{$color-primary};
+  --switch-base-bg-color-disabled: #{$color-disabled};
+  --switch-base-bg-color-checked-disabled: #{color.scale(
+      $color-primary,
+      $lightness: -20%,
+      $alpha: -40%
+    )};
+
+  // Switch thumb and text
+  --switch-base-thumb-color: #{$color-white};
+  --switch-base-text-color: #{$color-text};
+
+  // Switch shadows
+  --switch-base-shadow-color-focus: #{color.scale($color-primary, $alpha: -60%)};
+
+  // Error switch
+  --switch-error-bg-color-checked: #{$color-danger};
+  --switch-error-shadow-color-focus: #{color.scale($color-danger, $alpha: -40%)};
+
+  // Success switch
+  --switch-success-bg-color-checked: #{$color-success};
+  --switch-success-shadow-color-focus: #{color.scale(
+      $color-success,
+      $alpha: -20%
+    )};
+}

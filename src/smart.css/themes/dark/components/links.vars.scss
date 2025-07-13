@@ -1,0 +1,13 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// === LINKS VARIABLES ===
+// links.scss
+:root {
+  --color-link: #{$color-primary};
+  --color-link-hover: #{color.scale($color-primary, $lightness: 20%)};
+  --color-link-visited: #{color.scale($color-primary, $lightness: -20%)};
+  --color-link-active: #{color.scale($color-primary, $lightness: 40%)};
+  --color-link-focus: #{color.scale($color-primary, $lightness: 50%)};
+  --color-link-focus-outline: #{color.scale($color-primary, $lightness: 30%)};
+}
