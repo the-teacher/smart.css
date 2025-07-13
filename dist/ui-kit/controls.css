@@ -1,1 +1,245 @@
-.checkbox{display:flex;align-items:center;gap:8px;cursor:pointer;-webkit-user-select:none;user-select:none}.checkbox--input{position:relative;-webkit-appearance:none;-moz-appearance:none;appearance:none;width:20px;height:20px;min-width:20px;min-height:20px;max-width:20px;max-height:20px;border:1px solid var(--checkbox-base-border-color);border-radius:4px;background-color:var(--checkbox-base-bg-color);cursor:pointer;transition:all .2s ease}.checkbox--input:checked{background-color:var(--checkbox-base-bg-color-checked);border-color:var(--checkbox-base-border-color-checked)}.checkbox--input:checked:after{content:"";position:absolute;left:6px;top:1px;width:5px;height:11px;border:solid var(--checkbox-base-checkmark-color);border-width:0 2px 2px 0;transform:rotate(45deg)}.checkbox--input:focus{border-color:var(--checkbox-base-border-color-focus);box-shadow:0 0 0 4px var(--checkbox-base-shadow-focus)}.checkbox--input:disabled{background-color:var(--checkbox-base-bg-color-disabled);border-color:var(--checkbox-base-border-color-disabled);cursor:not-allowed;opacity:.6}.checkbox--input:disabled:checked{background-color:var(--checkbox-base-bg-color-disabled);border-color:var(--checkbox-base-border-color-disabled)}.checkbox--label{font-size:1.6rem;color:var(--checkbox-base-text-color)}.checkbox--label:disabled{color:var(--checkbox-base-text-color-disabled);cursor:not-allowed}.checkbox--error .checkbox--input{border-color:var(--checkbox-error-border-color)}.checkbox--error .checkbox--input:focus{box-shadow:0 0 0 4px var(--checkbox-error-shadow-focus)}.checkbox--success .checkbox--input{border-color:var(--checkbox-success-border-color)}.checkbox--success .checkbox--input:focus{box-shadow:0 0 0 4px var(--checkbox-success-shadow-focus)}.checkbox--small .checkbox--input{width:16px;height:16px;min-width:16px;min-height:16px;max-width:16px;max-height:16px}.checkbox--small .checkbox--input:checked:after{left:5px;top:0;width:4px;height:9px}.checkbox--large .checkbox--input{width:24px;height:24px;min-width:24px;min-height:24px;max-width:24px;max-height:24px}.checkbox--large .checkbox--input:checked:after{left:8px;top:2px;width:5px;height:12px}.checkbox--jumbo .checkbox--input{width:32px;height:32px;min-width:32px;min-height:32px;max-width:32px;max-height:32px}.checkbox--jumbo .checkbox--input:checked:after{left:9px;top:1px;width:9px;height:17px;border-width:0 4px 4px 0}.checkbox--error-highlight,.checkbox--error-highlight:focus{box-shadow:0 0 0 4px var(--checkbox-error-shadow-focus)}.switch{display:inline-flex;align-items:center;gap:8px;cursor:pointer;-webkit-user-select:none;user-select:none}.switch--toggle{position:relative;display:inline-block;width:40px;height:24px;min-width:40px;min-height:24px}.switch--input{opacity:0;width:0;height:0;position:absolute}.switch--input:checked+.switch--slider{background-color:var(--switch-base-bg-color-checked)}.switch--input:checked+.switch--slider:before{transform:translate(16px)}.switch--input:focus+.switch--slider{box-shadow:0 0 0 3px var(--switch-base-shadow-color-focus)}.switch--input:disabled+.switch--slider{background-color:var(--switch-base-bg-color-disabled);cursor:not-allowed;opacity:.6}.switch--input:disabled:checked+.switch--slider{background-color:var(--switch-base-bg-color-checked-disabled)}.switch--slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:var(--switch-base-bg-color);transition:.3s;border-radius:24px}.switch--slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:var(--switch-base-thumb-color);transition:.3s;border-radius:50%}.switch--label{font-size:1.6rem;color:var(--switch-base-text-color)}.switch--error .switch--input:focus+.switch--slider{box-shadow:0 0 0 3px var(--switch-error-shadow-color-focus)}.switch--error .switch--input:checked+.switch--slider{background-color:var(--switch-error-bg-color-checked)}.switch--success .switch--input:focus+.switch--slider{box-shadow:0 0 0 3px var(--switch-success-shadow-color-focus)}.switch--success .switch--input:checked+.switch--slider{background-color:var(--switch-success-bg-color-checked)}.switch--small .switch--toggle{width:32px;height:18px;min-width:32px;min-height:18px}.switch--small .switch--slider:before{height:12px;width:12px;left:3px;bottom:3px}.switch--small .switch--input:checked+.switch--slider:before{transform:translate(14px)}.switch--small .switch--label{font-size:1.4rem}.switch--large .switch--toggle{width:50px;height:30px;min-width:50px;min-height:30px}.switch--large .switch--slider:before{height:22px;width:22px;left:4px;bottom:4px}.switch--large .switch--input:checked+.switch--slider:before{transform:translate(20px)}.switch--large .switch--label{font-size:1.8rem}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox--input {
+  position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  border: 1px solid var(--checkbox-base-border-color);
+  border-radius: 4px;
+  background-color: var(--checkbox-base-bg-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.checkbox--input:checked {
+  background-color: var(--checkbox-base-bg-color-checked);
+  border-color: var(--checkbox-base-border-color-checked);
+}
+.checkbox--input:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 11px;
+  border: solid var(--checkbox-base-checkmark-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.checkbox--input:focus {
+  border-color: var(--checkbox-base-border-color-focus);
+  box-shadow: 0 0 0 4px var(--checkbox-base-shadow-focus);
+}
+.checkbox--input:disabled {
+  background-color: var(--checkbox-base-bg-color-disabled);
+  border-color: var(--checkbox-base-border-color-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.checkbox--input:disabled:checked {
+  background-color: var(--checkbox-base-bg-color-disabled);
+  border-color: var(--checkbox-base-border-color-disabled);
+}
+
+.checkbox--label {
+  font-size: 1.6rem;
+  color: var(--checkbox-base-text-color);
+}
+.checkbox--label:disabled {
+  color: var(--checkbox-base-text-color-disabled);
+  cursor: not-allowed;
+}
+
+.checkbox--error .checkbox--input {
+  border-color: var(--checkbox-error-border-color);
+}
+.checkbox--error .checkbox--input:focus {
+  box-shadow: 0 0 0 4px var(--checkbox-error-shadow-focus);
+}
+.checkbox--success .checkbox--input {
+  border-color: var(--checkbox-success-border-color);
+}
+.checkbox--success .checkbox--input:focus {
+  box-shadow: 0 0 0 4px var(--checkbox-success-shadow-focus);
+}
+
+.checkbox--small .checkbox--input {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+}
+.checkbox--small .checkbox--input:checked::after {
+  left: 5px;
+  top: 0px;
+  width: 4px;
+  height: 9px;
+}
+
+.checkbox--large .checkbox--input {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+}
+.checkbox--large .checkbox--input:checked::after {
+  left: 8px;
+  top: 2px;
+  width: 5px;
+  height: 12px;
+}
+
+.checkbox--jumbo .checkbox--input {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+}
+.checkbox--jumbo .checkbox--input:checked::after {
+  left: 9px;
+  top: 1px;
+  width: 9px;
+  height: 17px;
+  border-width: 0 4px 4px 0;
+}
+
+.checkbox--error-highlight,
+.checkbox--error-highlight:focus {
+  box-shadow: 0 0 0 4px var(--checkbox-error-shadow-focus);
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch--toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  min-width: 40px;
+  min-height: 24px;
+}
+
+.switch--input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.switch--input:checked + .switch--slider {
+  background-color: var(--switch-base-bg-color-checked);
+}
+.switch--input:checked + .switch--slider:before {
+  transform: translateX(16px);
+}
+.switch--input:focus + .switch--slider {
+  box-shadow: 0 0 0 3px var(--switch-base-shadow-color-focus);
+}
+.switch--input:disabled + .switch--slider {
+  background-color: var(--switch-base-bg-color-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.switch--input:disabled:checked + .switch--slider {
+  background-color: var(--switch-base-bg-color-checked-disabled);
+}
+
+.switch--slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-base-bg-color);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+.switch--slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--switch-base-thumb-color);
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.switch--label {
+  font-size: 1.6rem;
+  color: var(--switch-base-text-color);
+}
+
+.switch--error .switch--input:focus + .switch--slider {
+  box-shadow: 0 0 0 3px var(--switch-error-shadow-color-focus);
+}
+.switch--error .switch--input:checked + .switch--slider {
+  background-color: var(--switch-error-bg-color-checked);
+}
+.switch--success .switch--input:focus + .switch--slider {
+  box-shadow: 0 0 0 3px var(--switch-success-shadow-color-focus);
+}
+.switch--success .switch--input:checked + .switch--slider {
+  background-color: var(--switch-success-bg-color-checked);
+}
+
+.switch--small .switch--toggle {
+  width: 32px;
+  height: 18px;
+  min-width: 32px;
+  min-height: 18px;
+}
+.switch--small .switch--slider:before {
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 3px;
+}
+.switch--small .switch--input:checked + .switch--slider:before {
+  transform: translateX(14px);
+}
+.switch--small .switch--label {
+  font-size: 1.4rem;
+}
+
+.switch--large .switch--toggle {
+  width: 50px;
+  height: 30px;
+  min-width: 50px;
+  min-height: 30px;
+}
+.switch--large .switch--slider:before {
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+}
+.switch--large .switch--input:checked + .switch--slider:before {
+  transform: translateX(20px);
+}
+.switch--large .switch--label {
+  font-size: 1.8rem;
+}

@@ -8,6 +8,7 @@ const cssFileNames = [
   { match: 'controls', output: 'controls.css' },
   { match: 'forms', output: 'forms.css' },
   { match: 'static-content', output: 'static-content.css' },
+  { match: 'holy-grail-layout', output: 'holy-grail-layout.css' },
   { match: 'ui-kit', output: 'ui-kit.css' },
   { match: 'index', output: 'ui-kit.css' },
 ];
@@ -33,6 +34,10 @@ export default defineConfig({
           __dirname,
           'src/css-build/static-content.scss'
         ),
+        'holy-grail-layout': path.resolve(
+          __dirname,
+          'src/components/HolyGrailLayout/layout.scss'
+        ),
       },
       name: 'UIKit',
       formats: ['es'],
@@ -40,6 +45,7 @@ export default defineConfig({
     outDir: 'dist/ui-kit',
     emptyOutDir: true,
     cssCodeSplit: true,
+    minify: false,
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {

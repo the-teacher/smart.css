@@ -1,4 +1,4 @@
-/* Variables */
+/* SCSS Variables */
 $header-min-height: 60px;
 $footer-min-height: 60px;
 
@@ -19,6 +19,20 @@ $color-container-bg: #fff;
 $color-aside-bg: #fff;
 $color-content-bg: #fff;
 
+/* CSS Variables */
+:root {
+  --hgl-header-min-height: #{$header-min-height};
+  --hgl-footer-min-height: #{$footer-min-height};
+
+  --hgl-color-body-bg: #{$color-body-bg};
+  --hgl-color-header-bg: #{$color-header-bg};
+  --hgl-color-footer-bg: #{$color-footer-bg};
+  --hgl-color-main-bg: #{$color-main-bg};
+  --hgl-color-container-bg: #{$color-container-bg};
+  --hgl-color-aside-bg: #{$color-aside-bg};
+  --hgl-color-content-bg: #{$color-content-bg};
+}
+
 #root {
   display: contents;
 }
@@ -27,7 +41,7 @@ $color-content-bg: #fff;
   /* Ensure full viewport height on mobile devices */
   min-height: 100dvh;
   font-family: Arial, sans-serif;
-  background-color: $color-body-bg;
+  background-color: var(--hgl-color-body-bg);
 
   /* Flex container (as parent) */
   display: flex;
@@ -36,14 +50,14 @@ $color-content-bg: #fff;
 
   &--header {
     width: 100%;
-    background-color: $color-header-bg;
-    min-height: $header-min-height;
+    background-color: var(--hgl-color-header-bg);
+    min-height: var(--hgl-header-min-height);
     padding: 0 15px;
   }
 
   &--main {
     width: 100%;
-    background-color: $color-main-bg;
+    background-color: var(--hgl-color-main-bg);
     // padding: 0 15px;
 
     /* Fill remaining space (as child) */
@@ -57,7 +71,7 @@ $color-content-bg: #fff;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    background-color: $color-container-bg;
+    background-color: var(--hgl-color-container-bg);
   }
 
   &--main-columns {
@@ -67,22 +81,22 @@ $color-content-bg: #fff;
   }
 
   &--aside {
-    background-color: $color-aside-bg;
+    background-color: var(--hgl-color-aside-bg);
     padding: 15px;
     min-width: 200px;
     max-width: 300px;
   }
 
   &--content {
-    background-color: $color-content-bg;
+    background-color: var(--hgl-color-content-bg);
     padding: 15px;
     flex: 1;
   }
 
   &--footer {
     width: 100%;
-    background-color: $color-footer-bg;
-    min-height: $footer-min-height;
+    background-color: var(--hgl-color-footer-bg);
+    min-height: var(--hgl-footer-min-height);
     padding: 0 15px;
 
     display: flex;
@@ -90,14 +104,12 @@ $color-content-bg: #fff;
   }
 }
 
-.holy-grail--aside {
-  @media (0 < width < 840px) {
+@media (0 < width < 1024px) {
+  .holy-grail--aside {
     max-width: 100%;
   }
-}
 
-.holy-grail--main-columns {
-  @media (0 < width < 840px) {
+  .holy-grail--main-columns {
     flex-direction: column;
   }
 }
