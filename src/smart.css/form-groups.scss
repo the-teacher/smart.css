@@ -1,0 +1,45 @@
+// CSS Variables Naming Convention for Form Groups
+// Formula: --{component}-{variant}-{property}-{modifier}
+//
+// component: form-group
+// variant: actions, icon
+// property: bg-color, text-color, border-color
+// modifier: (empty), hover, active, disabled
+//
+// Required variables:
+// --form-group-icon-bg-color
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  &--actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--form-group-icon-bg-color);
+    padding: 0 8px;
+    border-radius: 4px;
+  }
+
+  &__with-icon {
+    align-items: normal;
+  }
+}
+
+@media (0 < width < 520px) {
+  .form-group {
+    &--actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

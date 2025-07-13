@@ -1,0 +1,71 @@
+// CSS Variables Naming Convention for Data Display
+// Formula: --{component}-{variant}-{property}-{modifier}
+//
+// component: data-display
+// variant: field, label, value, link, actions
+// property: text-color, border-color, bg-color
+// modifier: (empty), hover, active, disabled
+//
+// Required variables:
+// --data-display-field-border-color
+// --data-display-label-text-color
+// --data-display-value-text-color
+// --data-display-link-text-color
+// --data-display-link-text-color-hover
+
+.data-display {
+  &--field {
+    border-bottom: 1px solid var(--data-display-field-border-color);
+  }
+
+  &--label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--data-display-label-text-color);
+  }
+
+  &--value {
+    font-size: 1.6rem;
+    color: var(--data-display-value-text-color);
+    word-break: break-word;
+  }
+
+  &--actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__with-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__monospace {
+    font-family: monospace;
+    letter-spacing: 1px;
+  }
+
+  &__multiline {
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+
+  &__link {
+    color: var(--data-display-link-text-color);
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: var(--data-display-link-text-color-hover);
+    text-decoration: underline;
+  }
+}
+
+@media (0 < width < 520px) {
+  .data-display {
+    &--actions {
+      flex-direction: column;
+    }
+  }
+}

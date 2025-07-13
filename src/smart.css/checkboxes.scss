@@ -1,0 +1,197 @@
+// CSS Variables Naming Convention for Checkboxes
+// Formula: --{component}-{variant}-{property}-{modifier}
+//
+// component: checkbox
+// variant: base, error, success, small, large, jumbo
+// property: bg-color, border-color, text-color, size, checkmark-color
+// modifier: (empty), hover, active, disabled, focus, checked
+//
+// Examples:
+// --checkbox-base-bg-color
+// --checkbox-base-border-color-focus
+// --checkbox-base-text-color-disabled
+// --checkbox-error-border-color
+
+// Required CSS Variables:
+// Base checkbox:
+// --checkbox-base-bg-color
+// --checkbox-base-bg-color-checked
+// --checkbox-base-bg-color-disabled
+// --checkbox-base-border-color
+// --checkbox-base-border-color-checked
+// --checkbox-base-border-color-focus
+// --checkbox-base-border-color-disabled
+// --checkbox-base-checkmark-color
+// --checkbox-base-text-color
+// --checkbox-base-text-color-disabled
+// --checkbox-base-shadow-focus
+//
+// Error checkbox:
+// --checkbox-error-border-color
+// --checkbox-error-shadow-focus
+//
+// Success checkbox:
+// --checkbox-success-border-color
+// --checkbox-success-shadow-focus
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox--input {
+  position: relative;
+  appearance: none;
+
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+
+  border: 1px solid var(--checkbox-base-border-color);
+  border-radius: 4px;
+  background-color: var(--checkbox-base-bg-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:checked {
+    background-color: var(--checkbox-base-bg-color-checked);
+    border-color: var(--checkbox-base-border-color-checked);
+  }
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 1px;
+    width: 5px;
+    height: 11px;
+
+    border: solid var(--checkbox-base-checkmark-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  &:focus {
+    border-color: var(--checkbox-base-border-color-focus);
+    box-shadow: 0 0 0 4px var(--checkbox-base-shadow-focus);
+  }
+
+  &:disabled {
+    background-color: var(--checkbox-base-bg-color-disabled);
+    border-color: var(--checkbox-base-border-color-disabled);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:disabled:checked {
+    background-color: var(--checkbox-base-bg-color-disabled);
+    border-color: var(--checkbox-base-border-color-disabled);
+  }
+}
+
+.checkbox--label {
+  font-size: 1.6rem;
+  color: var(--checkbox-base-text-color);
+
+  &:disabled {
+    color: var(--checkbox-base-text-color-disabled);
+    cursor: not-allowed;
+  }
+}
+
+// ------------------------------------------------------------
+// States
+// ------------------------------------------------------------
+.checkbox {
+  &--error .checkbox--input {
+    border-color: var(--checkbox-error-border-color);
+  }
+
+  &--error .checkbox--input:focus {
+    box-shadow: 0 0 0 4px var(--checkbox-error-shadow-focus);
+  }
+
+  &--success .checkbox--input {
+    border-color: var(--checkbox-success-border-color);
+  }
+
+  &--success .checkbox--input:focus {
+    box-shadow: 0 0 0 4px var(--checkbox-success-shadow-focus);
+  }
+}
+
+// ------------------------------------------------------------
+// Sizes
+// ------------------------------------------------------------
+
+// SMALL
+.checkbox {
+  &--small .checkbox--input {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+  }
+
+  &--small .checkbox--input:checked::after {
+    left: 5px;
+    top: 0px;
+    width: 4px;
+    height: 9px;
+  }
+}
+
+// LARGE
+.checkbox {
+  &--large .checkbox--input {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  &--large .checkbox--input:checked::after {
+    left: 8px;
+    top: 2px;
+    width: 5px;
+    height: 12px;
+  }
+}
+
+// JUMBO
+.checkbox {
+  &--jumbo .checkbox--input {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  &--jumbo .checkbox--input:checked::after {
+    left: 9px;
+    top: 1px;
+    width: 9px;
+    height: 17px;
+    border-width: 0 4px 4px 0;
+  }
+}
+
+// ------------------------------------------------------------
+// Highlights
+// ------------------------------------------------------------
+.checkbox--error-highlight,
+.checkbox--error-highlight:focus {
+  box-shadow: 0 0 0 4px var(--checkbox-error-shadow-focus);
+}

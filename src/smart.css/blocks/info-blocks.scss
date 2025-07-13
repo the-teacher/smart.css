@@ -1,0 +1,118 @@
+// CSS Variables Naming Convention for Info Blocks
+// Formula: --{component}-{variant}-{property}-{modifier}
+//
+// component: info
+// variant: primary, secondary, success, danger, warning, light, dark, close
+// property: bg-color, text-color, border-color
+// modifier: (empty), hover, active, disabled
+//
+// Required variables:
+// --info-base-bg-color
+// --info-base-border-color
+// --info-primary-bg-color
+// --info-primary-border-color
+// --info-primary-text-color
+// --info-secondary-bg-color
+// --info-secondary-border-color
+// --info-secondary-text-color
+// --info-success-bg-color
+// --info-success-border-color
+// --info-success-text-color
+// --info-danger-bg-color
+// --info-danger-border-color
+// --info-danger-text-color
+// --info-warning-bg-color
+// --info-warning-border-color
+// --info-warning-text-color
+// --info-light-bg-color
+// --info-light-border-color
+// --info-light-text-color
+// --info-dark-bg-color
+// --info-dark-border-color
+// --info-dark-text-color
+// --info-close-bg-color
+// --info-close-bg-color-hover
+
+.info {
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  line-height: 1.5;
+  border: 1px solid transparent;
+
+  background-color: var(--info-base-bg-color);
+  border-color: var(--info-base-border-color);
+
+  &--primary {
+    background-color: var(--info-primary-bg-color);
+    border-color: var(--info-primary-border-color);
+    color: var(--info-primary-text-color);
+  }
+
+  &--secondary {
+    background-color: var(--info-secondary-bg-color);
+    border-color: var(--info-secondary-border-color);
+    color: var(--info-secondary-text-color);
+  }
+
+  &--success {
+    background-color: var(--info-success-bg-color);
+    border-color: var(--info-success-border-color);
+    color: var(--info-success-text-color);
+  }
+
+  &--danger {
+    background-color: var(--info-danger-bg-color);
+    border-color: var(--info-danger-border-color);
+    color: var(--info-danger-text-color);
+  }
+
+  &--warning {
+    background-color: var(--info-warning-bg-color);
+    border-color: var(--info-warning-border-color);
+    color: var(--info-warning-text-color);
+  }
+
+  &--light {
+    background-color: var(--info-light-bg-color);
+    border-color: var(--info-light-border-color);
+    color: var(--info-light-text-color);
+  }
+
+  &--dark {
+    background-color: var(--info-dark-bg-color);
+    border-color: var(--info-dark-border-color);
+    color: var(--info-dark-text-color);
+  }
+
+  &--closable {
+    position: relative;
+    padding-right: 40px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.8rem;
+    right: 4px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--info-close-bg-color);
+  }
+
+  &__close:hover {
+    opacity: 1;
+    background-color: var(--info-close-bg-color-hover);
+  }
+}

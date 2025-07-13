@@ -1,0 +1,87 @@
+// CSS Variables Naming Convention for Text Styles
+// Formula: --{component}-{variant}-{property}-{modifier}
+//
+// Required variables:
+// --text-primary-text-color, --text-secondary-text-color, --text-success-text-color
+// --text-danger-text-color, --text-warning-text-color, --text-info-text-color
+// --text-light-text-color, --text-dark-text-color
+
+// === COLORS (semantic) ===
+.text-primary {
+  color: var(--text-primary-text-color);
+}
+.text-secondary {
+  color: var(--text-secondary-text-color);
+}
+.text-success {
+  color: var(--text-success-text-color);
+}
+.text-danger {
+  color: var(--text-danger-text-color);
+}
+.text-warning {
+  color: var(--text-warning-text-color);
+}
+.text-info {
+  color: var(--text-info-text-color);
+}
+.text-light {
+  color: var(--text-light-text-color);
+}
+.text-dark {
+  color: var(--text-dark-text-color);
+}
+
+// === ALIGNMENT ===
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+// === FONT WEIGHTS ===
+.normal {
+  font-weight: 400;
+}
+.semibold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.italic {
+  font-style: italic;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+// === TRANSFORMATIONS ===
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.underline {
+  text-decoration: underline;
+}
+
+// === TEXT OVERFLOW ===
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

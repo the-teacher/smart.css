@@ -1,0 +1,31 @@
+// UI Kit Main Entry Point
+// This file imports all UI kit components and utilities
+
+// Reset and base styles
+@use "./reset.scss";
+
+// Utility classes
+@use "./links.scss";
+
+@use "./buttons.scss";
+@use "./checkboxes.scss";
+@use "./form-groups.scss";
+@use "./form-inputs.scss";
+@use "./switches.scss";
+
+@use "./static-content.scss";
+
+@use "./blocks/card.scss";
+@use "./blocks/data-display.scss";
+@use "./blocks/info-blocks.scss";
+
+// Themes (default gold theme)
+@use "./themes/gold/color-schema.scss";
+
+@use "./margins.scss";
+@use "./paddings.scss";
+@use "./text.scss";
+@use "./font-size.scss";
+@use "./line-height.scss";
+@use "./flex.scss";
+@use "./gaps.scss";

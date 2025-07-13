@@ -1,0 +1,47 @@
+// CSS Variables Naming Convention for Links
+// Formula: --{component}-{variant}-{property}-{modifier}
+//
+// component: link
+// variant: base, disabled
+// property: text-color, outline-color
+// modifier: (empty), hover, visited, active, focus, disabled
+//
+// Required variables:
+// --link-base-text-color
+// --link-base-text-color-hover
+// --link-base-text-color-visited
+// --link-base-text-color-active
+// --link-base-text-color-focus
+// --link-base-outline-color-focus
+// --link-disabled-text-color
+
+a {
+  color: var(--link-base-text-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--link-base-text-color-hover);
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: var(--link-base-text-color-visited);
+  }
+
+  &:active {
+    color: var(--link-base-text-color-active);
+  }
+
+  &:focus {
+    color: var(--link-base-text-color-focus);
+    outline: 1px dashed var(--link-base-outline-color-focus);
+    outline-offset: 2px;
+  }
+
+  &.disabled,
+  &[disabled] {
+    color: var(--link-disabled-text-color);
+    pointer-events: none;
+    text-decoration: none;
+  }
+}

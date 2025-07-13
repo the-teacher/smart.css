@@ -1,0 +1,26 @@
+// Additional styles for gold theme
+body {
+  background-color: #fffaf0;
+}
+
+// Gold accents
+.card {
+  border-left: 3px solid #d4af37;
+}
+
+// Special headings for gold theme
+h1,
+h2,
+h3 {
+  color: #b8860b;
+}
+
+.switch--slider {
+  // define in a theme
+  outline: 1px solid rgb(162, 110, 14);
+
+  &:before {
+    // define in a theme
+    outline: 1px solid rgb(162, 110, 14);
+  }
+}

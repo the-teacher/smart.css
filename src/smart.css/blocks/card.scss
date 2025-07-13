@@ -1,0 +1,43 @@
+// CSS Variables for Cards
+// Formula: --card-{variant}-{property}-{modifier}
+//
+// Required variables:
+// --card-base-bg-color
+// --card-header-border-color
+// --card-footer-border-color
+// --card-title-text-color
+// --card-subtitle-text-color
+
+.card {
+  background-color: var(--card-base-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &--header {
+    border-bottom: 1px solid var(--card-header-border-color);
+  }
+
+  &--title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--card-title-text-color);
+    text-align: center;
+  }
+
+  &--subtitle {
+    font-size: 1.6rem;
+    color: var(--card-subtitle-text-color);
+    margin: 0;
+    text-align: center;
+  }
+
+  &--footer {
+    border-top: 1px solid var(--card-footer-border-color);
+  }
+
+  &__centered {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

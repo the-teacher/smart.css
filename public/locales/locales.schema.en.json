@@ -1,0 +1,262 @@
+{
+  "AppModal": {
+    "actions": {
+      "close": "Close modal"
+    }
+  },
+  "footerNavigation": {
+    "home": "Home",
+    "create": "Create",
+    "search": "Search",
+    "favorites": "Favorites",
+    "logout": "Logout"
+  },
+  "CreatePasswordEntryForm": {
+    "title": "Create Password Entry",
+    "messages": {
+      "formSubmitted": "Form submitted successfully",
+      "networkError": "Network error. Please try again later. {{error}}",
+      "passwordCopied": "Password copied successfully",
+      "passwordGenerated": "Password generated successfully",
+      "passwordShown": "Password is now visible",
+      "passwordHidden": "Password is now hidden",
+      "setPasswordFirst": "Please enter a password first"
+    },
+    "fields": {
+      "serviceName": "Service Name",
+      "username": "Username",
+      "password": "Password",
+      "url": "URL",
+      "notes": "Notes",
+      "hint": "Please fill in this field"
+    },
+    "actions": {
+      "save": "Create",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "copyPassword": "Copy password",
+      "generatePassword": "Generate password"
+    },
+    "validation": {
+      "pleaseEnterField": "Please fill in this field",
+      "filledCorrectly": "Filled correctly",
+      "hasError": "Error in field",
+      "serviceName": {
+        "min": "Service name must be at least {{min}} characters",
+        "max": "Service name must not exceed {{max}} characters"
+      },
+      "username": {
+        "min": "Username must be at least {{min}} characters",
+        "max": "Username must not exceed {{max}} characters"
+      },
+      "password": {
+        "min": "Password must be at least {{min}} characters",
+        "max": "Password must not exceed {{max}} characters"
+      },
+      "serviceUrl": {
+        "invalid": "Please enter a valid URL"
+      },
+      "notes": {
+        "max": "Notes must not exceed {{max}} characters"
+      }
+    },
+    "modals": {
+      "resetForm": {
+        "title": "Reset Form",
+        "message": "Are you sure you want to reset the form? All entered data will be lost.",
+        "confirm": "Reset",
+        "cancel": "Cancel"
+      }
+    }
+  },
+  "EditPasswordEntryForm": {
+    "title": "Update Password Entry",
+    "actions": {
+      "save": "Update"
+    }
+  },
+  "ShowPasswordEntry": {
+    "title": "Password Entry Details",
+    "fields": {
+      "serviceName": "Service Name",
+      "username": "Username",
+      "password": "Password",
+      "serviceUrl": "Service URL",
+      "notes": "Notes"
+    },
+    "copy": "Copy",
+    "copyPassword": "Copy password to clipboard",
+    "edit": "Edit",
+    "back": "Home"
+  },
+  "title": "Password Entry Details",
+  "fields": {
+    "serviceName": "Service Name",
+    "username": "Username",
+    "password": "Password",
+    "serviceUrl": "Service URL",
+    "notes": "Notes"
+  },
+  "copy": "Copy",
+  "copyPassword": "Copy password to clipboard",
+  "edit": "Edit",
+  "back": "Back",
+  "notifications": {
+    "copied": "{{field}} copied to clipboard"
+  },
+  "ActivationPin": {
+    "title": "Account Activation",
+    "subtitle": "5-digit PIN code sent to <Bold>{{email}}</Bold>",
+    "fields": {
+      "pin": "PIN Code"
+    },
+    "placeholders": {
+      "pin": "00000"
+    },
+    "actions": {
+      "activate": "Activate Account",
+      "activating": "Activating...",
+      "resend": "Resend PIN Code",
+      "resending": "Sending...",
+      "cancel": "Back to Email Entry"
+    },
+    "info": {
+      "didntReceive": "If you haven't received the PIN code, please check your spam folder or request a new one."
+    },
+    "validation": {
+      "pin": {
+        "required": "PIN code is required",
+        "length": "PIN code must be exactly {{length}} digits",
+        "onlyDigits": "PIN code must contain only digits"
+      },
+      "filledCorrectly": "PIN code format is correct",
+      "pleaseEnterField": "Please enter this field"
+    },
+    "errors": {
+      "invalidPin": "Invalid PIN code. Please try again.",
+      "expiredPin": "PIN code has expired. Please request a new one.",
+      "tooManyAttempts": "Too many failed attempts. Please request a new PIN code.",
+      "failedToResend": "Failed to send PIN code. Please try again later."
+    }
+  },
+  "CreateAccountForm": {
+    "title": "Create Account",
+    "subtitle": "Please enter your email address to create a new account.",
+    "fields": {
+      "email": "Email Address"
+    },
+    "placeholders": {
+      "email": "your.email@example.com"
+    },
+    "disclaimer": "By continuing, you confirm your agreement with the <RulesLink>project rules</RulesLink> and <PolicyLink>data processing policy</PolicyLink>.",
+    "agreements": {
+      "checkbox": "I agree to the <RulesLink>project rules</RulesLink> and <PolicyLink>data processing policy</PolicyLink>"
+    },
+    "actions": {
+      "submit": "Create Account",
+      "submitting": "Creating...",
+      "cancel": "Cancel"
+    },
+    "errors": {
+      "serverError": "An error occurred. Please try again."
+    },
+    "validation": {
+      "pleaseEnterField": "Please fill in this field",
+      "filledCorrectly": "Filled correctly",
+      "hasError": "Error in field",
+      "email": {
+        "min": "Email must be at least {{min}} characters",
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address",
+        "max": "Email cannot exceed {{max}} characters"
+      },
+      "agreements": {
+        "required": "You must agree to the terms and conditions"
+      }
+    },
+    "info": {
+      "emailSent": "An email with a <PinCode>PIN code</PinCode> for account activation will be sent to your email.",
+      "pinCodes": "We send one-time PIN codes for logging into your account and confirming your actions.",
+      "emailSecurity": "Please do not share access to your email and use strong passwords for your email account."
+    }
+  },
+  "RegistrationSuccess": {
+    "title": "Registration Successful!",
+    "subtitle": "Your account has been created and activated.",
+    "message": {
+      "thankYou": "Thank you for registering with our password manager. You will be redirected to the application shortly.",
+      "redirectInfo": "If you're not redirected automatically, please click the button below."
+    },
+    "actions": {
+      "continue": "Go to Application"
+    }
+  },
+  "SorryAboutDecline": {
+    "title": "We're Sorry to See You Go",
+    "sorryMessage": "We're sorry that you've decided not to use our application at this time.",
+    "reconsiderMessage": "However, if you change your mind, you can always come back and give it a try — we're always happy to welcome new users!",
+    "benefitsMessage": "Remember, our password manager offers secure storage, easy organization, and peace of mind knowing your digital life is protected.",
+    "tryAgainButton": "I'd like to try it after all"
+  },
+  "UserRegistrationData": {
+    "title": "Account Creation",
+    "subtitle": "We will create a new account for you using the following data.",
+    "fields": {
+      "userId": "Unique User ID",
+      "username": "Username",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+    },
+    "disclaimer": "By continuing, you confirm your agreement with the <RulesLink>project rules</RulesLink> and <PolicyLink>data processing policy</PolicyLink>.",
+    "actions": {
+      "confirm": "Yes, create account",
+      "decline": "No, I don't want to"
+    }
+  },
+  "WelcomeMessage": {
+    "title": "HamsterPass.com",
+    "subtitle": "This application is a convenient and reliable password manager.",
+    "features": {
+      "title": "Features",
+      "storePasswords": "Store passwords from all services in one place.",
+      "addFavorites": "Add important ones to favorites.",
+      "groupForAccess": "Group for quick access.",
+      "useSearch": "Use search."
+    },
+    "security": {
+      "title": "Your data is secure",
+      "separateDatabase": "Each user gets a separate database, and all passwords are stored in encrypted form.",
+      "downloadPasswords": "You can download all your passwords at any time.",
+      "backupReminder": "Once a month, you receive a backup reminder."
+    },
+    "disclaimer": "Before you start, please review the <RulesLink>rules</RulesLink> and data processing <PolicyLink>policy</PolicyLink>.",
+    "tryFree": "Try for free",
+    "actions": {
+      "accept": "Yes, I want to try",
+      "decline": "No, thanks",
+      "acceptAlt": "Accept and start",
+      "declineAlt": "Decline"
+    }
+  },
+  "SearchField": {
+    "search": "Search",
+    "clear": "Clear search",
+    "placeholder": "Search passwords..."
+  },
+  "translations": {
+    "app": {
+      "name": "HamsterPass",
+      "settings": "Settings"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "reset": "Reset",
+    "edit": "Edit",
+    "copy": "Copy",
+    "show": "Show",
+    "hide": "Hide",
+    "saving": "Saving...",
+    "back": "Back"
+  }
+}

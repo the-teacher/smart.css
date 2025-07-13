@@ -1,0 +1,55 @@
+@use "sass:math";
+
+// === LINE HEIGHTS ===
+// Line height classes: .lh-0, .lh-2, .lh-4, ... .lh-40
+// Where index represents direct pixel value: lh-2 = 0.2rem = 2px, lh-4 = 0.4rem = 4px, etc.
+// Uses rem units based on root font-size of 10px.
+//
+// Examples:
+// lh-0 = 0px = 0rem
+// lh-2 = 2px = 0.2rem
+// lh-4 = 4px = 0.4rem
+// lh-6 = 6px = 0.6rem
+// lh-8 = 8px = 0.8rem
+// lh-10 = 10px = 1rem
+// lh-12 = 12px = 1.2rem
+// lh-20 = 20px = 2rem
+// lh-40 = 40px = 4rem
+
+// Zero line-height class
+.lh-0 {
+  line-height: 0;
+}
+
+// Array of all needed line-height values (excluding 0)
+$line-height-values: (
+  2,
+  4,
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36,
+  38,
+  40
+);
+
+// Generate classes for all values in the array
+@each $value in $line-height-values {
+  $rem-value: math.div($value, 10); // since root font-size = 10px, 1rem = 10px
+
+  .lh-#{$value} {
+    line-height: #{$rem-value}rem;
+  }
+}

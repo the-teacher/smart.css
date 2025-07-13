@@ -1,0 +1,71 @@
+// paddings.scss
+// This file provides utility classes for consistent spacing throughout the project.
+// It includes padding classes for top, bottom, left, right, and all sides.
+// The classes are generated using SCSS @each loop from predefined array of values.
+// Uses rem units based on root font-size of 10px.
+//
+// Available values: 0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32, 34, 35, 36, 38, 40
+//
+// Usage:
+// - Padding classes: .p-{value} where {value} is from the array above
+// - Available directions: p- (all), pt- (top), pb- (bottom), pl- (left), pr- (right)
+// - Where index represents direct rem value: p-2 = 0.2rem, p-10 = 1rem, p-20 = 2rem, etc.
+//
+// Examples:
+// p-0 = 0rem, p-2 = 0.2rem, p-4 = 0.4rem, p-5 = 0.5rem, p-6 = 0.6rem, p-8 = 0.8rem, p-10 = 1rem, p-15 = 1.5rem, p-20 = 2rem, p-25 = 2.5rem, p-35 = 3.5rem, p-40 = 4rem
+// pt-0 = 0rem, pt-2 = 0.2rem, pt-4 = 0.4rem, pt-5 = 0.5rem, pt-6 = 0.6rem, pt-8 = 0.8rem, pt-10 = 1rem, pt-15 = 1.5rem, pt-20 = 2rem, pt-25 = 2.5rem, pt-35 = 3.5rem, pt-40 = 4rem
+// pb-0 = 0rem, pb-2 = 0.2rem, pb-4 = 0.4rem, pb-5 = 0.5rem, pb-6 = 0.6rem, pb-8 = 0.8rem, pb-10 = 1rem, pb-15 = 1.5rem, pb-20 = 2rem, pb-25 = 2.5rem, pb-35 = 3.5rem, pb-40 = 4rem
+// pl-0 = 0rem, pl-2 = 0.2rem, pl-4 = 0.4rem, pl-5 = 0.5rem, pl-6 = 0.6rem, pl-8 = 0.8rem, pl-10 = 1rem, pl-15 = 1.5rem, pl-20 = 2rem, pl-25 = 2.5rem, pl-35 = 3.5rem, pl-40 = 4rem
+// pr-0 = 0rem, pr-2 = 0.2rem, pr-4 = 0.4rem, pr-5 = 0.5rem, pr-6 = 0.6rem, pr-8 = 0.8rem, pr-10 = 1rem, pr-15 = 1.5rem, pr-20 = 2rem, pr-25 = 2.5rem, pr-35 = 3.5rem, pr-40 = 4rem
+
+@use "sass:math";
+
+// Array of all needed padding values
+$padding-values: (
+  0,
+  2,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16,
+  18,
+  20,
+  22,
+  24,
+  25,
+  26,
+  28,
+  30,
+  32,
+  34,
+  35,
+  36,
+  38,
+  40
+);
+
+// Generate classes for all values in the array
+@each $value in $padding-values {
+  $rem-value: math.div($value, 10); // since root font-size = 10px, 1rem = 10px
+
+  .p-#{$value} {
+    padding: #{$rem-value}rem;
+  }
+  .pt-#{$value} {
+    padding-top: #{$rem-value}rem;
+  }
+  .pb-#{$value} {
+    padding-bottom: #{$rem-value}rem;
+  }
+  .pl-#{$value} {
+    padding-left: #{$rem-value}rem;
+  }
+  .pr-#{$value} {
+    padding-right: #{$rem-value}rem;
+  }
+}

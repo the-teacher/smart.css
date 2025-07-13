@@ -1,0 +1,31 @@
+.brand--logo {
+  background: #8e8e8e;
+  border-radius: 10px;
+}
+
+// Additional styles for gold theme
+body {
+  background-color: #3b3b3b;
+}
+
+// Gold accents
+.card {
+  border-left: 3px solid #474747;
+}
+
+// Special headings for gold theme
+h1,
+h2,
+h3 {
+  color: #acacac;
+}
+
+.switch--slider {
+  // define in a theme
+  outline: 1px solid rgb(221, 221, 221);
+
+  &:before {
+    // define in a theme
+    outline: 1px solid rgb(221, 221, 221);
+  }
+}

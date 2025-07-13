@@ -1,0 +1,75 @@
+// margins.scss
+// This file provides utility classes for consistent spacing throughout the project.
+// It includes margin classes for top, bottom, left, right, and all sides.
+// The classes are generated using SCSS @each loop from predefined array of values.
+// Uses rem units based on root font-size of 10px.
+//
+// Available values: 0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32, 34, 35, 36, 38, 40
+//
+// Usage:
+// - Margin classes: .m-{value} where {value} is from the array above
+// - Available directions: m- (all), mt- (top), mb- (bottom), ml- (left), mr- (right)
+// - Where index represents direct rem value: m-2 = 0.2rem, m-10 = 1rem, m-20 = 2rem, etc.
+//
+// Examples:
+// m-0 = 0rem, m-2 = 0.2rem, m-4 = 0.4rem, m-5 = 0.5rem, m-6 = 0.6rem, m-8 = 0.8rem, m-10 = 1rem, m-15 = 1.5rem, m-20 = 2rem, m-25 = 2.5rem, m-35 = 3.5rem, m-40 = 4rem
+// mt-0 = 0rem, mt-2 = 0.2rem, mt-4 = 0.4rem, mt-5 = 0.5rem, mt-6 = 0.6rem, mt-8 = 0.8rem, mt-10 = 1rem, mt-15 = 1.5rem, mt-20 = 2rem, mt-25 = 2.5rem, mt-35 = 3.5rem, mt-40 = 4rem
+// mb-0 = 0rem, mb-2 = 0.2rem, mb-4 = 0.4rem, mb-5 = 0.5rem, mb-6 = 0.6rem, mb-8 = 0.8rem, mb-10 = 1rem, mb-15 = 1.5rem, mb-20 = 2rem, mb-25 = 2.5rem, mb-35 = 3.5rem, mb-40 = 4rem
+// ml-0 = 0rem, ml-2 = 0.2rem, ml-4 = 0.4rem, ml-5 = 0.5rem, ml-6 = 0.6rem, ml-8 = 0.8rem, ml-10 = 1rem, ml-15 = 1.5rem, ml-20 = 2rem, ml-25 = 2.5rem, ml-35 = 3.5rem, ml-40 = 4rem
+// mr-0 = 0rem, mr-2 = 0.2rem, mr-4 = 0.4rem, mr-5 = 0.5rem, mr-6 = 0.6rem, mr-8 = 0.8rem, mr-10 = 1rem, mr-15 = 1.5rem, mr-20 = 2rem, mr-25 = 2.5rem, mr-35 = 3.5rem, mr-40 = 4rem
+
+@use "sass:math";
+
+// Array of all needed margin values
+$margin-values: (
+  0,
+  2,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16,
+  18,
+  20,
+  22,
+  24,
+  25,
+  26,
+  28,
+  30,
+  32,
+  34,
+  35,
+  36,
+  38,
+  40
+);
+
+.mauto {
+  margin: 0 auto;
+}
+
+// Generate classes for all values in the array
+@each $value in $margin-values {
+  $rem-value: math.div($value, 10); // since root font-size = 10px, 1rem = 10px
+
+  .m-#{$value} {
+    margin: #{$rem-value}rem;
+  }
+  .mt-#{$value} {
+    margin-top: #{$rem-value}rem;
+  }
+  .mb-#{$value} {
+    margin-bottom: #{$rem-value}rem;
+  }
+  .ml-#{$value} {
+    margin-left: #{$rem-value}rem;
+  }
+  .mr-#{$value} {
+    margin-right: #{$rem-value}rem;
+  }
+}

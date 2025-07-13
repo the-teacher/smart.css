@@ -1,0 +1,57 @@
+// gaps.scss
+// This file provides utility classes for consistent gap spacing throughout the project.
+// It includes gap classes for flexbox and grid layouts.
+// The classes are generated using SCSS @each loop from predefined array of values.
+// Uses rem units based on root font-size of 10px.
+//
+// Usage:
+// - Gap classes: .gap-0, .gap-2, .gap-4, .gap-6, ... .gap-40
+// - Where index represents direct pixel value: gap-2 = 0.2rem = 2px, gap-10 = 1rem = 10px, etc.
+//
+// Examples:
+// gap-0 = 0rem
+// gap-2 = 0.2rem = 2px
+// gap-4 = 0.4rem = 4px
+// gap-10 = 1rem = 10px
+// gap-20 = 2rem = 20px
+// gap-40 = 4rem = 40px
+
+@use "sass:math";
+
+// Zero gap class
+.gap-0 {
+  gap: 0;
+}
+
+// Array of all needed gap values (excluding 0)
+$gap-values: (
+  2,
+  4,
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36,
+  38,
+  40
+);
+
+// Generate classes for all values in the array
+@each $value in $gap-values {
+  $rem-value: math.div($value, 10); // since root font-size = 10px, 1rem = 10px
+
+  .gap-#{$value} {
+    gap: #{$rem-value}rem;
+  }
+}
