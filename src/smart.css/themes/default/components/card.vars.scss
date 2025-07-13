@@ -1,0 +1,17 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// CARDS | src/ui-kit/card.scss
+// ------------------------------------------------------------
+// Card variables according to formula: --card-{variant}-{property}-{modifier}
+:root {
+  // Card background and borders
+  --card-base-bg-color: #{$color-white};
+  --card-header-border-color: #{color.scale($color-light, $lightness: -10%)};
+  --card-footer-border-color: #{color.scale($color-light, $lightness: -10%)};
+
+  // Card text colors
+  --card-title-text-color: #{$color-text};
+  --card-subtitle-text-color: #{$color-secondary};
+}

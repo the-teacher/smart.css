@@ -1,0 +1,210 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// BUTTONS
+// Button variables according to formula: --button-{variant}-{property}-{modifier}
+// ------------------------------------------------------------
+:root {
+  // Base button colors
+  // ------------------------------------------------------------
+  --button-base-bg-color-disabled: #{$color-disabled};
+  --button-base-text-color-disabled: #{$color-text};
+
+  // ------------------------------------------------------------
+  // Primary button colors
+  // ------------------------------------------------------------
+  --button-primary-bg-color: #{$color-primary};
+  --button-primary-bg-color-hover: #{color.scale(
+      $color-primary,
+      $lightness: -10%
+    )};
+  --button-primary-bg-color-active: #{color.scale(
+      $color-primary,
+      $lightness: -15%
+    )};
+  --button-primary-bg-color-disabled: #{color.scale(
+      $color-primary,
+      $lightness: 30%,
+      $alpha: -40%
+    )};
+  --button-primary-text-color: #{$color-white};
+  --button-primary-text-color-disabled: #{color.scale(
+      $color-white,
+      $alpha: -30%
+    )};
+
+  // ------------------------------------------------------------
+  // Secondary button colors
+  // ------------------------------------------------------------
+  --button-secondary-bg-color: #{$color-secondary};
+  --button-secondary-bg-color-hover: #{color.scale(
+      $color-secondary,
+      $lightness: -10%
+    )};
+  --button-secondary-bg-color-active: #{color.scale(
+      $color-secondary,
+      $lightness: -15%
+    )};
+  --button-secondary-bg-color-disabled: #{color.scale(
+      $color-secondary,
+      $lightness: 30%,
+      $alpha: -40%
+    )};
+  --button-secondary-text-color: #{$color-white};
+  --button-secondary-text-color-disabled: #{color.scale(
+      $color-white,
+      $alpha: -30%
+    )};
+
+  // ------------------------------------------------------------
+  // Light button colors
+  // ------------------------------------------------------------
+  --button-light-bg-color: #{$color-light};
+  --button-light-bg-color-hover: #{color.scale($color-light, $lightness: -10%)};
+  --button-light-bg-color-active: #{color.scale($color-light, $lightness: -15%)};
+  --button-light-bg-color-disabled: #{color.scale(
+      $color-light,
+      $lightness: 10%,
+      $alpha: -10%
+    )};
+  --button-light-text-color: #{color.scale($color-dark, $lightness: 70%)};
+  --button-light-text-color-hover: #{color.scale($color-dark, $lightness: 30%)};
+  --button-light-text-color-disabled: #{color.scale(
+      $color-dark,
+      $lightness: 80%,
+      $alpha: -10%
+    )};
+
+  // ------------------------------------------------------------
+  // Success button colors
+  // ------------------------------------------------------------
+  --button-success-bg-color: #{$color-success};
+  --button-success-bg-color-hover: #{color.scale(
+      $color-success,
+      $lightness: -10%
+    )};
+  --button-success-bg-color-active: #{color.scale(
+      $color-success,
+      $lightness: -15%
+    )};
+  --button-success-bg-color-disabled: #{color.scale(
+      $color-success,
+      $lightness: 30%,
+      $alpha: -40%
+    )};
+  --button-success-text-color: #{$color-white};
+  --button-success-text-color-disabled: #{color.scale(
+      $color-white,
+      $alpha: -30%
+    )};
+
+  // ------------------------------------------------------------
+  // Warning button colors
+  // ------------------------------------------------------------
+  --button-warning-bg-color: #{$color-warning};
+  --button-warning-bg-color-hover: #{color.scale(
+      $color-warning,
+      $lightness: -10%
+    )};
+  --button-warning-bg-color-active: #{color.scale(
+      $color-warning,
+      $lightness: -15%
+    )};
+  --button-warning-bg-color-disabled: #{color.scale(
+      $color-warning,
+      $lightness: 20%,
+      $alpha: -40%
+    )};
+  --button-warning-text-color: #{$color-text};
+  --button-warning-text-color-disabled: #{color.scale(
+      $color-text,
+      $alpha: -40%
+    )};
+
+  // ------------------------------------------------------------
+  // Danger button colors
+  // ------------------------------------------------------------
+  --button-danger-bg-color: #{$color-danger};
+  --button-danger-bg-color-hover: #{color.scale(
+      $color-danger,
+      $lightness: -10%
+    )};
+  --button-danger-bg-color-active: #{color.scale(
+      $color-danger,
+      $lightness: -15%
+    )};
+  --button-danger-bg-color-disabled: #{color.scale(
+      $color-danger,
+      $lightness: 30%,
+      $alpha: -40%
+    )};
+  --button-danger-text-color: #{$color-white};
+  --button-danger-text-color-disabled: #{color.scale(
+      $color-white,
+      $alpha: -30%
+    )};
+
+  // ------------------------------------------------------------
+  // Info button colors
+  // ------------------------------------------------------------
+  --button-info-bg-color: #{$color-info};
+  --button-info-bg-color-hover: #{color.scale($color-info, $lightness: -10%)};
+  --button-info-bg-color-active: #{color.scale($color-info, $lightness: -15%)};
+  --button-info-bg-color-disabled: #{color.scale(
+      $color-info,
+      $lightness: 30%,
+      $alpha: -40%
+    )};
+  --button-info-text-color: #{$color-white};
+  --button-info-text-color-disabled: #{color.scale($color-white, $alpha: -30%)};
+
+  // ------------------------------------------------------------
+  // Ghost button colors
+  // ------------------------------------------------------------
+  --button-ghost-bg-color: #{color.scale(
+      $color-light,
+      $lightness: 10%,
+      $alpha: -20%
+    )};
+  --button-ghost-bg-color-hover: #{color.scale(
+      $color-light,
+      $lightness: 5%,
+      $alpha: -15%
+    )};
+  --button-ghost-bg-color-disabled: #{color.scale(
+      $color-light,
+      $lightness: 15%,
+      $alpha: -30%
+    )};
+  --button-ghost-text-color: #{color.scale(
+      $color-dark,
+      $lightness: 30%,
+      $alpha: -10%
+    )};
+  --button-ghost-text-color-hover: #{color.scale(
+      $color-dark,
+      $lightness: 5%,
+      $alpha: -10%
+    )};
+  --button-ghost-text-color-disabled: #{color.scale(
+      $color-dark,
+      $lightness: 80%,
+      $alpha: -20%
+    )};
+  --button-ghost-border-color: #{color.scale(
+      $color-light,
+      $lightness: 10%,
+      $alpha: -20%
+    )};
+  --button-ghost-border-color-hover: #{color.scale(
+      $color-light,
+      $lightness: 5%,
+      $alpha: -15%
+    )};
+  --button-ghost-border-color-disabled: #{color.scale(
+      $color-light,
+      $lightness: 15%,
+      $alpha: -30%
+    )};
+}

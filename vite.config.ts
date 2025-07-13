@@ -4,6 +4,7 @@ import path from 'path';
 // CSS file name mapping
 const cssFileNames = [
   { match: 'theme-gold', output: 'theme-gold.css' },
+  { match: 'theme-default', output: 'theme-default.css' },
   { match: 'blocks', output: 'blocks.css' },
   { match: 'controls', output: 'controls.css' },
   { match: 'forms', output: 'forms.css' },
@@ -27,6 +28,10 @@ export default defineConfig({
       entry: {
         'ui-kit': path.resolve(__dirname, 'src/css-build/index.scss'),
         'theme-gold': path.resolve(__dirname, 'src/css-build/theme-gold.scss'),
+        'theme-default': path.resolve(
+          __dirname,
+          'src/css-build/theme-default.scss'
+        ),
         blocks: path.resolve(__dirname, 'src/css-build/blocks.scss'),
         controls: path.resolve(__dirname, 'src/css-build/controls.scss'),
         forms: path.resolve(__dirname, 'src/css-build/forms.scss'),

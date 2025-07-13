@@ -1,0 +1,18 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// TEXT STYLES | src/ui-kit/text-styles.scss
+// ------------------------------------------------------------
+// Text variables according to formula: --text-{variant}-{property}-{modifier}
+:root {
+  // Text colors
+  --text-primary-text-color: #{$color-primary};
+  --text-secondary-text-color: #{$color-secondary};
+  --text-success-text-color: #{$color-success};
+  --text-danger-text-color: #{$color-danger};
+  --text-warning-text-color: #{$color-warning};
+  --text-info-text-color: #{$color-info};
+  --text-light-text-color: #{$color-light};
+  --text-dark-text-color: #{$color-dark};
+}

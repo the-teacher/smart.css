@@ -1,0 +1,17 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+:root {
+  // Base colors from SCSS variables
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+  --color-info: #{$color-info};
+  --color-light: #{$color-light};
+  --color-dark: #{$color-dark};
+  --color-white: #{$color-white};
+  --color-text: #{$color-text};
+  --color-disabled: #{$color-disabled};
+}

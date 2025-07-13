@@ -1,0 +1,51 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// INFO BLOCKS | src/ui-kit/info-blocks.scss
+// ------------------------------------------------------------
+// Info Block variables according to formula: --info-{variant}-{property}-{modifier}
+:root {
+  // Base info block
+  --info-base-bg-color: #{$color-light};
+  --info-base-border-color: #{color.scale($color-light, $lightness: -10%)};
+
+  // Primary info block
+  --info-primary-bg-color: #{color.scale($color-primary, $lightness: 90%)};
+  --info-primary-border-color: #{$color-primary};
+  --info-primary-text-color: #{$color-text};
+
+  // Secondary info block
+  --info-secondary-bg-color: #{color.scale($color-secondary, $lightness: 90%)};
+  --info-secondary-border-color: #{$color-secondary};
+  --info-secondary-text-color: #{$color-secondary};
+
+  // Success info block
+  --info-success-bg-color: #{color.scale($color-success, $lightness: 90%)};
+  --info-success-border-color: #{$color-success};
+  --info-success-text-color: #{$color-success};
+
+  // Danger info block
+  --info-danger-bg-color: #{color.scale($color-danger, $lightness: 90%)};
+  --info-danger-border-color: #{$color-danger};
+  --info-danger-text-color: #{$color-danger};
+
+  // Warning info block
+  --info-warning-bg-color: #{color.scale($color-warning, $lightness: 90%)};
+  --info-warning-border-color: #{$color-warning};
+  --info-warning-text-color: #{$color-warning};
+
+  // Light info block
+  --info-light-bg-color: #{color.scale($color-info, $lightness: 90%)};
+  --info-light-border-color: #{$color-info};
+  --info-light-text-color: #{$color-info};
+
+  // Dark info block
+  --info-dark-bg-color: #{$color-dark};
+  --info-dark-border-color: #{color.scale($color-dark, $lightness: -10%)};
+  --info-dark-text-color: #{$color-light};
+
+  // Close button
+  --info-close-bg-color: rgba(92, 64, 51, 0.1);
+  --info-close-bg-color-hover: rgba(92, 64, 51, 0.2);
+}

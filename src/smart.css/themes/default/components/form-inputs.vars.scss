@@ -1,0 +1,41 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// FORM INPUTS | src/ui-kit/form-inputs.scss
+// ------------------------------------------------------------
+// Form Input variables according to formula: --form-input-{variant}-{property}-{modifier}
+:root {
+  // Form label
+  --form-label-text-color: #{$color-secondary};
+
+  // Base form input colors
+  --form-input-bg-color: #{$color-light};
+  --form-input-bg-color-disabled: #{$color-disabled};
+
+  // Base form input borders
+  --form-input-border-color: #{color.scale($color-dark, $lightness: 70%)};
+  --form-input-border-color-focus: #{$color-primary};
+  --form-input-border-color-disabled: #{$color-light};
+
+  // Base form input shadows
+  --form-input-shadow-color-focus: #{color.scale($color-primary, $alpha: -70%)};
+
+  // Error state
+  --form-input-border-color-error: #{$color-danger};
+  --form-input-shadow-color-error: #{color.scale($color-danger, $alpha: -50%)};
+
+  // Success state
+  --form-input-border-color-success: #{$color-success};
+  --form-input-shadow-color-success: #{color.scale(
+      $color-success,
+      $alpha: -10%
+    )};
+
+  // Warning state
+  --form-input-border-color-warning: #{$color-warning};
+  --form-input-shadow-color-warning: #{color.scale(
+      $color-warning,
+      $alpha: -70%
+    )};
+}

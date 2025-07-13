@@ -1,5 +1,5 @@
-@use "sass:color";
-@use "./colors" as *;
+@use 'sass:color';
+@use './colors' as *;
 
 // Common CSS variables formula
 // --{component}-{variant}-{property}-{modifier}
@@ -260,13 +260,6 @@
   // Card text colors
   --card-title-text-color: #{$color-text};
   --card-subtitle-text-color: #{$color-secondary};
-}
-
-// === DATA DISPLAY VARIABLES ===
-// data-display.scss
-:root {
-  // Variables for data-display are already defined in other blocks:
-  // --color-primary, --color-secondary, --color-text, --color-light-border
 }
 
 // ------------------------------------------------------------

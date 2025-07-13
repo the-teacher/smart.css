@@ -1,0 +1,28 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// LINKS | src/ui-kit/links.scss
+// ------------------------------------------------------------
+// Link variables according to formula: --link-{variant}-{property}-{modifier}
+:root {
+  // Base link colors
+  --link-base-text-color: #{$color-primary};
+  --link-base-text-color-hover: #{color.scale($color-primary, $lightness: -20%)};
+  --link-base-text-color-visited: #{color.scale(
+      $color-primary,
+      $lightness: 20%
+    )};
+  --link-base-text-color-active: #{color.scale(
+      $color-primary,
+      $lightness: -40%
+    )};
+  --link-base-text-color-focus: #{color.scale($color-primary, $lightness: -50%)};
+  --link-base-outline-color-focus: #{color.scale(
+      $color-primary,
+      $lightness: -30%
+    )};
+
+  // Disabled link
+  --link-disabled-text-color: #{$color-disabled};
+}

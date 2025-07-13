@@ -13,8 +13,13 @@ for file in "$SOURCE_DIR"/$FILE_PATTERN; do
   if [[ -f "$file" ]]; then
     filename=$(basename "$file")
     target_file="$TARGET_DIR/$filename"
-    echo "Minifying: $file → $target_file"
     cleancss -o "$target_file" "$file"
+
+    # Get file size in KB with 2 decimal places
+    size_bytes=$(stat -c%s "$target_file")
+    size_kb=$(awk "BEGIN {printf \"%.2f\", $size_bytes / 1024}")
+
+    echo "Minifying: $file → $target_file (${size_kb} KB)"
   fi
 done
 
