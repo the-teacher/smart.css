@@ -1,18 +1,4 @@
 :root {
-  --color-primary: #d4af37;
-  --color-secondary: #b8860b;
-  --color-success: #9acd32;
-  --color-warning: #ff8c00;
-  --color-danger: #b22222;
-  --color-info: #cd853f;
-  --color-light: #fff8dc;
-  --color-dark: #5c4033;
-  --color-white: #fffaf0;
-  --color-text: #3a3a3a;
-  --color-disabled: #d3d3d3;
-}
-
-:root {
   --button-base-bg-color-disabled: #d3d3d3;
   --button-base-text-color-disabled: #3a3a3a;
   --button-primary-bg-color: #d4af37;
@@ -78,6 +64,46 @@
 }
 
 :root {
+  --checkbox-base-bg-color: #fff8dc;
+  --checkbox-base-bg-color-checked: #d4af37;
+  --checkbox-base-bg-color-disabled: #d3d3d3;
+  --checkbox-base-border-color: rgb(215.7335664336, 194.1755244755, 184.1664335664);
+  --checkbox-base-border-color-checked: #d4af37;
+  --checkbox-base-border-color-focus: #d4af37;
+  --checkbox-base-border-color-disabled: #fff8dc;
+  --checkbox-base-checkmark-color: #fffaf0;
+  --checkbox-base-text-color: #3a3a3a;
+  --checkbox-base-text-color-disabled: rgba(58, 58, 58, 0.6);
+  --checkbox-base-shadow-focus: rgba(212, 175, 55, 0.3);
+  --checkbox-error-border-color: #b22222;
+  --checkbox-error-shadow-focus: rgba(178, 34, 34, 0.5);
+  --checkbox-success-border-color: #9acd32;
+  --checkbox-success-shadow-focus: rgba(154, 205, 50, 0.9);
+}
+
+:root {
+  --color-primary: #d4af37;
+  --color-secondary: #b8860b;
+  --color-success: #9acd32;
+  --color-warning: #ff8c00;
+  --color-danger: #b22222;
+  --color-info: #cd853f;
+  --color-light: #fff8dc;
+  --color-dark: #5c4033;
+  --color-white: #fffaf0;
+  --color-text: #3a3a3a;
+  --color-disabled: #d3d3d3;
+}
+
+:root {
+  --data-display-field-border-color: rgb(255, 238.5, 172.5);
+  --data-display-label-text-color: #b8860b;
+  --data-display-value-text-color: #3a3a3a;
+  --data-display-link-text-color: #d4af37;
+  --data-display-link-text-color-hover: rgb(175.8024691358, 143.2790123457, 37.7975308642);
+}
+
+:root {
   --form-group-icon-bg-color: #ffe8cc;
 }
 
@@ -136,32 +162,6 @@
 }
 
 :root {
-  --checkbox-base-bg-color: #fff8dc;
-  --checkbox-base-bg-color-checked: #d4af37;
-  --checkbox-base-bg-color-disabled: #d3d3d3;
-  --checkbox-base-border-color: rgb(215.7335664336, 194.1755244755, 184.1664335664);
-  --checkbox-base-border-color-checked: #d4af37;
-  --checkbox-base-border-color-focus: #d4af37;
-  --checkbox-base-border-color-disabled: #fff8dc;
-  --checkbox-base-checkmark-color: #fffaf0;
-  --checkbox-base-text-color: #3a3a3a;
-  --checkbox-base-text-color-disabled: rgba(58, 58, 58, 0.6);
-  --checkbox-base-shadow-focus: rgba(212, 175, 55, 0.3);
-  --checkbox-error-border-color: #b22222;
-  --checkbox-error-shadow-focus: rgba(178, 34, 34, 0.5);
-  --checkbox-success-border-color: #9acd32;
-  --checkbox-success-shadow-focus: rgba(154, 205, 50, 0.9);
-}
-
-:root {
-  --data-display-field-border-color: rgb(255, 238.5, 172.5);
-  --data-display-label-text-color: #b8860b;
-  --data-display-value-text-color: #3a3a3a;
-  --data-display-link-text-color: #d4af37;
-  --data-display-link-text-color-hover: rgb(175.8024691358, 143.2790123457, 37.7975308642);
-}
-
-:root {
   --switch-base-bg-color: rgb(215.4, 215.4, 215.4);
   --switch-base-bg-color-checked: #d4af37;
   --switch-base-bg-color-disabled: #d3d3d3;
@@ -184,4 +184,25 @@
   --text-info-text-color: #cd853f;
   --text-light-text-color: #fff8dc;
   --text-dark-text-color: #5c4033;
+}
+
+body {
+  background-color: #fffaf0;
+}
+
+.card {
+  border-left: 3px solid #d4af37;
+}
+
+h1,
+h2,
+h3 {
+  color: #b8860b;
+}
+
+.switch--slider {
+  outline: 1px solid rgb(162, 110, 14);
+}
+.switch--slider:before {
+  outline: 1px solid rgb(162, 110, 14);
 }

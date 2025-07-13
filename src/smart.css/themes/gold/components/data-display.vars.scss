@@ -1,0 +1,25 @@
+@use 'sass:color';
+@use '../colors' as *;
+
+// ------------------------------------------------------------
+// DATA DISPLAY | src/ui-kit/data-display.scss
+// ------------------------------------------------------------
+// Data Display variables according to formula: --data-display-{variant}-{property}-{modifier}
+:root {
+  // Field borders
+  --data-display-field-border-color: #{color.scale(
+      $color-light,
+      $lightness: -10%
+    )};
+
+  // Text colors
+  --data-display-label-text-color: #{$color-secondary};
+  --data-display-value-text-color: #{$color-text};
+
+  // Link colors
+  --data-display-link-text-color: #{$color-primary};
+  --data-display-link-text-color-hover: #{color.scale(
+      $color-primary,
+      $lightness: -20%
+    )};
+}
