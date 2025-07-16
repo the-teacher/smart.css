@@ -6,7 +6,7 @@
   "scripts": {
     "build:clean": "rm -rf dist",
     "ts:check": "tsc --noEmit",
-    "build": "yarn build:clean && yarn tsc -b && vite build",
+    "build": "yarn build:clean && yarn tsc -b && vite build && yarn build:min",
     "build:min": "./minify-css.sh",
     "build:all": "yarn build && yarn build:min",
     "lint": "eslint .",

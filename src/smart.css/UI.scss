@@ -24,7 +24,10 @@
 @use './text.scss';
 @use './font-size.scss';
 @use './line-height.scss';
+
+@use './flex-grid-common.scss';
 @use './flex.scss';
+@use './grid.scss';
 @use './gaps.scss';
 
 // @use './themes/gold/styles.scss';

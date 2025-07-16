@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 // Minimal flex utilities inspired by Tailwind CSS
 .flex {
@@ -8,32 +8,6 @@
 // Direction
 .flex-col {
   flex-direction: column;
-}
-
-// Justify content (main axis)
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-// Align items (cross axis)
-.items-center {
-  align-items: center;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-end {
-  align-items: flex-end;
 }
 
 // Flex wrap

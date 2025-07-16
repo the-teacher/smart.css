@@ -1,18 +1,14 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 
-// Entry point configuration
-interface EntryConfig {
-  name: string;
-  path: string;
-  outputPath: string; // Custom output path for CSS
-}
+// Entry point configuration: [name, path, outputPath]
+type EntryConfig = [string, string, string];
 
 // Function to build entry points from array
 const buildEntryPoints = (entries: EntryConfig[]): Record<string, string> => {
   return entries.reduce(
-    (acc, entry) => {
-      acc[entry.name] = path.resolve(__dirname, entry.path);
+    (acc, [entryName, entryPath]) => {
+      acc[entryName] = path.resolve(__dirname, entryPath);
       return acc;
     },
     {} as Record<string, string>
@@ -22,15 +18,14 @@ const buildEntryPoints = (entries: EntryConfig[]): Record<string, string> => {
 // Helper function to create theme component entries
 const createThemeComponentEntries = (): EntryConfig[] => {
   const themes = ['default', 'dark', 'gold'];
+  // Exclude components that are already built in blocks.scss
+  // to avoid conflicts: card, info-blocks, data-display
   const components = [
     'button',
-    'card',
     'checkboxes',
     'color',
-    'data-display',
     'form-groups',
     'form-inputs',
-    'info-blocks',
     'links',
     'switches',
     'text-styles',
@@ -40,82 +35,55 @@ const createThemeComponentEntries = (): EntryConfig[] => {
 
   themes.forEach((theme) => {
     components.forEach((component) => {
-      entries.push({
-        name: `${theme}-${component}`,
-        path: `src/smart.css/themes/${theme}/components/${component}.vars.scss`,
-        outputPath: `components/${theme}/${component}.css`,
-      });
+      const entryName = `${theme}-${component}`;
+      const entryPath = `src/smart.css/themes/${theme}/components/${component}.vars.scss`;
+      const outputPath = `themes/${theme}/vars/${component}.css`;
+
+      entries.push([entryName, entryPath, outputPath]);
     });
   });
 
   return entries;
 };
 
-// Entry points configuration
+// Entry points configuration: [name, path, outputPath]
 const entryConfigs: EntryConfig[] = [
   // Main UI Kit
-  {
-    name: 'ui-kit',
-    path: 'src/css-build/index.scss',
-    outputPath: 'ui-kit.css',
-  },
+  ['ui-kit', 'src/css-build/index.scss', 'ui-kit.css'],
 
   // Themes
-  {
-    name: 'theme-default',
-    path: 'src/css-build/theme-default.scss',
-    outputPath: 'themes/default.css',
-  },
-  {
-    name: 'theme-dark',
-    path: 'src/css-build/theme-dark.scss',
-    outputPath: 'themes/dark.css',
-  },
-  {
-    name: 'theme-gold',
-    path: 'src/css-build/theme-gold.scss',
-    outputPath: 'themes/gold.css',
-  },
+  ['theme-default', 'src/css-build/theme-default.scss', 'themes/default.css'],
+  ['theme-dark', 'src/css-build/theme-dark.scss', 'themes/dark.css'],
+  ['theme-gold', 'src/css-build/theme-gold.scss', 'themes/gold.css'],
 
   // Main components
-  {
-    name: 'blocks',
-    path: 'src/css-build/blocks.scss',
-    outputPath: 'blocks.css',
-  },
-  {
-    name: 'controls',
-    path: 'src/css-build/controls.scss',
-    outputPath: 'controls.css',
-  },
-  { name: 'forms', path: 'src/css-build/forms.scss', outputPath: 'forms.css' },
-  {
-    name: 'static-content',
-    path: 'src/css-build/static-content.scss',
-    outputPath: 'static-content.css',
-  },
-  {
-    name: 'buttons',
-    path: 'src/css-build/buttons.scss',
-    outputPath: 'buttons.css',
-  },
+  ['blocks', 'src/css-build/blocks.scss', 'blocks.css'],
+  ['controls', 'src/css-build/controls.scss', 'controls.css'],
+  ['forms', 'src/css-build/forms.scss', 'forms.css'],
+  ['static-content', 'src/css-build/static-content.scss', 'static-content.css'],
+  ['buttons', 'src/css-build/buttons.scss', 'buttons.css'],
 
   // Layout components
-  {
-    name: 'holy-grail-layout',
-    path: 'src/components/HolyGrailLayout/layout.scss',
-    outputPath: 'holy-grail-layout.css',
-  },
+  [
+    'holy-grail-layout',
+    'src/components/HolyGrailLayout/layout.scss',
+    'holy-grail-layout.css',
+  ],
 
+  // Theme components (auto-generated)
   ...createThemeComponentEntries(),
 ];
 
 // Function to determine CSS file name based on entry point
 const getCSSFileName = (assetName: string): string => {
-  const foundEntry = entryConfigs.find((entry) =>
-    assetName.includes(entry.name)
+  const foundEntry = entryConfigs.find(([entryName]) =>
+    assetName.includes(entryName)
   );
-  return foundEntry?.outputPath || 'ui-kit.css';
+  if (foundEntry) {
+    const [, , outputPath] = foundEntry;
+    return outputPath;
+  }
+  return 'ui-kit.css';
 };
 
 export default defineConfig({
