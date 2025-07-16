@@ -1,0 +1,81 @@
+// height.scss
+// This file provides utility classes for consistent height values throughout the project.
+// It includes height classes for common percentage values, fixed rem values, and special height values.
+// The classes are generated using SCSS @each loop from predefined arrays of values.
+// Uses rem units based on root font-size of 10px for fixed values.
+//
+// Available percentage values: 25, 50, 75, 100
+// Available fixed values (rem): 0, 10, 20, 30, 40, 50, 60, 80, 100, 120, 150, 200, 250, 300, 400, 500, 600, 800, 1000, 1200
+//
+// Usage:
+//
+// Examples:
+// h-0 = 0rem, h-10 = 1rem, h-20 = 2rem, h-30 = 3rem, h-100 = 10rem, h-200 = 20rem
+// h-25p = 25%, h-50p = 50%, h-75p = 75%, h-100p = 100%
+// h-auto = auto, h-full = 100%, h-screen = 100vh, h-fit = fit-content, h-max = max-content, h-min = min-content
+
+@use "sass:math";
+
+// Array of percentage values (without % symbol, will be added in generation)
+$height-percentage-values: (25, 50, 75, 100);
+
+// Array of fixed height values in "px equivalent" (will be converted to rem)
+$height-fixed-values: (
+  0,
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  80,
+  100,
+  120,
+  150,
+  200,
+  250,
+  300,
+  400,
+  500
+);
+
+// Special height classes
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.h-max {
+  height: max-content;
+}
+
+.h-min {
+  height: min-content;
+}
+
+// Generate percentage height classes
+@each $value in $height-percentage-values {
+  .h-#{$value}p {
+    height: #{$value}%;
+  }
+}
+
+// Generate fixed height classes using rem
+@each $value in $height-fixed-values {
+  $rem-value: math.div($value, 10);
+
+  .h-#{$value} {
+    height: #{$rem-value}rem;
+  }
+}

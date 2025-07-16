@@ -62,6 +62,8 @@ const entryConfigs: EntryConfig[] = [
   ['forms', 'src/css-build/forms.scss', 'forms.css'],
   ['static-content', 'src/css-build/static-content.scss', 'static-content.css'],
   ['buttons', 'src/css-build/buttons.scss', 'buttons.css'],
+  ['width', 'src/css-build/width.scss', 'width.css'],
+  ['height', 'src/css-build/height.scss', 'height.css'],
 
   // Layout components
   [

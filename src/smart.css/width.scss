@@ -1,0 +1,86 @@
+// width.scss
+// This file provides utility classes for consistent width values throughout the project.
+// It includes width classes for common percentage values, fixed rem values, and special width values.
+// The classes are generated using SCSS @each loop from predefined arrays of values.
+// Uses rem units based on root font-size of 10px for fixed values.
+//
+// Available percentage values: 25, 33, 50, 67, 75, 100
+// Available fixed values (rem): 0, 10, 20, 30, 40, 50, 60, 80, 100, 120, 150, 200, 250, 300, 400, 500, 600, 800, 1000, 1200
+//
+// Usage:
+//
+// Examples:
+// w-0 = 0rem, w-10 = 1rem, w-20 = 2rem, w-30 = 3rem, w-100 = 10rem, w-200 = 20rem
+// w-25p = 25%, w-33p = 33.33%, w-50p = 50%, w-67p = 66.66%, w-75p = 75%, w-100p = 100%
+// w-auto = auto, w-full = 100%, w-screen = 100vw, w-fit = fit-content, w-max = max-content, w-min = min-content
+
+@use 'sass:math';
+
+// Array of percentage values (without % symbol, will be added in generation)
+$width-percentage-values: (25, 50, 75, 100);
+
+// Array of fixed width values in "px equivalent" (will be converted to rem)
+$width-fixed-values: (
+  0,
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  80,
+  100,
+  120,
+  150,
+  200,
+  250,
+  300,
+  400,
+  500,
+  600,
+  800,
+  1000,
+  1200,
+  1400
+);
+
+// Special width classes
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.w-max {
+  width: max-content;
+}
+
+.w-min {
+  width: min-content;
+}
+
+// Generate percentage width classes
+@each $value in $width-percentage-values {
+  .w-#{$value}p {
+    width: #{$value}%;
+  }
+}
+
+// Generate fixed width classes using rem
+@each $value in $width-fixed-values {
+  $rem-value: math.div($value, 10);
+
+  .w-#{$value} {
+    width: #{$rem-value}rem;
+  }
+}
