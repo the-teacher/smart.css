@@ -1,0 +1,27 @@
+:root {
+  --info-base-bg-color: #f8f9fa;
+  --info-base-border-color: rgb(218.95, 224.1, 229.25);
+  --info-primary-bg-color: rgb(229.5, 241.8, 255);
+  --info-primary-border-color: #007bff;
+  --info-primary-text-color: #212529;
+  --info-secondary-bg-color: rgb(242.9, 243.7, 244.5);
+  --info-secondary-border-color: #868e96;
+  --info-secondary-text-color: #868e96;
+  --info-success-bg-color: rgb(236.9422310757, 247.1577689243, 237.3549800797);
+  --info-success-border-color: #4caf50;
+  --info-success-text-color: #4caf50;
+  --info-danger-bg-color: rgb(250.9042553191, 231.5957446809, 233.4680851064);
+  --info-danger-border-color: #c82333;
+  --info-danger-text-color: #c82333;
+  --info-warning-bg-color: rgb(255, 248.8, 230.2);
+  --info-warning-border-color: #ffc107;
+  --info-warning-text-color: #ffc107;
+  --info-light-bg-color: rgb(224.7337278107, 247.5343195266, 251.1662721893);
+  --info-light-border-color: #138496;
+  --info-light-text-color: #138496;
+  --info-dark-bg-color: #343a40;
+  --info-dark-border-color: rgb(46.8, 52.2, 57.6);
+  --info-dark-text-color: #f8f9fa;
+  --info-close-bg-color: rgba(92, 64, 51, 0.1);
+  --info-close-bg-color-hover: rgba(92, 64, 51, 0.2);
+}

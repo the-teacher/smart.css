@@ -1,0 +1,13 @@
+:root {
+  --switch-base-bg-color: rgb(128.6, 128.6, 128.6);
+  --switch-base-bg-color-checked: #4dabff;
+  --switch-base-bg-color-disabled: #616161;
+  --switch-base-bg-color-checked-disabled: rgba(10.6, 139.6651685393, 255, 0.6);
+  --switch-base-thumb-color: #1e1e1e;
+  --switch-base-text-color: #e0e0e0;
+  --switch-base-shadow-color-focus: rgba(77, 171, 255, 0.4);
+  --switch-error-bg-color-checked: #ef5350;
+  --switch-error-shadow-color-focus: rgba(239, 83, 80, 0.6);
+  --switch-success-bg-color-checked: #66bb6a;
+  --switch-success-shadow-color-focus: rgba(102, 187, 106, 0.8);
+}

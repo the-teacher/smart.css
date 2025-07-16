@@ -1,0 +1,7 @@
+:root {
+  --data-display-field-border-color: rgb(103.8, 103.8, 103.8);
+  --data-display-label-text-color: #a9b3bd;
+  --data-display-value-text-color: #e0e0e0;
+  --data-display-link-text-color: #4dabff;
+  --data-display-link-text-color-hover: rgb(130.4, 196.2, 255);
+}

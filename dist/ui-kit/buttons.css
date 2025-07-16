@@ -1,0 +1,163 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  user-select: none;
+}
+.btn:disabled {
+  background-color: var(--button-base-bg-color-disabled);
+  color: var(--button-base-text-color-disabled);
+  cursor: not-allowed;
+}
+.btn--primary {
+  background-color: var(--button-primary-bg-color);
+  color: var(--button-primary-text-color);
+}
+.btn--primary:hover {
+  background-color: var(--button-primary-bg-color-hover);
+}
+.btn--primary:active {
+  background-color: var(--button-primary-bg-color-active);
+}
+.btn--primary:disabled {
+  background-color: var(--button-primary-bg-color-disabled);
+  color: var(--button-primary-text-color-disabled);
+}
+.btn--secondary {
+  background-color: var(--button-secondary-bg-color);
+  color: var(--button-secondary-text-color);
+}
+.btn--secondary:hover {
+  background-color: var(--button-secondary-bg-color-hover);
+}
+.btn--secondary:active {
+  background-color: var(--button-secondary-bg-color-active);
+}
+.btn--secondary:disabled {
+  background-color: var(--button-secondary-bg-color-disabled);
+  color: var(--button-secondary-text-color-disabled);
+}
+.btn--light {
+  background-color: var(--button-light-bg-color);
+  color: var(--button-light-text-color);
+}
+.btn--light:hover {
+  background-color: var(--button-light-bg-color-hover);
+  color: var(--button-light-text-color-hover);
+}
+.btn--light:active {
+  background-color: var(--button-light-bg-color-active);
+}
+.btn--light:disabled {
+  background-color: var(--button-light-bg-color-disabled);
+  color: var(--button-light-text-color-disabled);
+}
+.btn--success {
+  background-color: var(--button-success-bg-color);
+  color: var(--button-success-text-color);
+}
+.btn--success:hover {
+  background-color: var(--button-success-bg-color-hover);
+}
+.btn--success:active {
+  background-color: var(--button-success-bg-color-active);
+}
+.btn--success:disabled {
+  background-color: var(--button-success-bg-color-disabled);
+  color: var(--button-success-text-color-disabled);
+}
+.btn--warning {
+  background-color: var(--button-warning-bg-color);
+  color: var(--button-warning-text-color);
+}
+.btn--warning:hover {
+  background-color: var(--button-warning-bg-color-hover);
+}
+.btn--warning:active {
+  background-color: var(--button-warning-bg-color-active);
+}
+.btn--warning:disabled {
+  background-color: var(--button-warning-bg-color-disabled);
+  color: var(--button-warning-text-color-disabled);
+}
+.btn--danger {
+  background-color: var(--button-danger-bg-color);
+  color: var(--button-danger-text-color);
+}
+.btn--danger:hover {
+  background-color: var(--button-danger-bg-color-hover);
+}
+.btn--danger:active {
+  background-color: var(--button-danger-bg-color-active);
+}
+.btn--danger:disabled {
+  background-color: var(--button-danger-bg-color-disabled);
+  color: var(--button-danger-text-color-disabled);
+}
+.btn--info {
+  background-color: var(--button-info-bg-color);
+  color: var(--button-info-text-color);
+}
+.btn--info:hover {
+  background-color: var(--button-info-bg-color-hover);
+}
+.btn--info:active {
+  background-color: var(--button-info-bg-color-active);
+}
+.btn--info:disabled {
+  background-color: var(--button-info-bg-color-disabled);
+  color: var(--button-info-text-color-disabled);
+}
+.btn--ghost {
+  color: var(--button-ghost-text-color);
+  background-color: var(--button-ghost-bg-color);
+  border: 1px dotted var(--button-ghost-border-color);
+}
+.btn--ghost:hover {
+  color: var(--button-ghost-text-color-hover);
+  border-color: var(--button-ghost-border-color-hover);
+}
+.btn--ghost:disabled {
+  background-color: var(--button-ghost-bg-color-disabled);
+  color: var(--button-ghost-text-color-disabled);
+  border-color: var(--button-ghost-border-color-disabled);
+}
+.btn--icon {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn--icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.btn--small {
+  padding: 0.4rem 1.2rem;
+  font-size: 1.4rem;
+}
+.btn--medium {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+}
+.btn--large {
+  padding: 1.2rem 2rem;
+  font-size: 1.8rem;
+}
+.btn--jumbo {
+  padding: 2rem 4rem;
+  font-size: 2.2rem;
+}
+
+a.btn {
+  text-decoration: none;
+}

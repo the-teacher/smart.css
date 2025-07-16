@@ -4,17 +4,14 @@
 // @use '../smart.css/themes/default/styles.scss';
 
 // Reset and base styles
-@use '../smart.css/reset.scss';
+@use "../smart.css/reset.scss";
 
 // Utility classes
-@use '../smart.css/links.scss';
-@use '../smart.css/margins.scss';
-@use '../smart.css/paddings.scss';
-@use '../smart.css/text.scss';
-@use '../smart.css/font-size.scss';
-@use '../smart.css/line-height.scss';
-@use '../smart.css/flex.scss';
-@use '../smart.css/gaps.scss';
-
-// Components
-@use '../smart.css/buttons.scss';
+@use "../smart.css/links.scss";
+@use "../smart.css/margins.scss";
+@use "../smart.css/paddings.scss";
+@use "../smart.css/text.scss";
+@use "../smart.css/font-size.scss";
+@use "../smart.css/line-height.scss";
+@use "../smart.css/flex.scss";
+@use "../smart.css/gaps.scss";

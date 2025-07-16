@@ -4,11 +4,6 @@
 // Reset and base styles
 @use './reset.scss';
 
-// // Themes (default gold theme)
-// @use './themes/default/styles.scss';
-// @use './themes/gold/styles.scss';
-@use './themes/dark/styles.scss';
-
 // Utility classes
 @use './links.scss';
 
@@ -31,3 +26,6 @@
 @use './line-height.scss';
 @use './flex.scss';
 @use './gaps.scss';
+
+// @use './themes/gold/styles.scss';
+// @use './themes/dark/styles.scss';

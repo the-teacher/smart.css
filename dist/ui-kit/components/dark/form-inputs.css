@@ -1,0 +1,15 @@
+:root {
+  --form-label-text-color: #a9b3bd;
+  --form-input-bg-color: #424242;
+  --form-input-bg-color-disabled: #616161;
+  --form-input-border-color: rgb(183.9, 183.9, 183.9);
+  --form-input-border-color-focus: #4dabff;
+  --form-input-border-color-disabled: #424242;
+  --form-input-shadow-color-focus: rgba(77, 171, 255, 0.3);
+  --form-input-border-color-error: #ef5350;
+  --form-input-shadow-color-error: rgba(239, 83, 80, 0.5);
+  --form-input-border-color-success: #66bb6a;
+  --form-input-shadow-color-success: rgba(102, 187, 106, 0.9);
+  --form-input-border-color-warning: #ffca28;
+  --form-input-shadow-color-warning: rgba(255, 202, 40, 0.3);
+}

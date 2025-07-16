@@ -1,51 +1,127 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 
-// CSS file name mapping
-const cssFileNames = [
-  { match: 'theme-gold', output: 'theme-gold.css' },
-  { match: 'theme-default', output: 'theme-default.css' },
-  { match: 'theme-dark', output: 'theme-dark.css' },
-  { match: 'blocks', output: 'blocks.css' },
-  { match: 'controls', output: 'controls.css' },
-  { match: 'forms', output: 'forms.css' },
-  { match: 'static-content', output: 'static-content.css' },
-  { match: 'holy-grail-layout', output: 'holy-grail-layout.css' },
-  { match: 'ui-kit', output: 'ui-kit.css' },
-  { match: 'index', output: 'ui-kit.css' },
+// Entry point configuration
+interface EntryConfig {
+  name: string;
+  path: string;
+  outputPath: string; // Custom output path for CSS
+}
+
+// Function to build entry points from array
+const buildEntryPoints = (entries: EntryConfig[]): Record<string, string> => {
+  return entries.reduce(
+    (acc, entry) => {
+      acc[entry.name] = path.resolve(__dirname, entry.path);
+      return acc;
+    },
+    {} as Record<string, string>
+  );
+};
+
+// Helper function to create theme component entries
+const createThemeComponentEntries = (): EntryConfig[] => {
+  const themes = ['default', 'dark', 'gold'];
+  const components = [
+    'button',
+    'card',
+    'checkboxes',
+    'color',
+    'data-display',
+    'form-groups',
+    'form-inputs',
+    'info-blocks',
+    'links',
+    'switches',
+    'text-styles',
+  ];
+
+  const entries: EntryConfig[] = [];
+
+  themes.forEach((theme) => {
+    components.forEach((component) => {
+      entries.push({
+        name: `${theme}-${component}`,
+        path: `src/smart.css/themes/${theme}/components/${component}.vars.scss`,
+        outputPath: `components/${theme}/${component}.css`,
+      });
+    });
+  });
+
+  return entries;
+};
+
+// Entry points configuration
+const entryConfigs: EntryConfig[] = [
+  // Main UI Kit
+  {
+    name: 'ui-kit',
+    path: 'src/css-build/index.scss',
+    outputPath: 'ui-kit.css',
+  },
+
+  // Themes
+  {
+    name: 'theme-default',
+    path: 'src/css-build/theme-default.scss',
+    outputPath: 'themes/default.css',
+  },
+  {
+    name: 'theme-dark',
+    path: 'src/css-build/theme-dark.scss',
+    outputPath: 'themes/dark.css',
+  },
+  {
+    name: 'theme-gold',
+    path: 'src/css-build/theme-gold.scss',
+    outputPath: 'themes/gold.css',
+  },
+
+  // Main components
+  {
+    name: 'blocks',
+    path: 'src/css-build/blocks.scss',
+    outputPath: 'blocks.css',
+  },
+  {
+    name: 'controls',
+    path: 'src/css-build/controls.scss',
+    outputPath: 'controls.css',
+  },
+  { name: 'forms', path: 'src/css-build/forms.scss', outputPath: 'forms.css' },
+  {
+    name: 'static-content',
+    path: 'src/css-build/static-content.scss',
+    outputPath: 'static-content.css',
+  },
+  {
+    name: 'buttons',
+    path: 'src/css-build/buttons.scss',
+    outputPath: 'buttons.css',
+  },
+
+  // Layout components
+  {
+    name: 'holy-grail-layout',
+    path: 'src/components/HolyGrailLayout/layout.scss',
+    outputPath: 'holy-grail-layout.css',
+  },
+
+  ...createThemeComponentEntries(),
 ];
 
 // Function to determine CSS file name based on entry point
 const getCSSFileName = (assetName: string): string => {
-  const foundMapping = cssFileNames.find((mapping) =>
-    assetName.includes(mapping.match)
+  const foundEntry = entryConfigs.find((entry) =>
+    assetName.includes(entry.name)
   );
-  return foundMapping ? foundMapping.output : 'ui-kit.css';
+  return foundEntry?.outputPath || 'ui-kit.css';
 };
 
 export default defineConfig({
   build: {
     lib: {
-      entry: {
-        'ui-kit': path.resolve(__dirname, 'src/css-build/index.scss'),
-        'theme-gold': path.resolve(__dirname, 'src/css-build/theme-gold.scss'),
-        'theme-default': path.resolve(
-          __dirname,
-          'src/css-build/theme-default.scss'
-        ),
-        'theme-dark': path.resolve(__dirname, 'src/css-build/theme-dark.scss'),
-        blocks: path.resolve(__dirname, 'src/css-build/blocks.scss'),
-        controls: path.resolve(__dirname, 'src/css-build/controls.scss'),
-        forms: path.resolve(__dirname, 'src/css-build/forms.scss'),
-        'static-content': path.resolve(
-          __dirname,
-          'src/css-build/static-content.scss'
-        ),
-        'holy-grail-layout': path.resolve(
-          __dirname,
-          'src/components/HolyGrailLayout/layout.scss'
-        ),
-      },
+      entry: buildEntryPoints(entryConfigs),
       name: 'UIKit',
       formats: ['es'],
     },

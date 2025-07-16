@@ -2,6 +2,49 @@
 
 This component implements the Holy Grail Layout using React. It provides two different ways to compose the layout.
 
+```html
+<body class="layout__body">
+  <div id="root">
+    <header class="layout__header">
+      <div class="layout__content-container">Header Content</div>
+    </header>
+
+    <div class="layout__main">
+      <div class="layout__content-container layout__main-columns">
+        <aside class="layout__aside">Sidebar</aside>
+        <main class="layout__main-content">Main Content</main>
+        <aside class="layout__aside">Sidebar</aside>
+      </div>
+    </div>
+
+    <footer class="layout__footer">
+      <div class="layout__content-container">Footer Content</div>
+    </footer>
+  </div>
+</body>
+```
+
+```sh
+body.layout__body
+└── div#root
+    ├── header.layout__header
+    │   └── div.layout__content-container
+    │       └── "Header Content"
+    │
+    ├── div.layout__main
+    │   └── div.layout__content-container.layout__main-columns
+    │       ├── aside.layout__aside
+    │       │   └── "Sidebar"
+    │       ├── main.layout__main-content
+    │       │   └── "Main Content"
+    │       └── aside.layout__aside
+    │           └── "Sidebar"
+    │
+    └── footer.layout__footer
+        └── div.layout__content-container
+            └── "Footer Content"
+```
+
 ## Usage Option 1: Component Composition
 
 Using nested components for explicit layout structure:
@@ -13,7 +56,7 @@ import HolyGrailLayout, {
   AsideLeft,
   AsideRight,
   MainContent,
-  MainColumns
+  MainColumns,
 } from "./components/HolyGrailLayout";
 
 const App = () => (

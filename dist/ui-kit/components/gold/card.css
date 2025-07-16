@@ -1,0 +1,7 @@
+:root {
+  --card-base-bg-color: #fffaf0;
+  --card-header-border-color: rgb(255, 238.5, 172.5);
+  --card-footer-border-color: rgb(255, 238.5, 172.5);
+  --card-title-text-color: #3a3a3a;
+  --card-subtitle-text-color: #b8860b;
+}

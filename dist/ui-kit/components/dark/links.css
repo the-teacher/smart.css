@@ -1,0 +1,8 @@
+:root {
+  --color-link: #4dabff;
+  --color-link-hover: rgb(112.6, 187.8, 255);
+  --color-link-visited: rgb(10.6, 139.6651685393, 255);
+  --color-link-active: rgb(148.2, 204.6, 255);
+  --color-link-focus: #a6d5ff;
+  --color-link-focus-outline: rgb(130.4, 196.2, 255);
+}
