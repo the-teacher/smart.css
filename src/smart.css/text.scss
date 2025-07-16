@@ -2,34 +2,34 @@
 // Formula: --{component}-{variant}-{property}-{modifier}
 //
 // Required variables:
-// --text-primary-text-color, --text-secondary-text-color, --text-success-text-color
-// --text-danger-text-color, --text-warning-text-color, --text-info-text-color
-// --text-light-text-color, --text-dark-text-color
+// --sss-text-primary-text-color, --sss-text-secondary-text-color, --sss-text-success-text-color
+// --sss-text-danger-text-color, --sss-text-warning-text-color, --sss-text-info-text-color
+// --sss-text-light-text-color, --sss-text-dark-text-color
 
 // === COLORS (semantic) ===
 .text-primary {
-  color: var(--text-primary-text-color);
+  color: var(--sss-text-primary-text-color);
 }
 .text-secondary {
-  color: var(--text-secondary-text-color);
+  color: var(--sss-text-secondary-text-color);
 }
 .text-success {
-  color: var(--text-success-text-color);
+  color: var(--sss-text-success-text-color);
 }
 .text-danger {
-  color: var(--text-danger-text-color);
+  color: var(--sss-text-danger-text-color);
 }
 .text-warning {
-  color: var(--text-warning-text-color);
+  color: var(--sss-text-warning-text-color);
 }
 .text-info {
-  color: var(--text-info-text-color);
+  color: var(--sss-text-info-text-color);
 }
 .text-light {
-  color: var(--text-light-text-color);
+  color: var(--sss-text-light-text-color);
 }
 .text-dark {
-  color: var(--text-dark-text-color);
+  color: var(--sss-text-dark-text-color);
 }
 
 // === ALIGNMENT ===

@@ -1,10 +1,10 @@
 :root {
-  --text-primary-text-color: #007bff;
-  --text-secondary-text-color: #868e96;
-  --text-success-text-color: #4caf50;
-  --text-danger-text-color: #c82333;
-  --text-warning-text-color: #ffc107;
-  --text-info-text-color: #138496;
-  --text-light-text-color: #f8f9fa;
-  --text-dark-text-color: #343a40;
+  --sss-text-primary-text-color: #007bff;
+  --sss-text-secondary-text-color: #868e96;
+  --sss-text-success-text-color: #4caf50;
+  --sss-text-danger-text-color: #c82333;
+  --sss-text-warning-text-color: #ffc107;
+  --sss-text-info-text-color: #138496;
+  --sss-text-light-text-color: #f8f9fa;
+  --sss-text-dark-text-color: #343a40;
 }

@@ -7,32 +7,32 @@
 // modifier: (empty), hover, active, disabled, focus, checked
 //
 // Examples:
-// --checkbox-base-bg-color
-// --checkbox-base-border-color-focus
-// --checkbox-base-text-color-disabled
-// --checkbox-error-border-color
+// --sss-checkbox-base-bg-color
+// --sss-checkbox-base-border-color-focus
+// --sss-checkbox-base-text-color-disabled
+// --sss-checkbox-error-border-color
 
 // Required CSS Variables:
 // Base checkbox:
-// --checkbox-base-bg-color
-// --checkbox-base-bg-color-checked
-// --checkbox-base-bg-color-disabled
-// --checkbox-base-border-color
-// --checkbox-base-border-color-checked
-// --checkbox-base-border-color-focus
-// --checkbox-base-border-color-disabled
-// --checkbox-base-checkmark-color
-// --checkbox-base-text-color
-// --checkbox-base-text-color-disabled
-// --checkbox-base-shadow-focus
+// --sss-checkbox-base-bg-color
+// --sss-checkbox-base-bg-color-checked
+// --sss-checkbox-base-bg-color-disabled
+// --sss-checkbox-base-border-color
+// --sss-checkbox-base-border-color-checked
+// --sss-checkbox-base-border-color-focus
+// --sss-checkbox-base-border-color-disabled
+// --sss-checkbox-base-checkmark-color
+// --sss-checkbox-base-text-color
+// --sss-checkbox-base-text-color-disabled
+// --sss-checkbox-base-shadow-focus
 //
 // Error checkbox:
-// --checkbox-error-border-color
-// --checkbox-error-shadow-focus
+// --sss-checkbox-error-border-color
+// --sss-checkbox-error-shadow-focus
 //
 // Success checkbox:
-// --checkbox-success-border-color
-// --checkbox-success-shadow-focus
+// --sss-checkbox-success-border-color
+// --sss-checkbox-success-shadow-focus
 
 .checkbox {
   display: flex;
@@ -53,54 +53,54 @@
   max-width: 20px;
   max-height: 20px;
 
-  border: 1px solid var(--checkbox-base-border-color);
+  border: 1px solid var(--sss-checkbox-base-border-color);
   border-radius: 4px;
-  background-color: var(--checkbox-base-bg-color);
+  background-color: var(--sss-checkbox-base-bg-color);
   cursor: pointer;
   transition: all 0.2s ease;
 
   &:checked {
-    background-color: var(--checkbox-base-bg-color-checked);
-    border-color: var(--checkbox-base-border-color-checked);
+    background-color: var(--sss-checkbox-base-bg-color-checked);
+    border-color: var(--sss-checkbox-base-border-color-checked);
   }
 
   &:checked::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 6px;
     top: 1px;
     width: 5px;
     height: 11px;
 
-    border: solid var(--checkbox-base-checkmark-color);
+    border: solid var(--sss-checkbox-base-checkmark-color);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
 
   &:focus {
-    border-color: var(--checkbox-base-border-color-focus);
-    box-shadow: 0 0 0 4px var(--checkbox-base-shadow-focus);
+    border-color: var(--sss-checkbox-base-border-color-focus);
+    box-shadow: 0 0 0 4px var(--sss-checkbox-base-shadow-focus);
   }
 
   &:disabled {
-    background-color: var(--checkbox-base-bg-color-disabled);
-    border-color: var(--checkbox-base-border-color-disabled);
+    background-color: var(--sss-checkbox-base-bg-color-disabled);
+    border-color: var(--sss-checkbox-base-border-color-disabled);
     cursor: not-allowed;
     opacity: 0.6;
   }
 
   &:disabled:checked {
-    background-color: var(--checkbox-base-bg-color-disabled);
-    border-color: var(--checkbox-base-border-color-disabled);
+    background-color: var(--sss-checkbox-base-bg-color-disabled);
+    border-color: var(--sss-checkbox-base-border-color-disabled);
   }
 }
 
 .checkbox--label {
   font-size: 1.6rem;
-  color: var(--checkbox-base-text-color);
+  color: var(--sss-checkbox-base-text-color);
 
   &:disabled {
-    color: var(--checkbox-base-text-color-disabled);
+    color: var(--sss-checkbox-base-text-color-disabled);
     cursor: not-allowed;
   }
 }
@@ -110,19 +110,19 @@
 // ------------------------------------------------------------
 .checkbox {
   &--error .checkbox--input {
-    border-color: var(--checkbox-error-border-color);
+    border-color: var(--sss-checkbox-error-border-color);
   }
 
   &--error .checkbox--input:focus {
-    box-shadow: 0 0 0 4px var(--checkbox-error-shadow-focus);
+    box-shadow: 0 0 0 4px var(--sss-checkbox-error-shadow-focus);
   }
 
   &--success .checkbox--input {
-    border-color: var(--checkbox-success-border-color);
+    border-color: var(--sss-checkbox-success-border-color);
   }
 
   &--success .checkbox--input:focus {
-    box-shadow: 0 0 0 4px var(--checkbox-success-shadow-focus);
+    box-shadow: 0 0 0 4px var(--sss-checkbox-success-shadow-focus);
   }
 }
 
@@ -193,5 +193,5 @@
 // ------------------------------------------------------------
 .checkbox--error-highlight,
 .checkbox--error-highlight:focus {
-  box-shadow: 0 0 0 4px var(--checkbox-error-shadow-focus);
+  box-shadow: 0 0 0 4px var(--sss-checkbox-error-shadow-focus);
 }

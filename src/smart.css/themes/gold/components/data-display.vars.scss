@@ -4,21 +4,21 @@
 // ------------------------------------------------------------
 // DATA DISPLAY | src/ui-kit/data-display.scss
 // ------------------------------------------------------------
-// Data Display variables according to formula: --data-display-{variant}-{property}-{modifier}
+// Data Display variables according to formula: --sss-data-display-{variant}-{property}-{modifier}
 :root {
   // Field borders
-  --data-display-field-border-color: #{color.scale(
+  --sss-data-display-field-border-color: #{color.scale(
       $color-light,
       $lightness: -10%
     )};
 
   // Text colors
-  --data-display-label-text-color: #{$color-secondary};
-  --data-display-value-text-color: #{$color-text};
+  --sss-data-display-label-text-color: #{$color-secondary};
+  --sss-data-display-value-text-color: #{$color-text};
 
   // Link colors
-  --data-display-link-text-color: #{$color-primary};
-  --data-display-link-text-color-hover: #{color.scale(
+  --sss-data-display-link-text-color: #{$color-primary};
+  --sss-data-display-link-text-color-hover: #{color.scale(
       $color-primary,
       $lightness: -20%
     )};

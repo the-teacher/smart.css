@@ -1,15 +1,15 @@
 :root {
-  --form-label-text-color: #868e96;
-  --form-input-bg-color: #f8f9fa;
-  --form-input-bg-color-disabled: #ced4da;
-  --form-input-border-color: rgb(189.7862068966, 195.9, 202.0137931034);
-  --form-input-border-color-focus: #007bff;
-  --form-input-border-color-disabled: #f8f9fa;
-  --form-input-shadow-color-focus: rgba(0, 123, 255, 0.3);
-  --form-input-border-color-error: #c82333;
-  --form-input-shadow-color-error: rgba(200, 35, 51, 0.5);
-  --form-input-border-color-success: #4caf50;
-  --form-input-shadow-color-success: rgba(76, 175, 80, 0.9);
-  --form-input-border-color-warning: #ffc107;
-  --form-input-shadow-color-warning: rgba(255, 193, 7, 0.3);
+  --sss-form-label-text-color: #868e96;
+  --sss-form-input-bg-color: #f8f9fa;
+  --sss-form-input-bg-color-disabled: #ced4da;
+  --sss-form-input-border-color: rgb(189.7862068966, 195.9, 202.0137931034);
+  --sss-form-input-border-color-focus: #007bff;
+  --sss-form-input-border-color-disabled: #f8f9fa;
+  --sss-form-input-shadow-color-focus: rgba(0, 123, 255, 0.3);
+  --sss-form-input-border-color-error: #c82333;
+  --sss-form-input-shadow-color-error: rgba(200, 35, 51, 0.5);
+  --sss-form-input-border-color-success: #4caf50;
+  --sss-form-input-shadow-color-success: rgba(76, 175, 80, 0.9);
+  --sss-form-input-border-color-warning: #ffc107;
+  --sss-form-input-shadow-color-warning: rgba(255, 193, 7, 0.3);
 }

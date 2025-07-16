@@ -4,32 +4,38 @@
 // ------------------------------------------------------------
 // CHECKBOXES | src/ui-kit/checkboxes.scss
 // ------------------------------------------------------------
-// Checkbox variables according to formula: --checkbox-{variant}-{property}-{modifier}
+// Checkbox variables according to formula: --sss-checkbox-{variant}-{property}-{modifier}
 :root {
   // Base checkbox colors
-  --checkbox-base-bg-color: #{$color-light};
-  --checkbox-base-bg-color-checked: #{$color-primary};
-  --checkbox-base-bg-color-disabled: #{$color-disabled};
+  --sss-checkbox-base-bg-color: #{$color-light};
+  --sss-checkbox-base-bg-color-checked: #{$color-primary};
+  --sss-checkbox-base-bg-color-disabled: #{$color-disabled};
 
   // Base checkbox borders
-  --checkbox-base-border-color: #{color.scale($color-dark, $lightness: 70%)};
-  --checkbox-base-border-color-checked: #{$color-primary};
-  --checkbox-base-border-color-focus: #{$color-primary};
-  --checkbox-base-border-color-disabled: #{$color-light};
+  --sss-checkbox-base-border-color: #{color.scale($color-dark, $lightness: 70%)};
+  --sss-checkbox-base-border-color-checked: #{$color-primary};
+  --sss-checkbox-base-border-color-focus: #{$color-primary};
+  --sss-checkbox-base-border-color-disabled: #{$color-light};
 
   // Base checkbox text and checkmark
-  --checkbox-base-checkmark-color: #{$color-white};
-  --checkbox-base-text-color: #{$color-text};
-  --checkbox-base-text-color-disabled: #{color.scale($color-text, $alpha: -40%)};
+  --sss-checkbox-base-checkmark-color: #{$color-white};
+  --sss-checkbox-base-text-color: #{$color-text};
+  --sss-checkbox-base-text-color-disabled: #{color.scale(
+      $color-text,
+      $alpha: -40%
+    )};
 
   // Base checkbox shadows
-  --checkbox-base-shadow-focus: #{color.scale($color-primary, $alpha: -70%)};
+  --sss-checkbox-base-shadow-focus: #{color.scale($color-primary, $alpha: -70%)};
 
   // Error checkbox
-  --checkbox-error-border-color: #{$color-danger};
-  --checkbox-error-shadow-focus: #{color.scale($color-danger, $alpha: -50%)};
+  --sss-checkbox-error-border-color: #{$color-danger};
+  --sss-checkbox-error-shadow-focus: #{color.scale($color-danger, $alpha: -50%)};
 
   // Success checkbox
-  --checkbox-success-border-color: #{$color-success};
-  --checkbox-success-shadow-focus: #{color.scale($color-success, $alpha: -10%)};
+  --sss-checkbox-success-border-color: #{$color-success};
+  --sss-checkbox-success-shadow-focus: #{color.scale(
+      $color-success,
+      $alpha: -10%
+    )};
 }

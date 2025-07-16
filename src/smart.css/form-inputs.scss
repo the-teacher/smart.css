@@ -7,24 +7,24 @@
 // modifier: (empty), hover, active, disabled, focus
 //
 // Required variables:
-// --form-label-text-color
-// --form-input-bg-color
-// --form-input-bg-color-disabled
-// --form-input-border-color
-// --form-input-border-color-focus
-// --form-input-border-color-disabled
-// --form-input-shadow-color-focus
-// --form-input-border-color-error
-// --form-input-shadow-color-error
-// --form-input-border-color-success
-// --form-input-shadow-color-success
-// --form-input-border-color-warning
-// --form-input-shadow-color-warning
+// --sss-form-label-text-color
+// --sss-form-input-bg-color
+// --sss-form-input-bg-color-disabled
+// --sss-form-input-border-color
+// --sss-form-input-border-color-focus
+// --sss-form-input-border-color-disabled
+// --sss-form-input-shadow-color-focus
+// --sss-form-input-border-color-error
+// --sss-form-input-shadow-color-error
+// --sss-form-input-border-color-success
+// --sss-form-input-shadow-color-success
+// --sss-form-input-border-color-warning
+// --sss-form-input-shadow-color-warning
 
 .form {
   &--label {
     font-size: 1.2rem;
-    color: var(--form-label-text-color);
+    color: var(--sss-form-label-text-color);
   }
 }
 
@@ -34,42 +34,42 @@
   width: 100%;
   font-size: 1.6rem;
   padding: 1rem;
-  border: 1px solid var(--form-input-border-color);
+  border: 1px solid var(--sss-form-input-border-color);
   border-radius: 4px;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
   outline: none;
   appearance: none; // For select elements to remove default styling
-  background-color: var(--form-input-bg-color);
-  color: var(--form-input-text-color);
+  background-color: var(--sss-form-input-bg-color);
+  color: var(--sss-form-input-text-color);
 
   &:focus {
-    border-color: var(--form-input-border-color-focus);
-    box-shadow: 0 0 0 3px var(--form-input-shadow-color-focus);
+    border-color: var(--sss-form-input-border-color-focus);
+    box-shadow: 0 0 0 3px var(--sss-form-input-shadow-color-focus);
   }
 
   &--error,
   &--error:focus {
-    border-color: var(--form-input-border-color-error);
-    box-shadow: 0 0 0 3px var(--form-input-shadow-color-error);
+    border-color: var(--sss-form-input-border-color-error);
+    box-shadow: 0 0 0 3px var(--sss-form-input-shadow-color-error);
   }
 
   &--success,
   &--success:focus {
-    border-color: var(--form-input-border-color-success);
-    box-shadow: 0 0 0 3px var(--form-input-shadow-color-success);
+    border-color: var(--sss-form-input-border-color-success);
+    box-shadow: 0 0 0 3px var(--sss-form-input-shadow-color-success);
   }
 
   &--warning,
   &--warning:focus {
-    border-color: var(--form-input-border-color-warning);
-    box-shadow: 0 0 0 3px var(--form-input-shadow-color-warning);
+    border-color: var(--sss-form-input-border-color-warning);
+    box-shadow: 0 0 0 3px var(--sss-form-input-shadow-color-warning);
   }
 
   &:disabled {
-    background-color: var(--form-input-bg-color-disabled);
-    border-color: var(--form-input-border-color-disabled);
+    background-color: var(--sss-form-input-bg-color-disabled);
+    border-color: var(--sss-form-input-border-color-disabled);
     cursor: not-allowed;
     opacity: 0.6;
   }

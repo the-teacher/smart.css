@@ -4,8 +4,11 @@
 // ------------------------------------------------------------
 // FORM GROUPS | src/ui-kit/form-groups.scss
 // ------------------------------------------------------------
-// Form Group variables according to formula: --form-group-{variant}-{property}-{modifier}
+// Form Group variables according to formula: --sss-form-group-{variant}-{property}-{modifier}
 :root {
   // Icon background
-  --form-group-icon-bg-color: #{color.scale($color-warning, $lightness: 80%)};
+  --sss-form-group-icon-bg-color: #{color.scale(
+      $color-warning,
+      $lightness: 80%
+    )};
 }

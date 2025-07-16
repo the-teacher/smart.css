@@ -4,15 +4,15 @@
 // ------------------------------------------------------------
 // TEXT STYLES | src/ui-kit/text-styles.scss
 // ------------------------------------------------------------
-// Text variables according to formula: --text-{variant}-{property}-{modifier}
+// Text variables according to formula: --sss-text-{variant}-{property}-{modifier}
 :root {
   // Text colors
-  --text-primary-text-color: #{$color-primary};
-  --text-secondary-text-color: #{$color-secondary};
-  --text-success-text-color: #{$color-success};
-  --text-danger-text-color: #{$color-danger};
-  --text-warning-text-color: #{$color-warning};
-  --text-info-text-color: #{$color-info};
-  --text-light-text-color: #{$color-light};
-  --text-dark-text-color: #{$color-dark};
+  --sss-text-primary-text-color: #{$color-primary};
+  --sss-text-secondary-text-color: #{$color-secondary};
+  --sss-text-success-text-color: #{$color-success};
+  --sss-text-danger-text-color: #{$color-danger};
+  --sss-text-warning-text-color: #{$color-warning};
+  --sss-text-info-text-color: #{$color-info};
+  --sss-text-light-text-color: #{$color-light};
+  --sss-text-dark-text-color: #{$color-dark};
 }

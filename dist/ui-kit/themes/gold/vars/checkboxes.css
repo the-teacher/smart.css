@@ -1,17 +1,17 @@
 :root {
-  --checkbox-base-bg-color: #fff8dc;
-  --checkbox-base-bg-color-checked: #d4af37;
-  --checkbox-base-bg-color-disabled: #d3d3d3;
-  --checkbox-base-border-color: rgb(215.7335664336, 194.1755244755, 184.1664335664);
-  --checkbox-base-border-color-checked: #d4af37;
-  --checkbox-base-border-color-focus: #d4af37;
-  --checkbox-base-border-color-disabled: #fff8dc;
-  --checkbox-base-checkmark-color: #fffaf0;
-  --checkbox-base-text-color: #3a3a3a;
-  --checkbox-base-text-color-disabled: rgba(58, 58, 58, 0.6);
-  --checkbox-base-shadow-focus: rgba(212, 175, 55, 0.3);
-  --checkbox-error-border-color: #b22222;
-  --checkbox-error-shadow-focus: rgba(178, 34, 34, 0.5);
-  --checkbox-success-border-color: #9acd32;
-  --checkbox-success-shadow-focus: rgba(154, 205, 50, 0.9);
+  --sss-checkbox-base-bg-color: #fff8dc;
+  --sss-checkbox-base-bg-color-checked: #d4af37;
+  --sss-checkbox-base-bg-color-disabled: #d3d3d3;
+  --sss-checkbox-base-border-color: rgb(215.7335664336, 194.1755244755, 184.1664335664);
+  --sss-checkbox-base-border-color-checked: #d4af37;
+  --sss-checkbox-base-border-color-focus: #d4af37;
+  --sss-checkbox-base-border-color-disabled: #fff8dc;
+  --sss-checkbox-base-checkmark-color: #fffaf0;
+  --sss-checkbox-base-text-color: #3a3a3a;
+  --sss-checkbox-base-text-color-disabled: rgba(58, 58, 58, 0.6);
+  --sss-checkbox-base-shadow-focus: rgba(212, 175, 55, 0.3);
+  --sss-checkbox-error-border-color: #b22222;
+  --sss-checkbox-error-shadow-focus: rgba(178, 34, 34, 0.5);
+  --sss-checkbox-success-border-color: #9acd32;
+  --sss-checkbox-success-shadow-focus: rgba(154, 205, 50, 0.9);
 }

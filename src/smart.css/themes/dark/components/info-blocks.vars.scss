@@ -4,72 +4,75 @@
 // ------------------------------------------------------------
 // INFO BLOCKS | src/ui-kit/info-blocks.scss
 // ------------------------------------------------------------
-// Info Block variables according to formula: --info-{variant}-{property}-{modifier}
+// Info Block variables according to formula: --sss-info-{variant}-{property}-{modifier}
 :root {
   // Base info block
-  --info-base-bg-color: #{color.scale($color-light, $lightness: 10%)};
-  --info-base-border-color: #{color.scale($color-light, $lightness: 20%)};
+  --sss-info-base-bg-color: #{color.scale($color-light, $lightness: 10%)};
+  --sss-info-base-border-color: #{color.scale($color-light, $lightness: 20%)};
 
   // Primary info block
-  --info-primary-bg-color: #{color.scale(
+  --sss-info-primary-bg-color: #{color.scale(
       $color-primary,
       $lightness: -70%,
       $alpha: -20%
     )};
-  --info-primary-border-color: #{$color-primary};
-  --info-primary-text-color: #{color.scale($color-primary, $lightness: 20%)};
+  --sss-info-primary-border-color: #{$color-primary};
+  --sss-info-primary-text-color: #{color.scale($color-primary, $lightness: 20%)};
 
   // Secondary info block
-  --info-secondary-bg-color: #{color.scale(
+  --sss-info-secondary-bg-color: #{color.scale(
       $color-secondary,
       $lightness: -60%,
       $alpha: -20%
     )};
-  --info-secondary-border-color: #{$color-secondary};
-  --info-secondary-text-color: #{color.scale($color-secondary, $lightness: 30%)};
+  --sss-info-secondary-border-color: #{$color-secondary};
+  --sss-info-secondary-text-color: #{color.scale(
+      $color-secondary,
+      $lightness: 30%
+    )};
 
   // Success info block
-  --info-success-bg-color: #{color.scale(
+  --sss-info-success-bg-color: #{color.scale(
       $color-success,
       $lightness: -70%,
       $alpha: -20%
     )};
-  --info-success-border-color: #{$color-success};
-  --info-success-text-color: #{color.scale($color-success, $lightness: 20%)};
+  --sss-info-success-border-color: #{$color-success};
+  --sss-info-success-text-color: #{color.scale($color-success, $lightness: 20%)};
 
   // Danger info block
-  --info-danger-bg-color: #{color.scale(
+  --sss-info-danger-bg-color: #{color.scale(
       $color-danger,
       $lightness: -70%,
       $alpha: -20%
     )};
-  --info-danger-border-color: #{$color-danger};
-  --info-danger-text-color: #{color.scale($color-danger, $lightness: 20%)};
+  --sss-info-danger-border-color: #{$color-danger};
+  --sss-info-danger-text-color: #{color.scale($color-danger, $lightness: 20%)};
 
   // Warning info block
-  --info-warning-bg-color: #{color.scale(
+  --sss-info-warning-bg-color: #{color.scale(
       $color-warning,
       $lightness: -80%,
       $alpha: -20%
     )};
-  --info-warning-border-color: #{$color-warning};
-  --info-warning-text-color: #{color.scale($color-warning, $lightness: 10%)};
+  --sss-info-warning-border-color: #{$color-warning};
+  --sss-info-warning-text-color: #{color.scale($color-warning, $lightness: 10%)};
 
   // Light info block (using info color for better contrast in dark theme)
-  --info-light-bg-color: #{color.scale(
+  --sss-info-light-bg-color: #{color.scale(
       $color-info,
       $lightness: -70%,
       $alpha: -20%
     )};
-  --info-light-border-color: #{$color-info};
-  --info-light-text-color: #{color.scale($color-info, $lightness: 20%)};
+  --sss-info-light-border-color: #{$color-info};
+  --sss-info-light-text-color: #{color.scale($color-info, $lightness: 20%)};
 
   // Dark info block (lighter in dark theme for contrast)
-  --info-dark-bg-color: #{color.scale($color-light, $lightness: 30%)};
-  --info-dark-border-color: #{color.scale($color-light, $lightness: 40%)};
-  --info-dark-text-color: #{$color-text};
+  --sss-info-dark-bg-color: #{color.scale($color-light, $lightness: 30%)};
+  --sss-info-dark-border-color: #{color.scale($color-light, $lightness: 40%)};
+  --sss-info-dark-text-color: #{$color-text};
 
   // Close button (adapted for dark theme)
-  --info-close-bg-color: rgba(255, 255, 255, 0.1);
-  --info-close-bg-color-hover: rgba(255, 255, 255, 0.2);
+  --sss-info-close-bg-color: rgba(255, 255, 255, 0.1);
+  --sss-info-close-bg-color-hover: rgba(255, 255, 255, 0.2);
 }

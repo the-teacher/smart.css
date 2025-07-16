@@ -7,40 +7,40 @@
 // modifier: (empty), hover, visited, active, focus, disabled
 //
 // Required variables:
-// --link-base-text-color
-// --link-base-text-color-hover
-// --link-base-text-color-visited
-// --link-base-text-color-active
-// --link-base-text-color-focus
-// --link-base-outline-color-focus
-// --link-disabled-text-color
+// --sss-link-base-text-color
+// --sss-link-base-text-color-hover
+// --sss-link-base-text-color-visited
+// --sss-link-base-text-color-active
+// --sss-link-base-text-color-focus
+// --sss-link-base-outline-color-focus
+// --sss-link-disabled-text-color
 
 a {
-  color: var(--link-base-text-color);
+  color: var(--sss-link-base-text-color);
   text-decoration: none;
 
   &:hover {
-    color: var(--link-base-text-color-hover);
+    color: var(--sss-link-base-text-color-hover);
     text-decoration: underline;
   }
 
   &:visited {
-    color: var(--link-base-text-color-visited);
+    color: var(--sss-link-base-text-color-visited);
   }
 
   &:active {
-    color: var(--link-base-text-color-active);
+    color: var(--sss-link-base-text-color-active);
   }
 
   &:focus {
-    color: var(--link-base-text-color-focus);
-    outline: 1px dashed var(--link-base-outline-color-focus);
+    color: var(--sss-link-base-text-color-focus);
+    outline: 1px dashed var(--sss-link-base-outline-color-focus);
     outline-offset: 2px;
   }
 
   &.disabled,
   &[disabled] {
-    color: var(--link-disabled-text-color);
+    color: var(--sss-link-disabled-text-color);
     pointer-events: none;
     text-decoration: none;
   }

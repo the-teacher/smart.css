@@ -3,15 +3,15 @@
 
 :root {
   // Base colors from SCSS variables
-  --color-primary: #{$color-primary};
-  --color-secondary: #{$color-secondary};
-  --color-success: #{$color-success};
-  --color-warning: #{$color-warning};
-  --color-danger: #{$color-danger};
-  --color-info: #{$color-info};
-  --color-light: #{$color-light};
-  --color-dark: #{$color-dark};
-  --color-white: #{$color-white};
-  --color-text: #{$color-text};
-  --color-disabled: #{$color-disabled};
+  --sss-color-primary: #{$color-primary};
+  --sss-color-secondary: #{$color-secondary};
+  --sss-color-success: #{$color-success};
+  --sss-color-warning: #{$color-warning};
+  --sss-color-danger: #{$color-danger};
+  --sss-color-info: #{$color-info};
+  --sss-color-light: #{$color-light};
+  --sss-color-dark: #{$color-dark};
+  --sss-color-white: #{$color-white};
+  --sss-color-text: #{$color-text};
+  --sss-color-disabled: #{$color-disabled};
 }

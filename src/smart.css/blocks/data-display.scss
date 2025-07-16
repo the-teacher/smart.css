@@ -7,26 +7,26 @@
 // modifier: (empty), hover, active, disabled
 //
 // Required variables:
-// --data-display-field-border-color
-// --data-display-label-text-color
-// --data-display-value-text-color
-// --data-display-link-text-color
-// --data-display-link-text-color-hover
+// --sss-data-display-field-border-color
+// --sss-data-display-label-text-color
+// --sss-data-display-value-text-color
+// --sss-data-display-link-text-color
+// --sss-data-display-link-text-color-hover
 
 .data-display {
   &--field {
-    border-bottom: 1px solid var(--data-display-field-border-color);
+    border-bottom: 1px solid var(--sss-data-display-field-border-color);
   }
 
   &--label {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--data-display-label-text-color);
+    color: var(--sss-data-display-label-text-color);
   }
 
   &--value {
     font-size: 1.6rem;
-    color: var(--data-display-value-text-color);
+    color: var(--sss-data-display-value-text-color);
     word-break: break-word;
   }
 
@@ -52,12 +52,12 @@
   }
 
   &__link {
-    color: var(--data-display-link-text-color);
+    color: var(--sss-data-display-link-text-color);
     text-decoration: none;
   }
 
   &__link:hover {
-    color: var(--data-display-link-text-color-hover);
+    color: var(--sss-data-display-link-text-color-hover);
     text-decoration: underline;
   }
 }

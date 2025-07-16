@@ -99,7 +99,7 @@ The UI kit uses REM units with custom base configuration:
 ### Additional Global Variables
 
 ```css
---color-text /* Used in reset.scss for body text color */
+--sss-color-text /* Used in reset.scss for body text color */
 ```
 
 ## 4. Component Classes

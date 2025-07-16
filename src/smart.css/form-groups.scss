@@ -7,7 +7,7 @@
 // modifier: (empty), hover, active, disabled
 //
 // Required variables:
-// --form-group-icon-bg-color
+// --sss-form-group-icon-bg-color
 
 .form-group {
   display: flex;
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--form-group-icon-bg-color);
+    background-color: var(--sss-form-group-icon-bg-color);
     padding: 0 8px;
     border-radius: 4px;
   }

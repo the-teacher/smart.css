@@ -21,7 +21,7 @@ p:last-child {
 }
 
 body {
-  color: var(--color-text);
+  color: var(--sss-color-text);
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -94,26 +94,26 @@ ol li {
 }
 
 a {
-  color: var(--link-base-text-color);
+  color: var(--sss-link-base-text-color);
   text-decoration: none;
 }
 a:hover {
-  color: var(--link-base-text-color-hover);
+  color: var(--sss-link-base-text-color-hover);
   text-decoration: underline;
 }
 a:visited {
-  color: var(--link-base-text-color-visited);
+  color: var(--sss-link-base-text-color-visited);
 }
 a:active {
-  color: var(--link-base-text-color-active);
+  color: var(--sss-link-base-text-color-active);
 }
 a:focus {
-  color: var(--link-base-text-color-focus);
-  outline: 1px dashed var(--link-base-outline-color-focus);
+  color: var(--sss-link-base-text-color-focus);
+  outline: 1px dashed var(--sss-link-base-outline-color-focus);
   outline-offset: 2px;
 }
 a.disabled, a[disabled] {
-  color: var(--link-disabled-text-color);
+  color: var(--sss-link-disabled-text-color);
   pointer-events: none;
   text-decoration: none;
 }
@@ -1123,35 +1123,35 @@ a.disabled, a[disabled] {
 }
 
 .text-primary {
-  color: var(--text-primary-text-color);
+  color: var(--sss-text-primary-text-color);
 }
 
 .text-secondary {
-  color: var(--text-secondary-text-color);
+  color: var(--sss-text-secondary-text-color);
 }
 
 .text-success {
-  color: var(--text-success-text-color);
+  color: var(--sss-text-success-text-color);
 }
 
 .text-danger {
-  color: var(--text-danger-text-color);
+  color: var(--sss-text-danger-text-color);
 }
 
 .text-warning {
-  color: var(--text-warning-text-color);
+  color: var(--sss-text-warning-text-color);
 }
 
 .text-info {
-  color: var(--text-info-text-color);
+  color: var(--sss-text-info-text-color);
 }
 
 .text-light {
-  color: var(--text-light-text-color);
+  color: var(--sss-text-light-text-color);
 }
 
 .text-dark {
-  color: var(--text-dark-text-color);
+  color: var(--sss-text-dark-text-color);
 }
 
 .text-left {

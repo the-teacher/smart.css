@@ -4,25 +4,31 @@
 // ------------------------------------------------------------
 // LINKS | src/ui-kit/links.scss
 // ------------------------------------------------------------
-// Link variables according to formula: --link-{variant}-{property}-{modifier}
+// Link variables according to formula: --sss-link-{variant}-{property}-{modifier}
 :root {
   // Base link colors
-  --link-base-text-color: #{$color-primary};
-  --link-base-text-color-hover: #{color.scale($color-primary, $lightness: -20%)};
-  --link-base-text-color-visited: #{color.scale(
+  --sss-link-base-text-color: #{$color-primary};
+  --sss-link-base-text-color-hover: #{color.scale(
+      $color-primary,
+      $lightness: -20%
+    )};
+  --sss-link-base-text-color-visited: #{color.scale(
       $color-primary,
       $lightness: 20%
     )};
-  --link-base-text-color-active: #{color.scale(
+  --sss-link-base-text-color-active: #{color.scale(
       $color-primary,
       $lightness: -40%
     )};
-  --link-base-text-color-focus: #{color.scale($color-primary, $lightness: -50%)};
-  --link-base-outline-color-focus: #{color.scale(
+  --sss-link-base-text-color-focus: #{color.scale(
+      $color-primary,
+      $lightness: -50%
+    )};
+  --sss-link-base-outline-color-focus: #{color.scale(
       $color-primary,
       $lightness: -30%
     )};
 
   // Disabled link
-  --link-disabled-text-color: #{$color-disabled};
+  --sss-link-disabled-text-color: #{$color-disabled};
 }
