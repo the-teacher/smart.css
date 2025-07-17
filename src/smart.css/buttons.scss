@@ -26,6 +26,8 @@
 // --sss-btn-primary-bg-color-active
 // --sss-btn-primary-bg-color-disabled
 // --sss-btn-primary-text-color
+// --sss-btn-primary-text-color-hover
+// --sss-btn-primary-text-color-active
 // --sss-btn-primary-text-color-disabled
 //
 // Secondary button:
@@ -34,6 +36,8 @@
 // --sss-btn-secondary-bg-color-active
 // --sss-btn-secondary-bg-color-disabled
 // --sss-btn-secondary-text-color
+// --sss-btn-secondary-text-color-hover
+// --sss-btn-secondary-text-color-active
 // --sss-btn-secondary-text-color-disabled
 //
 // Light button:
@@ -43,6 +47,7 @@
 // --sss-btn-light-bg-color-disabled
 // --sss-btn-light-text-color
 // --sss-btn-light-text-color-hover
+// --sss-btn-light-text-color-active
 // --sss-btn-light-text-color-disabled
 //
 // Success button:
@@ -51,6 +56,8 @@
 // --sss-btn-success-bg-color-active
 // --sss-btn-success-bg-color-disabled
 // --sss-btn-success-text-color
+// --sss-btn-success-text-color-hover
+// --sss-btn-success-text-color-active
 // --sss-btn-success-text-color-disabled
 //
 // Warning button:
@@ -59,6 +66,8 @@
 // --sss-btn-warning-bg-color-active
 // --sss-btn-warning-bg-color-disabled
 // --sss-btn-warning-text-color
+// --sss-btn-warning-text-color-hover
+// --sss-btn-warning-text-color-active
 // --sss-btn-warning-text-color-disabled
 //
 // Danger button:
@@ -67,6 +76,8 @@
 // --sss-btn-danger-bg-color-active
 // --sss-btn-danger-bg-color-disabled
 // --sss-btn-danger-text-color
+// --sss-btn-danger-text-color-hover
+// --sss-btn-danger-text-color-active
 // --sss-btn-danger-text-color-disabled
 //
 // Info button:
@@ -75,6 +86,8 @@
 // --sss-btn-info-bg-color-active
 // --sss-btn-info-bg-color-disabled
 // --sss-btn-info-text-color
+// --sss-btn-info-text-color-hover
+// --sss-btn-info-text-color-active
 // --sss-btn-info-text-color-disabled
 //
 // Ghost button:
@@ -126,10 +139,12 @@
 
   &--primary:hover {
     background-color: var(--sss-btn-primary-bg-color-hover);
+    color: var(--sss-btn-primary-text-color-hover);
   }
 
   &--primary:active {
     background-color: var(--sss-btn-primary-bg-color-active);
+    color: var(--sss-btn-primary-text-color-active);
   }
 
   &--primary:disabled {
@@ -147,10 +162,12 @@
 
   &--secondary:hover {
     background-color: var(--sss-btn-secondary-bg-color-hover);
+    color: var(--sss-btn-secondary-text-color-hover);
   }
 
   &--secondary:active {
     background-color: var(--sss-btn-secondary-bg-color-active);
+    color: var(--sss-btn-secondary-text-color-active);
   }
 
   &--secondary:disabled {
@@ -173,6 +190,7 @@
 
   &--light:active {
     background-color: var(--sss-btn-light-bg-color-active);
+    color: var(--sss-btn-light-text-color-active);
   }
 
   &--light:disabled {
@@ -190,10 +208,12 @@
 
   &--success:hover {
     background-color: var(--sss-btn-success-bg-color-hover);
+    color: var(--sss-btn-success-text-color-hover);
   }
 
   &--success:active {
     background-color: var(--sss-btn-success-bg-color-active);
+    color: var(--sss-btn-success-text-color-active);
   }
 
   &--success:disabled {
@@ -211,10 +231,12 @@
 
   &--warning:hover {
     background-color: var(--sss-btn-warning-bg-color-hover);
+    color: var(--sss-btn-warning-text-color-hover);
   }
 
   &--warning:active {
     background-color: var(--sss-btn-warning-bg-color-active);
+    color: var(--sss-btn-warning-text-color-active);
   }
 
   &--warning:disabled {
@@ -232,10 +254,12 @@
 
   &--danger:hover {
     background-color: var(--sss-btn-danger-bg-color-hover);
+    color: var(--sss-btn-danger-text-color-hover);
   }
 
   &--danger:active {
     background-color: var(--sss-btn-danger-bg-color-active);
+    color: var(--sss-btn-danger-text-color-active);
   }
 
   &--danger:disabled {
@@ -253,10 +277,12 @@
 
   &--info:hover {
     background-color: var(--sss-btn-info-bg-color-hover);
+    color: var(--sss-btn-info-text-color-hover);
   }
 
   &--info:active {
     background-color: var(--sss-btn-info-bg-color-active);
+    color: var(--sss-btn-info-text-color-active);
   }
 
   &--info:disabled {

@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use '../colors' as *;
+@use "sass:color";
+@use "../colors" as *;
 
 // ------------------------------------------------------------
 // BUTTONS
@@ -32,6 +32,8 @@
       $alpha: -40%
     )};
   --sss-btn-primary-text-color: #{$color-white};
+  --sss-btn-primary-text-color-hover: #{$color-white};
+  --sss-btn-primary-text-color-active: #{$color-white};
   --sss-btn-primary-text-color-disabled: #{color.scale(
       $color-white,
       $alpha: -50%
@@ -55,6 +57,8 @@
       $alpha: -40%
     )};
   --sss-btn-secondary-text-color: #{$color-white};
+  --sss-btn-secondary-text-color-hover: #{$color-white};
+  --sss-btn-secondary-text-color-active: #{$color-white};
   --sss-btn-secondary-text-color-disabled: #{color.scale(
       $color-white,
       $alpha: -50%
@@ -75,6 +79,10 @@
   --sss-btn-light-text-color-hover: #{color.scale(
       $color-white,
       $lightness: 40%
+    )};
+  --sss-btn-light-text-color-active: #{color.scale(
+      $color-white,
+      $lightness: 30%
     )};
   --sss-btn-light-text-color-disabled: #{color.scale(
       $color-white,
@@ -99,6 +107,8 @@
       $alpha: -40%
     )};
   --sss-btn-success-text-color: #{$color-white};
+  --sss-btn-success-text-color-hover: #{$color-white};
+  --sss-btn-success-text-color-active: #{$color-white};
   --sss-btn-success-text-color-disabled: #{color.scale(
       $color-white,
       $alpha: -50%
@@ -122,6 +132,14 @@
       $alpha: -40%
     )};
   --sss-btn-warning-text-color: #{color.scale($color-text, $lightness: -30%)};
+  --sss-btn-warning-text-color-hover: #{color.scale(
+      $color-text,
+      $lightness: -30%
+    )};
+  --sss-btn-warning-text-color-active: #{color.scale(
+      $color-text,
+      $lightness: -30%
+    )};
   --sss-btn-warning-text-color-disabled: #{color.scale(
       $color-text,
       $alpha: -50%
@@ -145,6 +163,8 @@
       $alpha: -40%
     )};
   --sss-btn-danger-text-color: #{$color-white};
+  --sss-btn-danger-text-color-hover: #{$color-white};
+  --sss-btn-danger-text-color-active: #{$color-white};
   --sss-btn-danger-text-color-disabled: #{color.scale(
       $color-white,
       $alpha: -50%
@@ -162,6 +182,8 @@
       $alpha: -40%
     )};
   --sss-btn-info-text-color: #{$color-white};
+  --sss-btn-info-text-color-hover: #{$color-white};
+  --sss-btn-info-text-color-active: #{$color-white};
   --sss-btn-info-text-color-disabled: #{color.scale($color-white, $alpha: -50%)};
 
   // ------------------------------------------------------------
