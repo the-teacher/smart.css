@@ -23,9 +23,11 @@
 }
 .btn--primary:hover {
   background-color: var(--sss-btn-primary-bg-color-hover);
+  color: var(--sss-btn-primary-text-color-hover);
 }
 .btn--primary:active {
   background-color: var(--sss-btn-primary-bg-color-active);
+  color: var(--sss-btn-primary-text-color-active);
 }
 .btn--primary:disabled {
   background-color: var(--sss-btn-primary-bg-color-disabled);
@@ -37,9 +39,11 @@
 }
 .btn--secondary:hover {
   background-color: var(--sss-btn-secondary-bg-color-hover);
+  color: var(--sss-btn-secondary-text-color-hover);
 }
 .btn--secondary:active {
   background-color: var(--sss-btn-secondary-bg-color-active);
+  color: var(--sss-btn-secondary-text-color-active);
 }
 .btn--secondary:disabled {
   background-color: var(--sss-btn-secondary-bg-color-disabled);
@@ -55,6 +59,7 @@
 }
 .btn--light:active {
   background-color: var(--sss-btn-light-bg-color-active);
+  color: var(--sss-btn-light-text-color-active);
 }
 .btn--light:disabled {
   background-color: var(--sss-btn-light-bg-color-disabled);
@@ -66,9 +71,11 @@
 }
 .btn--success:hover {
   background-color: var(--sss-btn-success-bg-color-hover);
+  color: var(--sss-btn-success-text-color-hover);
 }
 .btn--success:active {
   background-color: var(--sss-btn-success-bg-color-active);
+  color: var(--sss-btn-success-text-color-active);
 }
 .btn--success:disabled {
   background-color: var(--sss-btn-success-bg-color-disabled);
@@ -80,9 +87,11 @@
 }
 .btn--warning:hover {
   background-color: var(--sss-btn-warning-bg-color-hover);
+  color: var(--sss-btn-warning-text-color-hover);
 }
 .btn--warning:active {
   background-color: var(--sss-btn-warning-bg-color-active);
+  color: var(--sss-btn-warning-text-color-active);
 }
 .btn--warning:disabled {
   background-color: var(--sss-btn-warning-bg-color-disabled);
@@ -94,9 +103,11 @@
 }
 .btn--danger:hover {
   background-color: var(--sss-btn-danger-bg-color-hover);
+  color: var(--sss-btn-danger-text-color-hover);
 }
 .btn--danger:active {
   background-color: var(--sss-btn-danger-bg-color-active);
+  color: var(--sss-btn-danger-text-color-active);
 }
 .btn--danger:disabled {
   background-color: var(--sss-btn-danger-bg-color-disabled);
@@ -108,9 +119,11 @@
 }
 .btn--info:hover {
   background-color: var(--sss-btn-info-bg-color-hover);
+  color: var(--sss-btn-info-text-color-hover);
 }
 .btn--info:active {
   background-color: var(--sss-btn-info-bg-color-active);
+  color: var(--sss-btn-info-text-color-active);
 }
 .btn--info:disabled {
   background-color: var(--sss-btn-info-bg-color-disabled);
