@@ -28,6 +28,11 @@ a {
     color: var(--sss-link-base-text-color-visited);
   }
 
+  &:visited:hover {
+    color: var(--sss-link-base-text-color-hover);
+    text-decoration: underline;
+  }
+
   &:active {
     color: var(--sss-link-base-text-color-active);
   }
