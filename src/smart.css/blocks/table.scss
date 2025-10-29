@@ -1,0 +1,85 @@
+// Table component styles
+
+// Table container
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white, #ffffff);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  &--header {
+    background-color: var(--color-light, #f8f9fa);
+    border-bottom: 2px solid var(--color-border-light, #e0e0e0);
+  }
+
+  &--row {
+    border-bottom: 1px solid var(--color-border-light, #e0e0e0);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(0, 123, 255, 0.03);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &--cell {
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  &--header-cell {
+    font-weight: 600;
+    color: var(--color-dark, #343a40);
+  }
+
+  &--compact {
+    .table--cell {
+      font-size: var(--font-size-12, 12px);
+    }
+  }
+
+  &--striped {
+    tbody tr:nth-child(even) {
+      background-color: var(--color-light, #f8f9fa);
+    }
+
+    tbody tr:hover {
+      background-color: rgba(0, 123, 255, 0.08);
+    }
+  }
+}
+
+// Table column width utilities
+.table--col-xs {
+  width: 60px;
+}
+
+.table--col-sm {
+  width: 100px;
+}
+
+.table--col-md {
+  width: 150px;
+}
+
+.table--col-lg {
+  width: 200px;
+}
+
+.table--col-xl {
+  width: 250px;
+}
+
+// Table cell alignment
+.table--cell-center {
+  text-align: center;
+}
+
+.table--cell-right {
+  text-align: right;
+}
