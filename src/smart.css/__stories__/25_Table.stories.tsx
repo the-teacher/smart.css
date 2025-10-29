@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 import "@smart.css/UI.scss";
 
 const meta: Meta = {
@@ -522,6 +523,117 @@ export const FullTable: Story = {
             <tbody>
               {tableData.map((row) => (
                 <tr key={row.id} className="table--row">
+                  <td className="table--cell table--col-xs p-12">{row.id}</td>
+                  <td className="table--cell table--col-md bold p-12">
+                    {row.title}
+                  </td>
+                  <td className="table--cell table--col-lg text-secondary p-12">
+                    {row.description}
+                  </td>
+                  <td className="table--cell table--col-md p-12">
+                    {row.holder}
+                  </td>
+                  <td className="table--cell table--col-md fs-12 p-12">
+                    {row.scope}
+                  </td>
+                  <td className="table--cell table--col-md fs-12 p-12">
+                    {row.resource}
+                  </td>
+                  <td className="table--cell table--col-sm fs-12 p-12">
+                    {row.action}
+                  </td>
+                  <td className="table--cell table--col-md p-12">
+                    <span className={`badge ${getBadgeClass(row.value)}`}>
+                      {row.value}
+                    </span>
+                  </td>
+                  <td className="table--cell table--col-md fs-12 p-12">
+                    {row.starts_at}
+                  </td>
+                  <td className="table--cell table--col-md fs-12 p-12">
+                    {row.ends_at}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+const ControlledSwitch = ({
+  initialChecked = false,
+  disabled = false,
+}: {
+  initialChecked?: boolean;
+  disabled?: boolean;
+}) => {
+  const [checked, setChecked] = useState(initialChecked);
+
+  return (
+    <label className="switch switch--small">
+      <div className="switch--toggle">
+        <input
+          type="checkbox"
+          className="switch--input"
+          checked={checked}
+          disabled={disabled}
+          onChange={(e) => setChecked(e.target.checked)}
+        />
+        <span className="switch--slider"></span>
+      </div>
+    </label>
+  );
+};
+
+export const FullTableWithToggle: Story = {
+  render: () => (
+    <div className="p-20">
+      <div className="card">
+        <div className="card--header p-20">
+          <h2 className="card--title">
+            Full Data Table with Toggles (30 Records)
+          </h2>
+        </div>
+        <div className="card--content p-0">
+          <table className="table table--striped">
+            <thead className="table--header text-left">
+              <tr className="table--row">
+                <th className="table--header-cell table--col-xs p-12">
+                  Enabled
+                </th>
+                <th className="table--header-cell table--col-xs p-12">ID</th>
+                <th className="table--header-cell table--col-md p-12">Title</th>
+                <th className="table--header-cell table--col-lg p-12">
+                  Description
+                </th>
+                <th className="table--header-cell table--col-md p-12">
+                  Holder
+                </th>
+                <th className="table--header-cell table--col-md p-12">Scope</th>
+                <th className="table--header-cell table--col-md p-12">
+                  Resource
+                </th>
+                <th className="table--header-cell table--col-sm p-12">
+                  Action
+                </th>
+                <th className="table--header-cell table--col-md p-12">Value</th>
+                <th className="table--header-cell table--col-md p-12">
+                  Starts At
+                </th>
+                <th className="table--header-cell table--col-md p-12">
+                  Ends At
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData.map((row) => (
+                <tr key={row.id} className="table--row">
+                  <td className="table--cell table--col-xs p-12 flex items-center">
+                    <ControlledSwitch initialChecked={row.id % 2 === 0} />
+                  </td>
                   <td className="table--cell table--col-xs p-12">{row.id}</td>
                   <td className="table--cell table--col-md bold p-12">
                     {row.title}
