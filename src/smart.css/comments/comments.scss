@@ -1,0 +1,32 @@
+// Comments component styles
+:root {
+  // Default comment background color
+  --sss-comment-background-color: #f9f9f9;
+  // Default comment border color
+  --sss-comment-border-color: #e0e0e0;
+  // Default comment text color
+  --sss-comment-text-color: #333333;
+}
+
+// Comment container
+.comment {
+  &--avatar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--sss-comment-border-color);
+  }
+
+  &--body {
+    min-width: 0;
+  }
+
+  &--time {
+    opacity: 0.6;
+  }
+
+  &--nested {
+    border-left: 2px solid var(--sss-comment-border-color);
+  }
+}
