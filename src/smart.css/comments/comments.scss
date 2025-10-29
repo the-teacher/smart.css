@@ -1,4 +1,31 @@
 // Comments component styles
+
+// Avatar gradient colors
+$avatar-color-1: (
+  start: #667eea,
+  end: #764ba2,
+);
+$avatar-color-2: (
+  start: #4caf50,
+  end: #45a049,
+);
+$avatar-color-3: (
+  start: #ffc107,
+  end: #ffb300,
+);
+$avatar-color-4: (
+  start: #c82333,
+  end: #a01d27,
+);
+$avatar-color-5: (
+  start: #138496,
+  end: #0f6475,
+);
+$avatar-color-6: (
+  start: #868e96,
+  end: #6c757d,
+);
+
 :root {
   // Default comment background color
   --sss-comment-background-color: #f9f9f9;
@@ -15,7 +42,8 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--sss-comment-border-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
   }
 
   &--body {
@@ -27,6 +55,73 @@
   }
 
   &--nested {
-    border-left: 2px solid var(--sss-comment-border-color);
+    border-left: 3px dashed var(--sss-comment-border-color);
   }
+}
+
+// Styled comment variant
+.comment--styled {
+  background-color: var(--sss-comment-background-color);
+  border-radius: 4px;
+  border: 1px solid var(--sss-comment-border-color);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .comment--avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
+// Avatar color variants
+.comment--avatar-color-1 {
+  background: linear-gradient(
+    135deg,
+    map-get($avatar-color-1, start) 0%,
+    map-get($avatar-color-1, end) 100%
+  );
+}
+
+.comment--avatar-color-2 {
+  background: linear-gradient(
+    135deg,
+    map-get($avatar-color-2, start) 0%,
+    map-get($avatar-color-2, end) 100%
+  );
+}
+
+.comment--avatar-color-3 {
+  background: linear-gradient(
+    135deg,
+    map-get($avatar-color-3, start) 0%,
+    map-get($avatar-color-3, end) 100%
+  );
+}
+
+.comment--avatar-color-4 {
+  background: linear-gradient(
+    135deg,
+    map-get($avatar-color-4, start) 0%,
+    map-get($avatar-color-4, end) 100%
+  );
+}
+
+.comment--avatar-color-5 {
+  background: linear-gradient(
+    135deg,
+    map-get($avatar-color-5, start) 0%,
+    map-get($avatar-color-5, end) 100%
+  );
+}
+
+.comment--avatar-color-6 {
+  background: linear-gradient(
+    135deg,
+    map-get($avatar-color-6, start) 0%,
+    map-get($avatar-color-6, end) 100%
+  );
 }

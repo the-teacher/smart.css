@@ -40,7 +40,7 @@ const Comment = ({
         <button className="btn btn--ghost btn--small">Reply</button>
       </div>
       {children && (
-        <div className="comment--nested mt-16 pl-20">{children}</div>
+        <div className="comment--nested mt-16 mb-16 pl-20">{children}</div>
       )}
     </div>
   </div>
@@ -250,6 +250,171 @@ export const CommentWithHighlight: Story = {
               }
             />
           </Comment>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+// Styled comment component with background
+const StyledComment = ({
+  author,
+  time,
+  content,
+  avatar,
+  avatarClass,
+  children,
+}: {
+  author: string;
+  time: string;
+  content: string | React.ReactNode;
+  avatar: string;
+  avatarClass?: string;
+  children?: React.ReactNode;
+}) => (
+  <div className="comment--styled mb-16 p-16">
+    <div className="flex gap-12">
+      <div
+        className={`comment--avatar flex items-center justify-center fs-14 bold text-light ${avatarClass || "comment--avatar-color-1"}`}
+      >
+        {avatar}
+      </div>
+      <div className="comment--body flex-1">
+        <div className="comment--header flex gap-8 items-center mb-8">
+          <span className="comment--author bold text-dark">{author}</span>
+          <span className="comment--time fs-12 text-secondary">{time}</span>
+        </div>
+        <div className="comment--content text-dark mb-12">{content}</div>
+        <div className="comment--actions flex gap-8 mb-0">
+          <button className="btn btn--primary btn--small">Like</button>
+          <button className="btn btn--secondary btn--small">Reply</button>
+        </div>
+        {children && (
+          <div className="comment--nested mt-16 mb-16 pl-20">{children}</div>
+        )}
+      </div>
+    </div>
+  </div>
+);
+
+export const StyledComments: Story = {
+  render: () => (
+    <div className="p-20">
+      <div className="card">
+        <div className="card--header p-20">
+          <h2 className="card--title">Styled Comments with Colors</h2>
+        </div>
+        <div className="card--content p-20">
+          <StyledComment
+            avatar="JD"
+            author="John Doe"
+            time="2 hours ago"
+            avatarClass="comment--avatar-color-1"
+            content="This is a styled comment with a beautiful gradient avatar and background styling!"
+          >
+            <StyledComment
+              avatar="SM"
+              author="Sarah Miller"
+              time="1 hour ago"
+              avatarClass="comment--avatar-color-2"
+              content="Great design! I love how the colors make the comments stand out."
+            >
+              <StyledComment
+                avatar="JD"
+                author="John Doe"
+                time="45 minutes ago"
+                avatarClass="comment--avatar-color-5"
+                content="Thanks! The styling really improves readability in long discussion threads."
+              />
+            </StyledComment>
+
+            <StyledComment
+              avatar="MK"
+              author="Mike Klein"
+              time="1 hour ago"
+              avatarClass="comment--avatar-color-3"
+              content="This looks amazing! The gradient avatars add personality to each commenter."
+            />
+          </StyledComment>
+
+          <div
+            className="mt-20 pt-20"
+            style={{ borderTop: "1px solid #e0e0e0" }}
+          >
+            <StyledComment
+              avatar="AB"
+              author="Alice Brown"
+              time="30 minutes ago"
+              avatarClass="comment--avatar-color-4"
+              content="The color coding helps distinguish different participants in the conversation."
+            >
+              <StyledComment
+                avatar="SM"
+                author="Sarah Miller"
+                time="20 minutes ago"
+                avatarClass="comment--avatar-color-2"
+                content="Exactly! And the subtle hover effect on the cards makes it feel interactive."
+              />
+            </StyledComment>
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+export const AllAvatarVariants: Story = {
+  render: () => (
+    <div className="p-20">
+      <div className="card">
+        <div className="card--header p-20">
+          <h2 className="card--title">Avatar Color Variants</h2>
+        </div>
+        <div className="card--content p-20">
+          <div className="grid grid-cols-2 gap-16">
+            <StyledComment
+              avatar="C1"
+              author="Color 1"
+              time="Just now"
+              avatarClass="comment--avatar-color-1"
+              content="This is the first avatar color variant."
+            />
+            <StyledComment
+              avatar="C2"
+              author="Color 2"
+              time="Just now"
+              avatarClass="comment--avatar-color-2"
+              content="This is the second avatar color variant."
+            />
+            <StyledComment
+              avatar="C3"
+              author="Color 3"
+              time="Just now"
+              avatarClass="comment--avatar-color-3"
+              content="This is the third avatar color variant."
+            />
+            <StyledComment
+              avatar="C4"
+              author="Color 4"
+              time="Just now"
+              avatarClass="comment--avatar-color-4"
+              content="This is the fourth avatar color variant."
+            />
+            <StyledComment
+              avatar="C5"
+              author="Color 5"
+              time="Just now"
+              avatarClass="comment--avatar-color-5"
+              content="This is the fifth avatar color variant."
+            />
+            <StyledComment
+              avatar="C6"
+              author="Color 6"
+              time="Just now"
+              avatarClass="comment--avatar-color-6"
+              content="This is the sixth avatar color variant."
+            />
+          </div>
         </div>
       </div>
     </div>
