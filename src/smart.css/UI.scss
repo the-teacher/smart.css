@@ -12,6 +12,9 @@
 @use "./form-groups.scss";
 @use "./form-inputs.scss";
 
+@use "./badge.scss";
+@use "./table.scss";
+
 @use "./checkboxes.scss";
 @use "./switches.scss";
 
@@ -20,8 +23,6 @@
 @use "./blocks/card.scss";
 @use "./blocks/data-display.scss";
 @use "./blocks/info-blocks.scss";
-@use "./blocks/badge.scss";
-@use "./blocks/table.scss";
 
 @use "./comments/comments.scss";
 
