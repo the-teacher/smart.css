@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: "2-UI-Kit-Blocks/4-Comments",
+  title: "3-UI-Kit-Comments/1-Comments",
   parameters: {
     docs: { disable: true },
   },
@@ -10,6 +11,61 @@ const meta: Meta = {
 
 export default meta;
 type Story = StoryObj;
+
+// Heart icon components
+const HeartIcon = ({ filled = false }: { filled?: boolean }) => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill={filled ? "currentColor" : "none"}
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+  </svg>
+);
+
+// Reply icon component
+const ReplyIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="9 17 4 12 9 7"></polyline>
+    <path d="M20 18v-2a4 4 0 0 0-4-4H4"></path>
+  </svg>
+);
+
+// Like button with state
+const LikeButton = ({ onLike }: { onLike?: () => void }) => {
+  const [liked, setLiked] = useState(false);
+
+  const handleLike = () => {
+    setLiked(!liked);
+    onLike?.();
+  };
+
+  return (
+    <button
+      className={`btn btn--ghost btn--small flex gap-4 items-center ${
+        liked ? "text-danger" : ""
+      }`}
+      onClick={handleLike}
+    >
+      <HeartIcon filled={liked} />
+      <span>{liked ? "Liked" : "Like"}</span>
+    </button>
+  );
+};
 
 // Single comment component
 const Comment = ({
@@ -36,8 +92,11 @@ const Comment = ({
       </div>
       <div className="comment--content mb-12">{content}</div>
       <div className="comment--actions flex gap-8 mb-12">
-        <button className="btn btn--ghost btn--small">Like</button>
-        <button className="btn btn--ghost btn--small">Reply</button>
+        <LikeButton />
+        <button className="btn btn--ghost btn--small flex gap-4 items-center">
+          <ReplyIcon />
+          <span>Reply</span>
+        </button>
       </div>
       {children && (
         <div className="comment--nested mt-16 mb-16 pl-20">{children}</div>
@@ -286,8 +345,11 @@ const StyledComment = ({
         </div>
         <div className="comment--content text-dark mb-12">{content}</div>
         <div className="comment--actions flex gap-8 mb-0">
-          <button className="btn btn--primary btn--small">Like</button>
-          <button className="btn btn--secondary btn--small">Reply</button>
+          <LikeButton />
+          <button className="btn btn--secondary btn--small flex gap-4 items-center">
+            <ReplyIcon />
+            <span>Reply</span>
+          </button>
         </div>
         {children && (
           <div className="comment--nested mt-16 mb-16 pl-20">{children}</div>
