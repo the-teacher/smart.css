@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/5-Gaps',
+  title: "1-UI-Kit/5-Gaps",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -233,19 +233,19 @@ export const AllGapUtilities: Story = {
         <div className="gap-demo-container flex gap-8">
           <div
             className="gap-demo-item"
-            style={{ backgroundColor: '#4caf50', color: 'white' }}
+            style={{ backgroundColor: "#4caf50", color: "white" }}
           >
             Save
           </div>
           <div
             className="gap-demo-item"
-            style={{ backgroundColor: '#f44336', color: 'white' }}
+            style={{ backgroundColor: "#f44336", color: "white" }}
           >
             Cancel
           </div>
           <div
             className="gap-demo-item"
-            style={{ backgroundColor: '#2196f3', color: 'white' }}
+            style={{ backgroundColor: "#2196f3", color: "white" }}
           >
             Reset
           </div>
@@ -255,19 +255,19 @@ export const AllGapUtilities: Story = {
         <div className="gap-demo-container gap-demo-grid gap-20">
           <div
             className="gap-demo-item"
-            style={{ height: '80px', backgroundColor: '#fff3e0' }}
+            style={{ height: "80px", backgroundColor: "#fff3e0" }}
           >
             Card 1
           </div>
           <div
             className="gap-demo-item"
-            style={{ height: '80px', backgroundColor: '#e8f5e8' }}
+            style={{ height: "80px", backgroundColor: "#e8f5e8" }}
           >
             Card 2
           </div>
           <div
             className="gap-demo-item"
-            style={{ height: '80px', backgroundColor: '#e3f2fd' }}
+            style={{ height: "80px", backgroundColor: "#e3f2fd" }}
           >
             Card 3
           </div>
@@ -277,19 +277,19 @@ export const AllGapUtilities: Story = {
         <div className="gap-demo-container flex flex-col gap-12">
           <div
             className="gap-demo-item"
-            style={{ backgroundColor: '#fff', border: '1px solid #ccc' }}
+            style={{ backgroundColor: "#fff", border: "1px solid #ccc" }}
           >
             Name Input
           </div>
           <div
             className="gap-demo-item"
-            style={{ backgroundColor: '#fff', border: '1px solid #ccc' }}
+            style={{ backgroundColor: "#fff", border: "1px solid #ccc" }}
           >
             Email Input
           </div>
           <div
             className="gap-demo-item"
-            style={{ backgroundColor: '#fff', border: '1px solid #ccc' }}
+            style={{ backgroundColor: "#fff", border: "1px solid #ccc" }}
           >
             Message Textarea
           </div>
@@ -299,23 +299,23 @@ export const AllGapUtilities: Story = {
           Responsive layout with gap-8 and flex-wrap
         </div>
         <div className="gap-demo-container flex flex-wrap gap-8">
-          <div className="gap-demo-item" style={{ minWidth: '120px' }}>
+          <div className="gap-demo-item" style={{ minWidth: "120px" }}>
             Feature 1
           </div>
-          <div className="gap-demo-item" style={{ minWidth: '120px' }}>
+          <div className="gap-demo-item" style={{ minWidth: "120px" }}>
             Feature 2
           </div>
-          <div className="gap-demo-item" style={{ minWidth: '120px' }}>
+          <div className="gap-demo-item" style={{ minWidth: "120px" }}>
             Feature 3
           </div>
-          <div className="gap-demo-item" style={{ minWidth: '120px' }}>
+          <div className="gap-demo-item" style={{ minWidth: "120px" }}>
             Feature 4
           </div>
-          <div className="gap-demo-item" style={{ minWidth: '120px' }}>
+          <div className="gap-demo-item" style={{ minWidth: "120px" }}>
             Feature 5
           </div>
         </div>
       </div>
     </div>
-  ),
+  )
 };

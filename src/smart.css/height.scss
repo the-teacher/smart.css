@@ -67,7 +67,7 @@ $height-fixed-values: (
 // Generate percentage height classes
 @each $value in $height-percentage-values {
   .h-#{$value}p {
-    height: #{$value}%;
+    height: $value * 1%;
   }
 }
 

@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss'; // Assuming text styles are defined here
-import AppIcon from '@components/AppIcon'; // Import AppIcon
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss"; // Assuming text styles are defined here
+import AppIcon from "@components/AppIcon"; // Import AppIcon
 
 const meta: Meta = {
-  title: '1-UI-Kit/11-FormGroups',
+  title: "1-UI-Kit/11-FormGroups",
   // component: "div",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -19,7 +19,7 @@ type Story = StoryObj;
 // Form group story
 export const FormGroupExample: Story = {
   render: () => (
-    <div className="p-20" style={{ maxWidth: '400px' }}>
+    <div className="p-20" style={{ maxWidth: "400px" }}>
       <div className="form-group mb-24">
         <label
           className="form--label flex items-center text--dark gap-4"
@@ -93,5 +93,5 @@ export const FormGroupExample: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };

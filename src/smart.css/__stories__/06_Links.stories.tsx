@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/6-Links',
+  title: "1-UI-Kit/6-Links",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -183,7 +183,7 @@ export const AllLinkStates: Story = {
             This is a paragraph with <a href="#inline1">an inline link</a> that
             demonstrates how links appear within text content. You can also have
             <a href="#inline2">multiple links</a> in the same paragraph, and
-            they should maintain proper{' '}
+            they should maintain proper{" "}
             <a href="#inline3">readability and accessibility</a>.
           </div>
           <div className="link-demo-text">
@@ -282,7 +282,7 @@ export const AllLinkStates: Story = {
           <div className="link-demo-card">
             <h4 className="mb-8">Product Card</h4>
             <p className="mb-12 text-14">
-              Product description with{' '}
+              Product description with{" "}
               <a href="#product-details">detailed specifications</a>
               and <a href="#reviews">customer reviews</a>.
             </p>
@@ -333,7 +333,7 @@ export const AllLinkStates: Story = {
                 <a href="#mixed-list3">different links</a>
               </li>
               <li className="mb-4">
-                Item with{' '}
+                Item with{" "}
                 <a href="#mixed-list4" className="disabled">
                   disabled link
                 </a>
@@ -431,5 +431,5 @@ export const AllLinkStates: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };

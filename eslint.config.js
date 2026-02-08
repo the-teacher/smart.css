@@ -25,5 +25,7 @@ export default tseslint.config({ ignores: ["dist"] }, eslintConfigPrettier, {
       { allowConstantExport: true },
     ],
     "prettier/prettier": "error",
+    quotes: ["error", "double", { avoidEscape: true }],
+    "@typescript-eslint/quotes": ["error", "double", { avoidEscape: true }],
   },
 });

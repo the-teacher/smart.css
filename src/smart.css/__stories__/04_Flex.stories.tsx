@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/4-Flex',
+  title: "1-UI-Kit/4-Flex",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -249,7 +249,7 @@ export const AllFlexUtilities: Story = {
         </div>
         <div
           className="flex-demo-container flex flex-col items-center justify-between"
-          style={{ height: '160px' }}
+          style={{ height: "160px" }}
         >
           <div className="flex-demo-item">Top Item</div>
           <div className="flex-demo-item">Middle Item</div>
@@ -289,32 +289,32 @@ export const AllFlexUtilities: Story = {
         <div className="flex-demo-label">Card with flex layout</div>
         <div
           className="flex-demo-container flex items-center justify-between"
-          style={{ backgroundColor: '#fff', border: '1px solid #ddd' }}
+          style={{ backgroundColor: "#fff", border: "1px solid #ddd" }}
         >
           <div className="flex items-center">
             <div
               className="flex-demo-item"
               style={{
-                borderRadius: '50%',
-                width: '40px',
-                height: '40px',
-                margin: '0 12px 0 0',
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                margin: "0 12px 0 0"
               }}
             >
               👤
             </div>
             <div>
-              <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>
+              <div style={{ fontWeight: "bold", marginBottom: "4px" }}>
                 John Doe
               </div>
-              <div style={{ fontSize: '12px', color: '#666' }}>
+              <div style={{ fontSize: "12px", color: "#666" }}>
                 Software Developer
               </div>
             </div>
           </div>
           <div
             className="flex-demo-item"
-            style={{ backgroundColor: '#4caf50', color: 'white' }}
+            style={{ backgroundColor: "#4caf50", color: "white" }}
           >
             Follow
           </div>
@@ -322,28 +322,28 @@ export const AllFlexUtilities: Story = {
 
         <div className="flex-demo-label">Form layout with flex</div>
         <div className="flex-demo-container flex flex-wrap">
-          <div className="flex-demo-item flex-1" style={{ minWidth: '200px' }}>
+          <div className="flex-demo-item flex-1" style={{ minWidth: "200px" }}>
             Name Input
           </div>
-          <div className="flex-demo-item flex-1" style={{ minWidth: '200px' }}>
+          <div className="flex-demo-item flex-1" style={{ minWidth: "200px" }}>
             Email Input
           </div>
           <div className="flex-demo-item flex-none">Submit</div>
         </div>
 
         <div className="flex-demo-label">Sidebar layout</div>
-        <div className="flex-demo-container flex" style={{ height: '200px' }}>
+        <div className="flex-demo-container flex" style={{ height: "200px" }}>
           <div
             className="flex-demo-item flex-none"
-            style={{ width: '200px', height: '100%' }}
+            style={{ width: "200px", height: "100%" }}
           >
             Sidebar
           </div>
-          <div className="flex-demo-item flex-1" style={{ height: '100%' }}>
+          <div className="flex-demo-item flex-1" style={{ height: "100%" }}>
             Main Content Area
           </div>
         </div>
       </div>
     </div>
-  ),
+  )
 };

@@ -5,8 +5,8 @@ import "@smart.css/UI.scss";
 const meta: Meta = {
   title: "3-UI-Kit-Comments/1-Comments",
   parameters: {
-    docs: { disable: true },
-  },
+    docs: { disable: true }
+  }
 };
 
 export default meta;
@@ -73,7 +73,7 @@ const Comment = ({
   time,
   content,
   avatar,
-  children,
+  children
 }: {
   author: string;
   time: string;
@@ -122,7 +122,7 @@ export const SingleComment: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CommentThread: Story = {
@@ -188,7 +188,7 @@ export const CommentThread: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CommentVariations: Story = {
@@ -269,7 +269,7 @@ export const CommentVariations: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CommentWithHighlight: Story = {
@@ -312,7 +312,7 @@ export const CommentWithHighlight: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 // Styled comment component with background
@@ -322,7 +322,7 @@ const StyledComment = ({
   content,
   avatar,
   avatarClass,
-  children,
+  children
 }: {
   author: string;
   time: string;
@@ -422,7 +422,7 @@ export const StyledComments: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const AllAvatarVariants: Story = {
@@ -480,5 +480,5 @@ export const AllAvatarVariants: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };

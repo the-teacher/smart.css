@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/7-Buttons',
+  title: "1-UI-Kit/7-Buttons",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -190,5 +190,5 @@ export const ButtonsShowcase: Story = {
         </div>
       </section>
     </div>
-  ),
+  )
 };

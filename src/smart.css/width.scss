@@ -14,7 +14,7 @@
 // w-25p = 25%, w-33p = 33.33%, w-50p = 50%, w-67p = 66.66%, w-75p = 75%, w-100p = 100%
 // w-auto = auto, w-full = 100%, w-screen = 100vw, w-fit = fit-content, w-max = max-content, w-min = min-content
 
-@use 'sass:math';
+@use "sass:math";
 
 // Array of percentage values (without % symbol, will be added in generation)
 $width-percentage-values: (25, 50, 75, 100);
@@ -72,7 +72,7 @@ $width-fixed-values: (
 // Generate percentage width classes
 @each $value in $width-percentage-values {
   .w-#{$value}p {
-    width: #{$value}%;
+    width: $value * 1%;
   }
 }
 

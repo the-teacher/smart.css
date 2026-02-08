@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
-import { useState } from 'react';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
+import { useState } from "react";
 
 const meta: Meta = {
-  title: '1-UI-Kit/9-Switches',
+  title: "1-UI-Kit/9-Switches",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -18,9 +18,9 @@ type Story = StoryObj;
 // Controlled switch component for the story
 const ControlledSwitch = ({
   label,
-  className = '',
+  className = "",
   disabled = false,
-  initialChecked = false,
+  initialChecked = false
 }: {
   label: string;
   className?: string;
@@ -48,16 +48,16 @@ const ControlledSwitch = ({
 
 export const SwitchesShowcase: Story = {
   render: () => (
-    <div style={{ padding: '16px' }}>
+    <div style={{ padding: "16px" }}>
       {/* Default Switches */}
-      <section style={{ marginBottom: '32px' }}>
+      <section style={{ marginBottom: "32px" }}>
         <h2>Default Switches</h2>
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
-            marginTop: '16px',
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+            marginTop: "16px"
           }}
         >
           <ControlledSwitch label="Off switch" />
@@ -72,14 +72,14 @@ export const SwitchesShowcase: Story = {
       </section>
 
       {/* Switch Sizes */}
-      <section style={{ marginBottom: '32px' }}>
+      <section style={{ marginBottom: "32px" }}>
         <h2>Switch Sizes</h2>
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
-            marginTop: '16px',
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+            marginTop: "16px"
           }}
         >
           <ControlledSwitch label="Small switch" className="switch--small" />
@@ -89,14 +89,14 @@ export const SwitchesShowcase: Story = {
       </section>
 
       {/* Switch States */}
-      <section style={{ marginBottom: '32px' }}>
+      <section style={{ marginBottom: "32px" }}>
         <h2>Switch States</h2>
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
-            marginTop: '16px',
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+            marginTop: "16px"
           }}
         >
           <ControlledSwitch
@@ -121,16 +121,16 @@ export const SwitchesShowcase: Story = {
       </section>
 
       {/* Switch in Form Group */}
-      <section style={{ marginBottom: '32px' }}>
+      <section style={{ marginBottom: "32px" }}>
         <h2>Switch in Form Group</h2>
         <div className="form-group">
           <div className="form--label text--dark">Settings</div>
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px',
-              marginTop: '8px',
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              marginTop: "8px"
             }}
           >
             <ControlledSwitch label="Enable dark mode" />
@@ -147,28 +147,28 @@ export const SwitchesShowcase: Story = {
       </section>
 
       {/* Switch with Long Text */}
-      <section style={{ marginBottom: '32px' }}>
+      <section style={{ marginBottom: "32px" }}>
         <h2>Switch with Long Text</h2>
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
-            marginTop: '16px',
-            maxWidth: '500px',
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+            marginTop: "16px",
+            maxWidth: "500px"
           }}
         >
           <ControlledSwitch label="Enable advanced features including automatic data synchronization, background processing, and enhanced security protocols. These features may use additional system resources." />
         </div>
       </section>
     </div>
-  ),
+  )
 };
 
 // Simple usage example
 export const SimpleSwitch: Story = {
   render: () => (
-    <div style={{ padding: '16px' }}>
+    <div style={{ padding: "16px" }}>
       <label className="switch">
         <div className="switch--toggle">
           <input type="checkbox" className="switch--input" />
@@ -177,5 +177,5 @@ export const SimpleSwitch: Story = {
         <span className="switch--label">Enable feature</span>
       </label>
     </div>
-  ),
+  )
 };

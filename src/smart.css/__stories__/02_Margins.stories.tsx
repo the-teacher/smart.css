@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/2-Margins',
+  title: "1-UI-Kit/2-Margins",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'desktop',
-    },
-  },
+      defaultViewport: "desktop"
+    }
+  }
 };
 
 export default meta;
@@ -77,7 +77,7 @@ export const AllMarginUtilities: Story = {
       <div className="margin-demo-section">
         <h3 className="mb-20">Auto Margin (mauto)</h3>
         <div className="margin-auto-demo">
-          <div className="margin-auto-block mauto" style={{ width: '200px' }}>
+          <div className="margin-auto-block mauto" style={{ width: "200px" }}>
             mauto - Centered with auto margins
           </div>
         </div>
@@ -358,7 +358,7 @@ export const AllMarginUtilities: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CombinedMargins: Story = {
@@ -411,16 +411,16 @@ export const CombinedMargins: Story = {
       <div className="margin-demo-section">
         <h4 className="mb-10">Auto Margin Examples</h4>
         <div className="margin-auto-demo">
-          <div className="margin-auto-block mauto" style={{ width: '150px' }}>
+          <div className="margin-auto-block mauto" style={{ width: "150px" }}>
             mauto - Small centered block
           </div>
         </div>
         <div className="margin-auto-demo">
-          <div className="margin-auto-block mauto" style={{ width: '300px' }}>
+          <div className="margin-auto-block mauto" style={{ width: "300px" }}>
             mauto - Large centered block
           </div>
         </div>
       </div>
     </div>
-  ),
+  )
 };

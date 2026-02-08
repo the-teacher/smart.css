@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
-import AppIcon from '@components/AppIcon';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
+import AppIcon from "@components/AppIcon";
 
 const meta: Meta = {
-  title: '1-UI-Kit/10-FormInputs',
+  title: "1-UI-Kit/10-FormInputs",
   // component: "input",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'tablet',
-    },
-  },
+      defaultViewport: "tablet"
+    }
+  }
 };
 
 export default meta;
@@ -163,7 +163,7 @@ export const AllFormInputs: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 // Form input with icon story
@@ -236,5 +236,5 @@ export const FormInputWithIcon: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };

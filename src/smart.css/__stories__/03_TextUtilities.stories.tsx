@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/3-Text Utilities',
+  title: "1-UI-Kit/3-Text Utilities",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'desktop',
-    },
-  },
+      defaultViewport: "desktop"
+    }
+  }
 };
 
 export default meta;
@@ -33,7 +33,7 @@ export const FontSizes: Story = {
         <div className="fs-30 mb-10">fs-30 = 3rem (30px)</div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const LineHeights: Story = {
@@ -44,7 +44,7 @@ export const LineHeights: Story = {
       <div className="mb-20">
         <div
           className="fs-16 lh-16 mb-20"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           lh-16 = 1.6rem (16px) - This is a longer text to demonstrate line
           height. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -52,7 +52,7 @@ export const LineHeights: Story = {
 
         <div
           className="fs-16 lh-20 mb-20"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           lh-20 = 2rem (20px) - This is a longer text to demonstrate line
           height. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -60,7 +60,7 @@ export const LineHeights: Story = {
 
         <div
           className="fs-16 lh-24 mb-20"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           lh-24 = 2.4rem (24px) - This is a longer text to demonstrate line
           height. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -68,14 +68,14 @@ export const LineHeights: Story = {
 
         <div
           className="fs-16 lh-32 mb-20"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           lh-32 = 3.2rem (32px) - This is a longer text to demonstrate line
           height. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const TextColors: Story = {
@@ -106,7 +106,7 @@ export const TextColors: Story = {
         <div className="text-dark mb-10 fs-16">text-dark - Dark color text</div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const TextAlignment: Story = {
@@ -117,25 +117,25 @@ export const TextAlignment: Story = {
       <div className="mb-20">
         <div
           className="text-left mb-10 fs-16"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           text-left - Left aligned text
         </div>
         <div
           className="text-center mb-10 fs-16"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           text-center - Center aligned text
         </div>
         <div
           className="text-right mb-10 fs-16"
-          style={{ backgroundColor: '#f0f0f0', padding: '10px' }}
+          style={{ backgroundColor: "#f0f0f0", padding: "10px" }}
         >
           text-right - Right aligned text
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const FontWeights: Story = {
@@ -153,7 +153,7 @@ export const FontWeights: Story = {
         <div className="strike mb-10 fs-16">strike - Strikethrough text</div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const TextTransformations: Story = {
@@ -170,7 +170,7 @@ export const TextTransformations: Story = {
         <div className="underline mb-10 fs-16">underline - Underlined text</div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const TextOverflow: Story = {
@@ -184,9 +184,9 @@ export const TextOverflow: Story = {
           <div
             className="truncate fs-16 mb-10"
             style={{
-              width: '200px',
-              backgroundColor: '#f0f0f0',
-              padding: '10px',
+              width: "200px",
+              backgroundColor: "#f0f0f0",
+              padding: "10px"
             }}
           >
             This is a very long text that will be truncated with ellipsis when
@@ -199,9 +199,9 @@ export const TextOverflow: Story = {
           <div
             className="break-words fs-16"
             style={{
-              width: '200px',
-              backgroundColor: '#f0f0f0',
-              padding: '10px',
+              width: "200px",
+              backgroundColor: "#f0f0f0",
+              padding: "10px"
             }}
           >
             This is a verylongwordthatwillbebrokenacrossmultiplelines when it
@@ -210,7 +210,7 @@ export const TextOverflow: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CombinedUtilities: Story = {
@@ -238,16 +238,16 @@ export const CombinedUtilities: Story = {
         <div
           className="fs-12 text-warning truncate"
           style={{
-            width: '250px',
-            backgroundColor: '#f0f0f0',
-            padding: '10px',
+            width: "250px",
+            backgroundColor: "#f0f0f0",
+            padding: "10px"
           }}
         >
           Small warning text that gets truncated when too long for the container
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const AllTextStyles: Story = {
@@ -402,7 +402,7 @@ export const AllTextStyles: Story = {
             normal warning capitalized text
           </span>
         </div>
-        <div className="info info--danger truncate" style={{ width: '300px' }}>
+        <div className="info info--danger truncate" style={{ width: "300px" }}>
           <span className="text-danger fs-12">
             Small danger text that gets truncated when it's too long for the
             container width
@@ -448,5 +448,5 @@ export const AllTextStyles: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };

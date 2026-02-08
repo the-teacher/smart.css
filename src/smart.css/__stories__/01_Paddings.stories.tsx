@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '1-UI-Kit/1-Paddings',
+  title: "1-UI-Kit/1-Paddings",
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: 'desktop',
-    },
-  },
+      defaultViewport: "desktop"
+    }
+  }
 };
 
 export default meta;
@@ -331,7 +331,7 @@ export const AllPaddingUtilities: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CombinedPaddings: Story = {
@@ -377,5 +377,5 @@ export const CombinedPaddings: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };

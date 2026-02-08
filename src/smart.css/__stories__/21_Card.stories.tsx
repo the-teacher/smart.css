@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/UI.scss';
+import type { Meta, StoryObj } from "@storybook/react";
+import "@smart.css/UI.scss";
 
 const meta: Meta = {
-  title: '2-UI-Kit-Blocks/1-Card',
+  title: "2-UI-Kit-Blocks/1-Card",
   parameters: {
-    docs: { disable: true },
-  },
+    docs: { disable: true }
+  }
 };
 
 export default meta;
@@ -36,13 +36,13 @@ export const CardExample: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const SimpleCard: Story = {
   render: () => (
     <div className="p-20">
-      <div className="card" style={{ maxWidth: '400px' }}>
+      <div className="card" style={{ maxWidth: "400px" }}>
         <div className="p-20">
           <h3 className="text text--large mb-16">Simple Card</h3>
           <p className="text mb-16">
@@ -53,7 +53,7 @@ export const SimpleCard: Story = {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export const CardShowcase: Story = {
@@ -107,7 +107,7 @@ export const CardShowcase: Story = {
       <section className="mb-32">
         <h2 className="mb-16">Multiple Cards</h2>
         <div className="flex gap-16 flex-wrap">
-          <div className="card" style={{ minWidth: '300px' }}>
+          <div className="card" style={{ minWidth: "300px" }}>
             <div className="p-20">
               <div className="card--header mb-20 pb-16">
                 <h3 className="card--title">Card One</h3>
@@ -118,7 +118,7 @@ export const CardShowcase: Story = {
             </div>
           </div>
 
-          <div className="card" style={{ minWidth: '300px' }}>
+          <div className="card" style={{ minWidth: "300px" }}>
             <div className="p-20">
               <div className="card--header mb-20 pb-16">
                 <h3 className="card--title">Card Two</h3>
@@ -129,7 +129,7 @@ export const CardShowcase: Story = {
             </div>
           </div>
 
-          <div className="card" style={{ minWidth: '300px' }}>
+          <div className="card" style={{ minWidth: "300px" }}>
             <div className="p-20">
               <div className="card--header mb-20 pb-16">
                 <h3 className="card--title">Card Three</h3>
@@ -145,7 +145,7 @@ export const CardShowcase: Story = {
       {/* Complex Card */}
       <section className="mb-32">
         <h2 className="mb-16">Complex Card Layout</h2>
-        <div className="card" style={{ maxWidth: '500px' }}>
+        <div className="card" style={{ maxWidth: "500px" }}>
           <div className="p-20">
             <div className="card--header mb-20 pb-16">
               <h3 className="card--title">User Profile</h3>
@@ -155,10 +155,10 @@ export const CardShowcase: Story = {
               <div className="flex gap-12 items-center mb-16">
                 <div
                   style={{
-                    width: '48px',
-                    height: '48px',
-                    backgroundColor: '#e2e8f0',
-                    borderRadius: '50%',
+                    width: "48px",
+                    height: "48px",
+                    backgroundColor: "#e2e8f0",
+                    borderRadius: "50%"
                   }}
                 ></div>
                 <div>
@@ -175,8 +175,8 @@ export const CardShowcase: Story = {
                 <span
                   className="text text--small p-8"
                   style={{
-                    backgroundColor: '#f1f5f9',
-                    borderRadius: '4px',
+                    backgroundColor: "#f1f5f9",
+                    borderRadius: "4px"
                   }}
                 >
                   React
@@ -184,8 +184,8 @@ export const CardShowcase: Story = {
                 <span
                   className="text text--small p-8"
                   style={{
-                    backgroundColor: '#f1f5f9',
-                    borderRadius: '4px',
+                    backgroundColor: "#f1f5f9",
+                    borderRadius: "4px"
                   }}
                 >
                   TypeScript
@@ -193,8 +193,8 @@ export const CardShowcase: Story = {
                 <span
                   className="text text--small p-8"
                   style={{
-                    backgroundColor: '#f1f5f9',
-                    borderRadius: '4px',
+                    backgroundColor: "#f1f5f9",
+                    borderRadius: "4px"
                   }}
                 >
                   Node.js
@@ -210,5 +210,5 @@ export const CardShowcase: Story = {
         </div>
       </section>
     </div>
-  ),
+  )
 };
