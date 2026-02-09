@@ -1,107 +1,160 @@
-# UI Kit Documentation
+# Smart.CSS — UI Kit Documentation
 
-This UI Kit provides a set of reusable components and styles for consistent application design. Below is a guide to using the various components available in the kit.
+A lightweight CSS utility kit built with SCSS. Uses REM units with a 10px base (`html { font-size: 62.5% }`), so **1rem = 10px**.
 
 ## Table of Contents
 
-- [Colors](#colors)
+- [Fonts](#fonts)
 - [Buttons](#buttons)
+- [Checkboxes](#checkboxes)
+- [Switches](#switches)
 - [Form Inputs](#form-inputs)
 - [Form Groups](#form-groups)
+- [Cards](#cards)
 - [Info Blocks](#info-blocks)
-- [Text Styles](#text-styles)
+- [Data Display](#data-display)
+- [Table](#table)
+- [Badge](#badge)
+- [Comments](#comments)
+- [Text Utilities](#text-utilities)
 - [Spacing Utilities](#spacing-utilities)
-- [BEM Naming Convention](#bem-naming-convention)
-- [Importing Styles](#importing-styles)
+- [Sizing Utilities](#sizing-utilities)
+- [Layout Utilities](#layout-utilities)
+- [Static Content](#static-content)
+- [Theming](#theming)
 
-## Colors
+## Fonts
 
-The UI Kit uses a consistent color palette defined in `colors.scss`:
+Import Roboto from Google Fonts:
 
 ```scss
-$color-primary: #007bff;
-$color-secondary: #868e96;
-$color-success: #4caf50;
-$color-warning: #ffc107;
-$color-danger: #c82333;
-$color-info: #138496;
-$color-light: #f8f9fa;
-$color-dark: #343a40;
+@use "fonts/roboto.scss";
+```
+
+Apply the font:
+
+```html
+<body class="font-roboto">
+  ...
+</body>
 ```
 
 ## Buttons
 
-Buttons are styled using the `.btn` class with modifiers for different types and sizes.
-
-### Basic Usage
+Base class `.btn` with variant and size modifiers:
 
 ```html
-<button class="btn btn--primary">Primary Button</button>
-<button class="btn btn--secondary">Secondary Button</button>
-<button class="btn btn--success">Success Button</button>
-<button class="btn btn--warning">Warning Button</button>
-<button class="btn btn--danger">Danger Button</button>
-<button class="btn btn--info">Info Button</button>
+<button class="btn btn--primary">Primary</button>
+<button class="btn btn--secondary">Secondary</button>
+<button class="btn btn--light">Light</button>
+<button class="btn btn--success">Success</button>
+<button class="btn btn--warning">Warning</button>
+<button class="btn btn--danger">Danger</button>
+<button class="btn btn--info">Info</button>
+<button class="btn btn--ghost">Ghost</button>
 ```
 
-### Button Sizes
+### Sizes
 
 ```html
-<button class="btn btn--small">Small Button</button>
-<button class="btn btn--medium">Medium Button</button>
-<button class="btn btn--large">Large Button</button>
+<button class="btn btn--primary btn--small">Small</button>
+<button class="btn btn--primary btn--medium">Medium (default)</button>
+<button class="btn btn--primary btn--large">Large</button>
+<button class="btn btn--primary btn--jumbo">Jumbo</button>
 ```
 
-### Button with Icons
+### Icon Buttons
 
 ```html
-<button class="btn btn--icon">
-  <img src="/icons/eye.svg" alt="Icon" />
+<button class="btn btn--primary btn--icon">
+  <img src="/icons/eye.svg" alt="View" />
 </button>
 
-<button class="btn btn--icon-text">
-  <img src="/icons/clipboard-check.svg" alt="Icon" />
-  <span>Text</span>
+<button class="btn btn--primary btn--icon-text">
+  <img src="/icons/clipboard-check.svg" alt="" />
+  <span>Copy</span>
 </button>
 ```
 
-### Disabled Button
+### Disabled & Link Button
 
 ```html
-<button class="btn" disabled>Disabled Button</button>
+<button class="btn btn--primary" disabled>Disabled</button>
+<a class="btn btn--primary" href="/path">Link Button</a>
+```
+
+## Checkboxes
+
+```html
+<label class="checkbox">
+  <input type="checkbox" class="checkbox--input" />
+  <span class="checkbox--label">Accept terms</span>
+</label>
+```
+
+### Sizes & States
+
+```html
+<label class="checkbox checkbox--small">...</label>
+<label class="checkbox checkbox--large">...</label>
+<label class="checkbox checkbox--jumbo">...</label>
+
+<label class="checkbox checkbox--error">...</label>
+<label class="checkbox checkbox--success">...</label>
+```
+
+## Switches
+
+```html
+<label class="switch">
+  <div class="switch--toggle">
+    <input type="checkbox" class="switch--input" />
+    <span class="switch--slider"></span>
+  </div>
+  <span class="switch--label">Enable feature</span>
+</label>
+```
+
+### Sizes & States
+
+```html
+<label class="switch switch--small">...</label>
+<label class="switch switch--large">...</label>
+
+<label class="switch switch--error">...</label>
+<label class="switch switch--success">...</label>
 ```
 
 ## Form Inputs
 
-Form inputs include text inputs, selects, and textareas.
-
-### Basic Usage
-
 ```html
-<!-- Text Input -->
-<input class="form-input" placeholder="Default Input" />
-
-<!-- Select Input -->
+<input class="form-input" placeholder="Text input" />
 <select class="form-select">
-  <option value="">Select an option</option>
-  <option value="option1">Option 1</option>
+  <option>Option</option>
 </select>
-
-<!-- Textarea -->
-<textarea class="form-textarea" placeholder="Enter text here..."></textarea>
+<textarea class="form-textarea" placeholder="Text area"></textarea>
 ```
 
-### Input States
+### Label
 
 ```html
-<!-- Error State -->
-<input class="form-input form-input--error" placeholder="Error Input" />
+<label class="form--label">Username</label>
+```
 
-<!-- Success State -->
-<input class="form-input form-input--success" placeholder="Success Input" />
+### Sizes
 
-<!-- Disabled State -->
-<input class="form-input" placeholder="Disabled Input" disabled />
+```html
+<input class="form-input input--small" placeholder="Small" />
+<input class="form-input input--large" placeholder="Large" />
+<input class="form-input input--jumbo" placeholder="Jumbo" />
+```
+
+### Validation States
+
+```html
+<input class="form-input form-input--error" placeholder="Error" />
+<input class="form-input form-input--success" placeholder="Success" />
+<input class="form-input form-input--warning" placeholder="Warning" />
 ```
 
 ### Search Input
@@ -112,24 +165,10 @@ Form inputs include text inputs, selects, and textareas.
 
 ## Form Groups
 
-Form groups provide structure for form elements with labels and help text.
-
-### Basic Usage
-
 ```html
 <div class="form-group">
-  <label class="form-group--label text--dark" for="username">Username</label>
-  <div class="form-group--input">
-    <input
-      class="form-input"
-      id="username"
-      type="text"
-      placeholder="Enter your username"
-    />
-  </div>
-  <div class="form-group--info text--info text--small">
-    Please enter a unique username.
-  </div>
+  <label class="form--label">Email</label>
+  <input class="form-input" type="email" placeholder="Enter email" />
 </div>
 ```
 
@@ -137,14 +176,9 @@ Form groups provide structure for form elements with labels and help text.
 
 ```html
 <div class="form-group">
-  <label class="form-group--label text--dark" for="email">Email</label>
-  <div class="form-group--input form-group__with-icon">
-    <input
-      class="form-input"
-      id="email"
-      type="email"
-      placeholder="Enter your email"
-    />
+  <label class="form--label">Search</label>
+  <div class="form-group__with-icon">
+    <input class="form-input" placeholder="Search..." />
     <div class="form-group--icon">
       <img src="/icons/search.svg" alt="search" />
     </div>
@@ -152,188 +186,241 @@ Form groups provide structure for form elements with labels and help text.
 </div>
 ```
 
-## Info Blocks
-
-Info blocks are used to display messages, alerts, and notifications.
-
-### Basic Usage
+### Actions Row
 
 ```html
-<div class="info">Plain Info Block</div>
-<div class="info info--primary">Primary Info Block</div>
-<div class="info info--secondary">Secondary Info Block</div>
-<div class="info info--success">Success Info Block</div>
-<div class="info info--warning">Warning Info Block</div>
-<div class="info info--danger">Danger Info Block</div>
+<div class="form-group--actions">
+  <button class="btn btn--secondary">Cancel</button>
+  <button class="btn btn--primary">Submit</button>
+</div>
 ```
 
-### Closable Info Blocks
+## Cards
 
 ```html
-<div class="info info--primary info--closable">
-  Primary Info Block
+<div class="card">
+  <div class="card--header p-16">
+    <h2 class="card--title">Card Title</h2>
+    <p class="card--subtitle">Subtitle text</p>
+  </div>
+  <div class="p-16">Card content</div>
+  <div class="card--footer p-16">Footer</div>
+</div>
+
+<div class="card card__centered">Centered card (max 600px)</div>
+```
+
+## Info Blocks
+
+```html
+<div class="info info--primary p-10">Primary message</div>
+<div class="info info--success p-10">Success message</div>
+<div class="info info--danger p-10">Error message</div>
+<div class="info info--warning p-10">Warning message</div>
+```
+
+Variants: `primary`, `secondary`, `success`, `danger`, `warning`, `light`, `dark`
+
+### Closable
+
+```html
+<div class="info info--primary info--closable p-10">
+  Dismissible message
   <button class="info__close" aria-label="Close">&times;</button>
 </div>
 ```
 
-## Text Styles
-
-Text styles provide consistent typography with different colors and sizes.
-
-### Text Colors
+## Data Display
 
 ```html
-<p class="text text--primary">Primary Text</p>
-<p class="text text--secondary">Secondary Text</p>
-<p class="text text--success">Success Text</p>
-<p class="text text--warning">Warning Text</p>
-<p class="text text--danger">Danger Text</p>
-<p class="text text--info">Info Text</p>
-<p class="text text--light">Light Text</p>
-<p class="text text--dark">Dark Text</p>
+<div class="data-display">
+  <div class="data-display--field p-10">
+    <div class="data-display--label">Username</div>
+    <div class="data-display--value">john_doe</div>
+  </div>
+  <div class="data-display--field p-10">
+    <div class="data-display--label">Password</div>
+    <div class="data-display--value data-display__monospace">••••••••</div>
+  </div>
+  <div class="data-display--actions p-10">
+    <button class="btn btn--primary btn--small">Edit</button>
+    <button class="btn btn--danger btn--small">Delete</button>
+  </div>
+</div>
 ```
 
-### Text Sizes
+Modifiers: `data-display__with-action`, `data-display__monospace`, `data-display__multiline`, `data-display__link`
+
+## Table
 
 ```html
-<p class="text text--small">Small Text</p>
-<p class="text text--medium">Medium Text</p>
-<p class="text text--large">Large Text</p>
+<table class="table">
+  <thead>
+    <tr class="table--header">
+      <th class="table--header-cell p-10">Name</th>
+      <th class="table--header-cell p-10">Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table--row">
+      <td class="table--cell p-10">Alice</td>
+      <td class="table--cell p-10">Admin</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-### Combined Styles
+Variants: `.table--compact`, `.table--striped`
+Column widths: `.table--col-xs` (60px), `.table--col-sm` (100px), `.table--col-md` (150px), `.table--col-lg` (200px), `.table--col-xl` (250px)
+Cell align: `.table--cell-center`, `.table--cell-right`
+
+## Badge
 
 ```html
-<p class="text text--primary text--small">Small Primary Text</p>
-<p class="text text--danger text--large">Large Danger Text</p>
+<span class="badge">Default</span>
+<span class="badge badge-primary">Primary</span>
+<span class="badge badge-success">Success</span>
+<span class="badge badge-warning">Warning</span>
+<span class="badge badge-danger">Danger</span>
+<span class="badge badge-info">Info</span>
+```
+
+## Comments
+
+```html
+<div class="comment--styled flex gap-10 p-10">
+  <div class="comment--avatar comment--avatar-color-1"></div>
+  <div class="comment--body">
+    <div class="bold">Author Name</div>
+    <div class="comment--time fs-12">2 hours ago</div>
+    <p class="mt-6">Comment text here.</p>
+  </div>
+</div>
+```
+
+Nested comments use `.comment--nested` with left border.
+Avatar colors: `.comment--avatar-color-{1..6}`
+
+## Text Utilities
+
+### Colors
+
+```html
+<p class="text-primary">Primary</p>
+<p class="text-secondary">Secondary</p>
+<p class="text-success">Success</p>
+<p class="text-danger">Danger</p>
+```
+
+### Font Size & Line Height
+
+```html
+<p class="fs-14 lh-20">14px font, 20px line-height</p>
+<p class="fs-20 lh-28 bold">20px bold text</p>
+```
+
+### Weight, Style, Transform
+
+```html
+<span class="bold">Bold</span>
+<span class="semibold">Semibold</span>
+<span class="italic">Italic</span>
+<span class="uppercase">Uppercase</span>
+<span class="truncate">Long text that gets cut off...</span>
 ```
 
 ## Spacing Utilities
 
-Spacing utilities provide consistent margins and padding.
+All values represent pixels: value ÷ 10 = rem. Example: `.m-20` = 2rem = 20px.
 
-### Margin Utilities
-
-```html
-<div class="m16">16px margin on all sides</div>
-<div class="mt8">8px margin top</div>
-<div class="mb16">16px margin bottom</div>
-<div class="ml24">24px margin left</div>
-<div class="mr32">32px margin right</div>
-```
-
-### Padding Utilities
+### Margins
 
 ```html
-<div class="p16">16px padding on all sides</div>
-<div class="pt8">8px padding top</div>
-<div class="pb16">16px padding bottom</div>
-<div class="pl24">24px padding left</div>
-<div class="pr32">32px padding right</div>
+<div class="m-16">16px all sides</div>
+<div class="mt-8">8px top</div>
+<div class="mb-16">16px bottom</div>
+<div class="ml-24">24px left</div>
+<div class="mr-10">10px right</div>
+<div class="mauto">margin: 0 auto</div>
 ```
 
-Available spacing values: 0, 8, 16, 20, 24, 32 (in pixels).
+### Paddings
 
-## BEM Naming Convention
-
-This UI Kit follows the BEM (Block, Element, Modifier) naming convention for CSS classes, with some custom adaptations:
-
-- **Block**: The main component (e.g., `btn`, `form-group`, `info`)
-- **Element**: A part of the block, denoted with `--` (e.g., `form-group--label`, `info--closable`)
-- **Modifier**: A variant of a block or element, denoted with `__` (e.g., `btn__primary`, `text__large`)
-
-### Examples
-
-```
-Block:           .btn
-Element:         .form-group--label
-Modifier:        .btn__primary
-Element+Modifier: .form-input__error
+```html
+<div class="p-16">16px all sides</div>
+<div class="pt-8 pb-8">8px top and bottom</div>
 ```
 
-### Warning: Naming Inconsistencies
+### Gaps
 
-**Note**: The current implementation of the UI Kit contains naming inconsistencies that don't follow the standard BEM convention described above. Many classes use `--` for modifiers instead of `__`.
-
-#### Inconsistent Classes
-
-The following classes use inconsistent naming patterns:
-
-- Modifiers using `--` instead of `__`:
-  - `btn--primary`, `btn--secondary`, `btn--success`, etc.
-  - `text--primary`, `text--secondary`, `text--small`, etc.
-  - `info--primary`, `info--secondary`, `info--closable`, etc.
-  - `form-input--error`, `form-input--success`
-
-- Elements using `__` instead of `--`:
-  - `info__close` (should be `info--close`)
-
-- Special contextual variants:
-  - `form-group__with-icon` (uses `__` for a contextual variant)
-
-When using the UI Kit, be aware of these inconsistencies and follow the actual implementation patterns rather than the standard BEM convention.
-
-## Importing Styles
-
-### In SCSS Files
-
-To import UI Kit styles in your SCSS files:
-
-```scss
-// Import specific components
-@use '@smart.css/buttons.scss';
-@use '@smart.css/form-inputs.scss';
-@use '@smart.css/text-styles.scss';
-
-// Import variables only
-@use '@smart.css/colors.scss' as *;
-
-// In your component styles
-.my-component {
-  background-color: $color-primary;
-  padding: 16px;
-
-  &__title {
-    color: $color-dark;
-  }
-}
+```html
+<div class="flex gap-10">10px gap between flex items</div>
 ```
 
-### In React Components
+Available spacing values: `0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32, 34, 35, 36, 38, 40`
 
-To import UI Kit styles in your React components:
+## Sizing Utilities
 
-```tsx
-// Import in your component file
-import '@smart.css/buttons.scss';
-import '@smart.css/form-inputs.scss';
-import './your-component.scss'; // Your component-specific styles
+### Width
 
-const YourComponent = () => {
-  return (
-    <div className="your-component">
-      <h2 className="your-component--title text--large">Title</h2>
-      <button className="btn btn--primary">Click Me</button>
-    </div>
-  );
-};
+```html
+<div class="w-200">200px (20rem)</div>
+<div class="w-50p">50%</div>
+<div class="w-full">100%</div>
 ```
 
-### In Storybook Stories
+### Height
 
-```tsx
-import type { Meta, StoryObj } from '@storybook/react';
-import '@smart.css/buttons.scss';
-import '@smart.css/text-styles.scss';
-import YourComponent from './YourComponent';
-
-const meta: Meta<typeof YourComponent> = {
-  title: 'Components/YourComponent',
-  component: YourComponent,
-};
-
-export default meta;
-type Story = StoryObj<typeof YourComponent>;
-
-export const Default: Story = {};
+```html
+<div class="h-100">100px (10rem)</div>
+<div class="h-screen">100vh</div>
 ```
+
+## Layout Utilities
+
+### Flexbox
+
+```html
+<div class="flex gap-10 items-center justify-between">
+  <div class="flex-1">Grows</div>
+  <div class="flex-none">Fixed</div>
+</div>
+
+<div class="flex flex-col gap-8">
+  <div>Row 1</div>
+  <div>Row 2</div>
+</div>
+```
+
+### Grid
+
+```html
+<div class="grid grid-cols-3 gap-16">
+  <div>Col 1</div>
+  <div>Col 2</div>
+  <div>Col 3</div>
+</div>
+```
+
+## Static Content
+
+Wrapper for rendered HTML (articles, user-generated content):
+
+```html
+<div class="static-content">
+  <h1>Article Title</h1>
+  <p>Paragraph text with <a href="#">links</a>.</p>
+  <ul>
+    <li>List item</li>
+  </ul>
+</div>
+```
+
+## Theming
+
+Components use CSS custom properties (`--sss-*` prefix). Define them in a theme file.
+Built-in themes: `themes/default/`, `themes/gold/`, `themes/dark/`.
+
+The default theme is loaded automatically via `UI.scss`.
+
+For the full list of required CSS variables, see [AI-DOCUMENTATION.md](./AI-DOCUMENTATION.md#6-required-css-variables).

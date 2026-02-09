@@ -2,9 +2,10 @@
 
 ## Table of Contents
 
-### Reset
+### Base
 
 - [Reset Stylesheet](#reset-stylesheet)
+- [Fonts](#fonts)
 
 ### Typography & Text
 
@@ -28,11 +29,20 @@
 - [Link Component](#link-component)
 - [Checkboxes](#checkboxes)
 - [Switches](#switches)
+- [Badge](#badge)
 
 ### Forms
 
 - [Form Groups](#form-groups)
 - [Form Inputs](#form-inputs)
+
+### Blocks
+
+- [Card](#card)
+- [Info Blocks](#info-blocks)
+- [Data Display](#data-display)
+- [Table](#table)
+- [Comments](#comments)
 
 ### Layout & Alignment
 
@@ -44,6 +54,7 @@
 ### Content
 
 - [Static Content](#static-content)
+- [Theming](#theming)
 
 ---
 
@@ -102,6 +113,14 @@ Individual markers:
 
 - `ul li`: `list-style: circle`
 - `ol li`: `list-style: decimal`
+
+## Fonts
+
+File: `fonts/roboto.scss`
+
+Imports Roboto from Google Fonts and provides `.font-roboto` class.
+
+- `.font-roboto`: `font-family: "Roboto", sans-serif`
 
 ## Link Component
 
@@ -549,3 +568,131 @@ Wrapper for rendered HTML content (blog posts, articles, user-generated content)
 ### 4. Links
 
 Links inside static content: underlined, primary color
+
+## Badge
+
+Class: `.badge`
+
+Inline label/tag element.
+
+### Variants
+
+- `.badge-primary`, `.badge-success`, `.badge-warning`, `.badge-danger`, `.badge-info`
+
+Uses CSS custom properties with inline fallbacks.
+
+## Card
+
+Class: `.card`
+
+Container with background, border-radius, shadow.
+
+### Parts
+
+- `.card--header`: top section with border-bottom
+- `.card--title`: large centered title (2.4rem, 600 weight)
+- `.card--subtitle`: smaller centered subtitle (1.6rem)
+- `.card--footer`: bottom section with border-top
+
+### Modifier
+
+- `.card__centered`: max-width 600px, centered with auto margins
+
+## Info Blocks
+
+Class: `.info`
+
+Alert/notification block with border and background.
+
+### Variants
+
+- `.info--primary`, `.info--secondary`, `.info--success`, `.info--danger`, `.info--warning`, `.info--light`, `.info--dark`
+
+### Closable
+
+- `.info--closable`: adds right padding for close button
+- `.info__close`: positioned close button (absolute, top-right)
+
+## Data Display
+
+Class: `.data-display`
+
+Read-only data presentation (key-value pairs).
+
+### Parts
+
+- `.data-display--field`: row with bottom border
+- `.data-display--label`: field label (1.4rem, 600 weight)
+- `.data-display--value`: field value (1.6rem, word-break)
+- `.data-display--actions`: action buttons row (responsive, stacks on mobile)
+
+### Modifiers
+
+- `.data-display__with-action`: row with space-between alignment
+- `.data-display__monospace`: monospace font with letter-spacing
+- `.data-display__multiline`: pre-wrap with 1.5 line-height
+- `.data-display__link`: styled link with hover underline
+
+## Table
+
+Class: `.table`
+
+Full-width table with collapse borders and shadow.
+
+### Parts
+
+- `.table--header`: thead row with background and bottom border
+- `.table--row`: tbody row with hover effect
+- `.table--cell`: td element
+- `.table--header-cell`: th element (600 weight)
+
+### Variants
+
+- `.table--compact`: smaller font size cells
+- `.table--striped`: alternating row backgrounds
+
+### Column Widths
+
+- `.table--col-xs`: 60px
+- `.table--col-sm`: 100px
+- `.table--col-md`: 150px
+- `.table--col-lg`: 200px
+- `.table--col-xl`: 250px
+
+### Cell Alignment
+
+- `.table--cell-center`: centered text
+- `.table--cell-right`: right-aligned text
+
+## Comments
+
+Class prefix: `.comment`
+
+Comment/discussion thread component.
+
+### Parts
+
+- `.comment--avatar`: circular avatar (40px, gradient background)
+- `.comment--body`: content wrapper
+- `.comment--time`: timestamp (reduced opacity)
+- `.comment--nested`: nested replies (left dashed border)
+
+### Styled Variant
+
+- `.comment--styled`: adds background, border, rounded corners, hover shadow. Avatar enlarged to 48px.
+
+### Avatar Colors
+
+6 gradient presets: `.comment--avatar-color-1` through `.comment--avatar-color-6`
+
+## Theming
+
+Components use CSS custom properties with `--sss-` prefix.
+
+Built-in themes in `themes/` directory:
+
+- `default/` — default light theme (loaded by `UI.scss`)
+- `gold/` — gold accent theme
+- `dark/` — dark theme
+
+Each theme provides `colors.scss`, `custom.scss`, `styles.scss`, and component-specific overrides in `components/`.
