@@ -6,9 +6,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "desktop"
-    }
-  }
+      defaultViewport: "desktop",
+    },
+  },
 };
 
 export default meta;
@@ -358,7 +358,7 @@ export const AllMarginUtilities: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const CombinedMargins: Story = {
@@ -422,5 +422,5 @@ export const CombinedMargins: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

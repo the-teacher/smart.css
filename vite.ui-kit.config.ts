@@ -9,7 +9,7 @@ const cssFileNames = [
   { match: "forms", output: "forms.css" },
   { match: "static-content", output: "static-content.css" },
   { match: "ui-kit", output: "ui-kit.css" },
-  { match: "index", output: "ui-kit.css" }
+  { match: "index", output: "ui-kit.css" },
 ];
 
 // Function to determine CSS file name based on entry point
@@ -35,10 +35,10 @@ export default defineConfig({
         "static-content": path.resolve(
           __dirname,
           "src/ui-kit/css-build/static-content.scss"
-        )
+        ),
       },
       name: "UIKit",
-      formats: ["es"]
+      formats: ["es"],
     },
     outDir: "dist/ui-kit",
     emptyOutDir: true,
@@ -51,16 +51,16 @@ export default defineConfig({
             return getCSSFileName(name);
           }
           return assetInfo.name || "asset";
-        }
-      }
-    }
+        },
+      },
+    },
   },
   resolve: {
     alias: [
       {
         find: "@ui-kit",
-        replacement: path.resolve(__dirname, "src/ui-kit")
-      }
-    ]
-  }
+        replacement: path.resolve(__dirname, "src/ui-kit"),
+      },
+    ],
+  },
 });

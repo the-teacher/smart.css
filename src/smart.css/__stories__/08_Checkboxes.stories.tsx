@@ -7,9 +7,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "tablet"
-    }
-  }
+      defaultViewport: "tablet",
+    },
+  },
 };
 
 export default meta;
@@ -20,7 +20,7 @@ const ControlledCheckbox = ({
   label,
   className = "",
   disabled = false,
-  initialChecked = false
+  initialChecked = false,
 }: {
   label: string;
   className?: string;
@@ -58,7 +58,7 @@ export const CheckboxesShowcase: Story = {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            marginTop: "16px"
+            marginTop: "16px",
           }}
         >
           <ControlledCheckbox label="Unchecked checkbox" />
@@ -80,7 +80,7 @@ export const CheckboxesShowcase: Story = {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            marginTop: "16px"
+            marginTop: "16px",
           }}
         >
           <ControlledCheckbox
@@ -103,7 +103,7 @@ export const CheckboxesShowcase: Story = {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            marginTop: "16px"
+            marginTop: "16px",
           }}
         >
           <ControlledCheckbox
@@ -137,7 +137,7 @@ export const CheckboxesShowcase: Story = {
               display: "flex",
               flexDirection: "column",
               gap: "8px",
-              marginTop: "8px"
+              marginTop: "8px",
             }}
           >
             <ControlledCheckbox label="Receive email notifications" />
@@ -159,14 +159,14 @@ export const CheckboxesShowcase: Story = {
             flexDirection: "column",
             gap: "16px",
             marginTop: "16px",
-            maxWidth: "500px"
+            maxWidth: "500px",
           }}
         >
           <ControlledCheckbox label="I agree to the terms and conditions of the service, privacy policy, and all other policies that apply to using this application. This is a long text to demonstrate how checkboxes handle multi-line labels." />
         </div>
       </section>
     </div>
-  )
+  ),
 };
 
 // Simple usage example
@@ -178,5 +178,5 @@ export const SimpleCheckbox: Story = {
         <span className="checkbox--label">Accept terms and conditions</span>
       </label>
     </div>
-  )
+  ),
 };

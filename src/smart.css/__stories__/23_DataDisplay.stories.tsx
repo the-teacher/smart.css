@@ -4,8 +4,8 @@ import "@smart.css/UI.scss";
 const meta: Meta = {
   title: "2-UI-Kit-Blocks/3-DataDisplay",
   parameters: {
-    docs: { disable: true }
-  }
+    docs: { disable: true },
+  },
 };
 
 export default meta;
@@ -77,5 +77,5 @@ export const DataDisplayExample: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

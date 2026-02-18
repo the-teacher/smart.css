@@ -12,11 +12,11 @@ export default defineConfig({
         "ui-kit-regular": path.resolve(
           __dirname,
           "src/ui-kit/themes/regular/index.scss"
-        )
+        ),
       },
-      formats: ["es"]
+      formats: ["es"],
     },
     outDir: "dist/ui-kit-themes",
-    cssCodeSplit: false
-  }
+    cssCodeSplit: false,
+  },
 });

@@ -6,9 +6,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "desktop"
-    }
-  }
+      defaultViewport: "desktop",
+    },
+  },
 };
 
 export default meta;
@@ -33,7 +33,7 @@ export const FontSizes: Story = {
         <div className="fs-30 mb-10">fs-30 = 3rem (30px)</div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const LineHeights: Story = {
@@ -75,7 +75,7 @@ export const LineHeights: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const TextColors: Story = {
@@ -106,7 +106,7 @@ export const TextColors: Story = {
         <div className="text-dark mb-10 fs-16">text-dark - Dark color text</div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const TextAlignment: Story = {
@@ -135,7 +135,7 @@ export const TextAlignment: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const FontWeights: Story = {
@@ -153,7 +153,7 @@ export const FontWeights: Story = {
         <div className="strike mb-10 fs-16">strike - Strikethrough text</div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const TextTransformations: Story = {
@@ -170,7 +170,7 @@ export const TextTransformations: Story = {
         <div className="underline mb-10 fs-16">underline - Underlined text</div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const TextOverflow: Story = {
@@ -186,7 +186,7 @@ export const TextOverflow: Story = {
             style={{
               width: "200px",
               backgroundColor: "#f0f0f0",
-              padding: "10px"
+              padding: "10px",
             }}
           >
             This is a very long text that will be truncated with ellipsis when
@@ -201,7 +201,7 @@ export const TextOverflow: Story = {
             style={{
               width: "200px",
               backgroundColor: "#f0f0f0",
-              padding: "10px"
+              padding: "10px",
             }}
           >
             This is a verylongwordthatwillbebrokenacrossmultiplelines when it
@@ -210,7 +210,7 @@ export const TextOverflow: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const CombinedUtilities: Story = {
@@ -240,14 +240,14 @@ export const CombinedUtilities: Story = {
           style={{
             width: "250px",
             backgroundColor: "#f0f0f0",
-            padding: "10px"
+            padding: "10px",
           }}
         >
           Small warning text that gets truncated when too long for the container
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const AllTextStyles: Story = {
@@ -448,5 +448,5 @@ export const AllTextStyles: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

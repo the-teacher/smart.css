@@ -11,7 +11,7 @@ type HolyGrailLayoutProps = {
 
 const HolyGrailLayout = ({
   children,
-  layoutRoot = DEFAULT_ROOT
+  layoutRoot = DEFAULT_ROOT,
 }: HolyGrailLayoutProps) => {
   useEffect(() => {
     const element = document.querySelector(layoutRoot);

@@ -6,8 +6,8 @@ const meta: Meta<typeof HolyGrailLayoutWithParams> = {
   title: "1-Layouts/2-HolyGrailLayoutWithParams",
   component: HolyGrailLayoutWithParams,
   parameters: {
-    docs: { disable: true }
-  }
+    docs: { disable: true },
+  },
 };
 
 export default meta;
@@ -27,7 +27,7 @@ export const Default: Story = {
       }
       footer={<p className="holy-grail--text">Footer content</p>}
     />
-  )
+  ),
 };
 
 // Layout with left sidebar
@@ -50,7 +50,7 @@ export const WithLeftSidebar: Story = {
       }
       footer={<p className="holy-grail--text">Footer content</p>}
     />
-  )
+  ),
 };
 
 // Layout with right sidebar
@@ -73,7 +73,7 @@ export const WithRightSidebar: Story = {
       }
       footer={<p className="holy-grail--text">Footer content</p>}
     />
-  )
+  ),
 };
 
 // Layout with both sidebars
@@ -102,5 +102,5 @@ export const WithBothSidebars: Story = {
       }
       footer={<p className="holy-grail--text">Footer content</p>}
     />
-  )
+  ),
 };

@@ -6,9 +6,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "tablet"
-    }
-  }
+      defaultViewport: "tablet",
+    },
+  },
 };
 
 export default meta;
@@ -33,7 +33,7 @@ export const Typography: Story = {
         Font with antialiasing enabled for smooth rendering.
       </p>
     </div>
-  )
+  ),
 };
 
 export const Lists: Story = {
@@ -61,7 +61,7 @@ export const Lists: Story = {
         </ol>
       </div>
     </div>
-  )
+  ),
 };
 
 export const FormElements: Story = {
@@ -100,7 +100,7 @@ export const FormElements: Story = {
         </button>
       </div>
     </div>
-  )
+  ),
 };
 
 export const BoxModel: Story = {
@@ -115,7 +115,7 @@ export const BoxModel: Story = {
           style={{
             width: "200px",
             border: "10px solid #ccc",
-            backgroundColor: "#f0f0f0"
+            backgroundColor: "#f0f0f0",
           }}
         >
           This div is 200px wide including padding and border
@@ -137,5 +137,5 @@ export const BoxModel: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

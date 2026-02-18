@@ -8,9 +8,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "tablet"
-    }
-  }
+      defaultViewport: "tablet",
+    },
+  },
 };
 
 export default meta;
@@ -163,7 +163,7 @@ export const AllFormInputs: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 // Form input with icon story
@@ -236,5 +236,5 @@ export const FormInputWithIcon: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

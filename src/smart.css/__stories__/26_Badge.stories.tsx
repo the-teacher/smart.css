@@ -4,8 +4,8 @@ import "@smart.css/UI.scss";
 const meta: Meta = {
   title: "2-UI-Kit-Blocks/4-Badge",
   parameters: {
-    docs: { disable: true }
-  }
+    docs: { disable: true },
+  },
 };
 
 export default meta;
@@ -30,7 +30,7 @@ export const BadgeVariants: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const BadgesInContext: Story = {
@@ -93,7 +93,7 @@ export const BadgesInContext: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const BadgeSizesWithText: Story = {
@@ -139,7 +139,7 @@ export const BadgeSizesWithText: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const BadgeFontSizes: Story = {
@@ -220,5 +220,5 @@ export const BadgeFontSizes: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

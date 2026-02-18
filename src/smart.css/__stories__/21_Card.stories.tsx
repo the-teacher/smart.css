@@ -4,8 +4,8 @@ import "@smart.css/UI.scss";
 const meta: Meta = {
   title: "2-UI-Kit-Blocks/1-Card",
   parameters: {
-    docs: { disable: true }
-  }
+    docs: { disable: true },
+  },
 };
 
 export default meta;
@@ -36,7 +36,7 @@ export const CardExample: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const SimpleCard: Story = {
@@ -53,7 +53,7 @@ export const SimpleCard: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const CardShowcase: Story = {
@@ -158,7 +158,7 @@ export const CardShowcase: Story = {
                     width: "48px",
                     height: "48px",
                     backgroundColor: "#e2e8f0",
-                    borderRadius: "50%"
+                    borderRadius: "50%",
                   }}
                 ></div>
                 <div>
@@ -176,7 +176,7 @@ export const CardShowcase: Story = {
                   className="text text--small p-8"
                   style={{
                     backgroundColor: "#f1f5f9",
-                    borderRadius: "4px"
+                    borderRadius: "4px",
                   }}
                 >
                   React
@@ -185,7 +185,7 @@ export const CardShowcase: Story = {
                   className="text text--small p-8"
                   style={{
                     backgroundColor: "#f1f5f9",
-                    borderRadius: "4px"
+                    borderRadius: "4px",
                   }}
                 >
                   TypeScript
@@ -194,7 +194,7 @@ export const CardShowcase: Story = {
                   className="text text--small p-8"
                   style={{
                     backgroundColor: "#f1f5f9",
-                    borderRadius: "4px"
+                    borderRadius: "4px",
                   }}
                 >
                   Node.js
@@ -210,5 +210,5 @@ export const CardShowcase: Story = {
         </div>
       </section>
     </div>
-  )
+  ),
 };

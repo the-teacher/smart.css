@@ -6,9 +6,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "desktop"
-    }
-  }
+      defaultViewport: "desktop",
+    },
+  },
 };
 
 export default meta;
@@ -331,7 +331,7 @@ export const AllPaddingUtilities: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const CombinedPaddings: Story = {
@@ -377,5 +377,5 @@ export const CombinedPaddings: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

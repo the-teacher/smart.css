@@ -5,7 +5,7 @@ import HolyGrailLayout, {
   AsideLeft,
   AsideRight,
   MainContent,
-  MainColumns
+  MainColumns,
 } from "..";
 import "./stories.scss";
 
@@ -13,8 +13,8 @@ const meta: Meta<typeof HolyGrailLayout> = {
   title: "1-Layouts/1-HolyGrailLayout",
   component: HolyGrailLayout,
   parameters: {
-    docs: { disable: true }
-  }
+    docs: { disable: true },
+  },
 };
 
 export default meta;
@@ -37,7 +37,7 @@ export const Default: Story = {
         <p className="holy-grail--text">Footer content</p>
       </Footer>
     </HolyGrailLayout>
-  )
+  ),
 };
 
 // Layout with left sidebar
@@ -61,7 +61,7 @@ export const WithLeftSidebar: Story = {
         <p className="holy-grail--text">Footer content</p>
       </Footer>
     </HolyGrailLayout>
-  )
+  ),
 };
 
 // Layout with right sidebar
@@ -85,7 +85,7 @@ export const WithRightSidebar: Story = {
         <p className="holy-grail--text">Footer content</p>
       </Footer>
     </HolyGrailLayout>
-  )
+  ),
 };
 
 // Layout with both sidebars
@@ -113,5 +113,5 @@ export const WithBothSidebars: Story = {
         <p className="holy-grail--text">Footer content</p>
       </Footer>
     </HolyGrailLayout>
-  )
+  ),
 };

@@ -5,8 +5,8 @@ import "@smart.css/UI.scss";
 const meta: Meta = {
   title: "2-UI-Kit-Blocks/5-Table",
   parameters: {
-    docs: { disable: true }
-  }
+    docs: { disable: true },
+  },
 };
 
 export default meta;
@@ -24,7 +24,7 @@ const tableData = [
     action: "view",
     value: "granted",
     starts_at: "2024-01-15",
-    ends_at: "2025-01-15"
+    ends_at: "2025-01-15",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const tableData = [
     action: "edit",
     value: "pending",
     starts_at: "2024-02-01",
-    ends_at: "2024-08-01"
+    ends_at: "2024-08-01",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const tableData = [
     action: "remove",
     value: "denied",
     starts_at: "2024-01-20",
-    ends_at: "2024-12-20"
+    ends_at: "2024-12-20",
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const tableData = [
     action: "manage",
     value: "granted",
     starts_at: "2024-01-01",
-    ends_at: "2025-12-31"
+    ends_at: "2025-12-31",
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const tableData = [
     action: "query",
     value: "granted",
     starts_at: "2024-03-10",
-    ends_at: "2025-03-10"
+    ends_at: "2025-03-10",
   },
   {
     id: 6,
@@ -84,7 +84,7 @@ const tableData = [
     action: "invoke",
     value: "pending",
     starts_at: "2024-04-05",
-    ends_at: "2024-10-05"
+    ends_at: "2024-10-05",
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const tableData = [
     action: "view",
     value: "granted",
     starts_at: "2024-02-14",
-    ends_at: "2025-02-14"
+    ends_at: "2025-02-14",
   },
   {
     id: 8,
@@ -108,7 +108,7 @@ const tableData = [
     action: "modify",
     value: "denied",
     starts_at: "2024-01-25",
-    ends_at: "2024-07-25"
+    ends_at: "2024-07-25",
   },
   {
     id: 9,
@@ -120,7 +120,7 @@ const tableData = [
     action: "manage",
     value: "granted",
     starts_at: "2024-01-10",
-    ends_at: "2026-01-10"
+    ends_at: "2026-01-10",
   },
   {
     id: 10,
@@ -132,7 +132,7 @@ const tableData = [
     action: "generate",
     value: "granted",
     starts_at: "2024-03-20",
-    ends_at: "2025-03-20"
+    ends_at: "2025-03-20",
   },
   {
     id: 11,
@@ -144,7 +144,7 @@ const tableData = [
     action: "clear",
     value: "pending",
     starts_at: "2024-05-01",
-    ends_at: "2024-11-01"
+    ends_at: "2024-11-01",
   },
   {
     id: 12,
@@ -156,7 +156,7 @@ const tableData = [
     action: "send",
     value: "granted",
     starts_at: "2024-01-05",
-    ends_at: "2025-01-05"
+    ends_at: "2025-01-05",
   },
   {
     id: 13,
@@ -168,7 +168,7 @@ const tableData = [
     action: "upload",
     value: "granted",
     starts_at: "2024-02-28",
-    ends_at: "2025-02-28"
+    ends_at: "2025-02-28",
   },
   {
     id: 14,
@@ -180,7 +180,7 @@ const tableData = [
     action: "manage",
     value: "denied",
     starts_at: "2024-04-10",
-    ends_at: "2024-10-10"
+    ends_at: "2024-10-10",
   },
   {
     id: 15,
@@ -192,7 +192,7 @@ const tableData = [
     action: "process",
     value: "granted",
     starts_at: "2024-01-01",
-    ends_at: "2025-12-31"
+    ends_at: "2025-12-31",
   },
   {
     id: 16,
@@ -204,7 +204,7 @@ const tableData = [
     action: "audit",
     value: "pending",
     starts_at: "2024-06-01",
-    ends_at: "2024-12-01"
+    ends_at: "2024-12-01",
   },
   {
     id: 17,
@@ -216,7 +216,7 @@ const tableData = [
     action: "export",
     value: "granted",
     starts_at: "2024-02-15",
-    ends_at: "2025-02-15"
+    ends_at: "2025-02-15",
   },
   {
     id: 18,
@@ -228,7 +228,7 @@ const tableData = [
     action: "enable",
     value: "denied",
     starts_at: "2024-03-01",
-    ends_at: "2024-09-01"
+    ends_at: "2024-09-01",
   },
   {
     id: 19,
@@ -240,7 +240,7 @@ const tableData = [
     action: "manage",
     value: "granted",
     starts_at: "2024-01-20",
-    ends_at: "2026-01-20"
+    ends_at: "2026-01-20",
   },
   {
     id: 20,
@@ -252,7 +252,7 @@ const tableData = [
     action: "configure",
     value: "pending",
     starts_at: "2024-05-10",
-    ends_at: "2024-11-10"
+    ends_at: "2024-11-10",
   },
   {
     id: 21,
@@ -264,7 +264,7 @@ const tableData = [
     action: "set",
     value: "granted",
     starts_at: "2024-04-01",
-    ends_at: "2025-04-01"
+    ends_at: "2025-04-01",
   },
   {
     id: 22,
@@ -276,7 +276,7 @@ const tableData = [
     action: "manage",
     value: "granted",
     starts_at: "2024-01-10",
-    ends_at: "2025-12-31"
+    ends_at: "2025-12-31",
   },
   {
     id: 23,
@@ -288,7 +288,7 @@ const tableData = [
     action: "manage",
     value: "denied",
     starts_at: "2024-02-20",
-    ends_at: "2024-08-20"
+    ends_at: "2024-08-20",
   },
   {
     id: 24,
@@ -300,7 +300,7 @@ const tableData = [
     action: "configure",
     value: "granted",
     starts_at: "2024-01-15",
-    ends_at: "2026-01-15"
+    ends_at: "2026-01-15",
   },
   {
     id: 25,
@@ -312,7 +312,7 @@ const tableData = [
     action: "manage",
     value: "pending",
     starts_at: "2024-06-05",
-    ends_at: "2024-12-05"
+    ends_at: "2024-12-05",
   },
   {
     id: 26,
@@ -324,7 +324,7 @@ const tableData = [
     action: "allocate",
     value: "granted",
     starts_at: "2024-03-01",
-    ends_at: "2025-03-01"
+    ends_at: "2025-03-01",
   },
   {
     id: 27,
@@ -336,7 +336,7 @@ const tableData = [
     action: "analyze",
     value: "granted",
     starts_at: "2024-01-01",
-    ends_at: "2025-12-31"
+    ends_at: "2025-12-31",
   },
   {
     id: 28,
@@ -348,7 +348,7 @@ const tableData = [
     action: "manage",
     value: "denied",
     starts_at: "2024-04-15",
-    ends_at: "2024-10-15"
+    ends_at: "2024-10-15",
   },
   {
     id: 29,
@@ -360,7 +360,7 @@ const tableData = [
     action: "deploy",
     value: "granted",
     starts_at: "2024-01-20",
-    ends_at: "2026-01-20"
+    ends_at: "2026-01-20",
   },
   {
     id: 30,
@@ -372,8 +372,8 @@ const tableData = [
     action: "verify",
     value: "pending",
     starts_at: "2024-07-01",
-    ends_at: "2025-01-01"
-  }
+    ends_at: "2025-01-01",
+  },
 ];
 
 const getBadgeClass = (value: string) => {
@@ -434,7 +434,7 @@ export const SimpleTable: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const StripedTable: Story = {
@@ -482,7 +482,7 @@ export const StripedTable: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const FullTable: Story = {
@@ -560,12 +560,12 @@ export const FullTable: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 const ControlledSwitch = ({
   initialChecked = false,
-  disabled = false
+  disabled = false,
 }: {
   initialChecked?: boolean;
   disabled?: boolean;
@@ -671,7 +671,7 @@ export const FullTableWithToggle: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const CompactTable: Story = {
@@ -739,7 +739,7 @@ export const CompactTable: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
 
 export const TableWithActions: Story = {
@@ -802,5 +802,5 @@ export const TableWithActions: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

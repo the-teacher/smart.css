@@ -7,9 +7,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "tablet"
-    }
-  }
+      defaultViewport: "tablet",
+    },
+  },
 };
 
 export default meta;
@@ -20,7 +20,7 @@ const ControlledSwitch = ({
   label,
   className = "",
   disabled = false,
-  initialChecked = false
+  initialChecked = false,
 }: {
   label: string;
   className?: string;
@@ -57,7 +57,7 @@ export const SwitchesShowcase: Story = {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            marginTop: "16px"
+            marginTop: "16px",
           }}
         >
           <ControlledSwitch label="Off switch" />
@@ -79,7 +79,7 @@ export const SwitchesShowcase: Story = {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            marginTop: "16px"
+            marginTop: "16px",
           }}
         >
           <ControlledSwitch label="Small switch" className="switch--small" />
@@ -96,7 +96,7 @@ export const SwitchesShowcase: Story = {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            marginTop: "16px"
+            marginTop: "16px",
           }}
         >
           <ControlledSwitch
@@ -130,7 +130,7 @@ export const SwitchesShowcase: Story = {
               display: "flex",
               flexDirection: "column",
               gap: "8px",
-              marginTop: "8px"
+              marginTop: "8px",
             }}
           >
             <ControlledSwitch label="Enable dark mode" />
@@ -155,14 +155,14 @@ export const SwitchesShowcase: Story = {
             flexDirection: "column",
             gap: "16px",
             marginTop: "16px",
-            maxWidth: "500px"
+            maxWidth: "500px",
           }}
         >
           <ControlledSwitch label="Enable advanced features including automatic data synchronization, background processing, and enhanced security protocols. These features may use additional system resources." />
         </div>
       </section>
     </div>
-  )
+  ),
 };
 
 // Simple usage example
@@ -177,5 +177,5 @@ export const SimpleSwitch: Story = {
         <span className="switch--label">Enable feature</span>
       </label>
     </div>
-  )
+  ),
 };

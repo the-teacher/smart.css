@@ -6,9 +6,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "tablet"
-    }
-  }
+      defaultViewport: "tablet",
+    },
+  },
 };
 
 export default meta;
@@ -298,7 +298,7 @@ export const AllFlexUtilities: Story = {
                 borderRadius: "50%",
                 width: "40px",
                 height: "40px",
-                margin: "0 12px 0 0"
+                margin: "0 12px 0 0",
               }}
             >
               👤
@@ -345,5 +345,5 @@ export const AllFlexUtilities: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };

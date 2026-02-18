@@ -8,9 +8,9 @@ const meta: Meta = {
   parameters: {
     docs: { disable: true },
     viewport: {
-      defaultViewport: "tablet"
-    }
-  }
+      defaultViewport: "tablet",
+    },
+  },
 };
 
 export default meta;
@@ -93,5 +93,5 @@ export const FormGroupExample: Story = {
         </div>
       </div>
     </div>
-  )
+  ),
 };
