@@ -16,7 +16,8 @@
 .text-success {
   color: var(--sss-text-success-text-color);
 }
-.text-danger {
+.text-danger,
+.text-error {
   color: var(--sss-text-danger-text-color);
 }
 .text-warning {
