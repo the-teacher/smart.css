@@ -24,11 +24,11 @@ a {
     text-decoration: underline;
   }
 
-  &:visited {
+  &:visited:not(.btn) {
     color: var(--sss-link-base-text-color-visited);
   }
 
-  &:visited:hover {
+  &:visited:not(.btn):hover {
     color: var(--sss-link-base-text-color-hover);
     text-decoration: underline;
   }
