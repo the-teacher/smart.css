@@ -9,6 +9,7 @@
 // Required variables:
 // --info-base-bg-color
 // --info-base-border-color
+// --info-base-text-color
 // --info-primary-bg-color
 // --info-primary-border-color
 // --info-primary-text-color
@@ -32,6 +33,7 @@
 // --info-dark-text-color
 // --info-close-bg-color
 // --info-close-bg-color-hover
+// --info-close-text-color
 
 .info {
   font-size: 1.4rem;
@@ -42,6 +44,7 @@
 
   background-color: var(--info-base-bg-color);
   border-color: var(--info-base-border-color);
+  color: var(--info-base-text-color);
 
   &--primary {
     background-color: var(--info-primary-bg-color);
@@ -100,7 +103,7 @@
     font-size: 20px;
     cursor: pointer;
     font-family: monospace;
-    color: black;
+    color: var(--info-close-text-color);
     opacity: 0.7;
     transition: opacity 0.2s ease;
     width: 24px;

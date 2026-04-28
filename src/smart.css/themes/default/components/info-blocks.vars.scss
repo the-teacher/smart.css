@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use '../colors' as *;
+@use "sass:color";
+@use "../colors" as *;
 
 // ------------------------------------------------------------
 // INFO BLOCKS | src/ui-kit/info-blocks.scss
@@ -9,6 +9,7 @@
   // Base info block
   --info-base-bg-color: #{$color-light};
   --info-base-border-color: #{color.scale($color-light, $lightness: -10%)};
+  --info-base-text-color: #{$color-text};
 
   // Primary info block
   --info-primary-bg-color: #{color.scale($color-primary, $lightness: 90%)};
@@ -48,4 +49,5 @@
   // Close button
   --info-close-bg-color: rgba(92, 64, 51, 0.1);
   --info-close-bg-color-hover: rgba(92, 64, 51, 0.2);
+  --info-close-text-color: #{$color-text};
 }

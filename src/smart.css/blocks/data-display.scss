@@ -7,6 +7,8 @@
 // modifier: (empty), hover, active, disabled
 //
 // Required variables:
+// --sss-data-display-bg-color
+// --sss-data-display-text-color
 // --sss-data-display-field-border-color
 // --sss-data-display-label-text-color
 // --sss-data-display-value-text-color
@@ -14,6 +16,9 @@
 // --sss-data-display-link-text-color-hover
 
 .data-display {
+  background-color: var(--sss-data-display-bg-color);
+  color: var(--sss-data-display-text-color);
+
   &--field {
     border-bottom: 1px solid var(--sss-data-display-field-border-color);
   }

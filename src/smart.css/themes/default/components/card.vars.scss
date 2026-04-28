@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use '../colors' as *;
+@use "sass:color";
+@use "../colors" as *;
 
 // ------------------------------------------------------------
 // CARDS | src/ui-kit/card.scss
@@ -8,6 +8,7 @@
 :root {
   // Card background and borders
   --card-base-bg-color: #{$color-white};
+  --card-base-text-color: #{$color-text};
   --card-header-border-color: #{color.scale($color-light, $lightness: -10%)};
   --card-footer-border-color: #{color.scale($color-light, $lightness: -10%)};
 

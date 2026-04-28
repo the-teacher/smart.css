@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use '../colors' as *;
+@use "sass:color";
+@use "../colors" as *;
 
 // ------------------------------------------------------------
 // DATA DISPLAY | src/ui-kit/data-display.scss
@@ -7,6 +7,8 @@
 // Data Display variables according to formula: --sss-data-display-{variant}-{property}-{modifier}
 :root {
   // Field borders
+  --sss-data-display-bg-color: transparent;
+  --sss-data-display-text-color: #{$color-text};
   --sss-data-display-field-border-color: #{color.scale(
       $color-light,
       $lightness: -10%
