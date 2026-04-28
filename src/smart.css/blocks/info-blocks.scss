@@ -3,34 +3,50 @@
 //
 // component: info
 // variant: primary, secondary, success, danger, warning, light, dark, close
-// property: bg-color, text-color, border-color
+// property: bg-color, text-color, border-color, border-width, font-weight
 // modifier: (empty), hover, active, disabled
 //
 // Required variables:
 // --info-base-bg-color
 // --info-base-border-color
+// --info-base-border-width
 // --info-base-text-color
+// --info-base-font-weight
 // --info-primary-bg-color
 // --info-primary-border-color
+// --info-primary-border-width
 // --info-primary-text-color
+// --info-primary-font-weight
 // --info-secondary-bg-color
 // --info-secondary-border-color
+// --info-secondary-border-width
 // --info-secondary-text-color
+// --info-secondary-font-weight
 // --info-success-bg-color
 // --info-success-border-color
+// --info-success-border-width
 // --info-success-text-color
+// --info-success-font-weight
 // --info-danger-bg-color
 // --info-danger-border-color
+// --info-danger-border-width
 // --info-danger-text-color
+// --info-danger-font-weight
 // --info-warning-bg-color
 // --info-warning-border-color
+// --info-warning-border-width
 // --info-warning-text-color
+// --info-warning-font-weight
 // --info-light-bg-color
 // --info-light-border-color
+// --info-light-border-width
 // --info-light-text-color
+// --info-light-font-weight
 // --info-dark-bg-color
 // --info-dark-border-color
+// --info-dark-border-width
 // --info-dark-text-color
+// --info-dark-font-weight
 // --info-close-bg-color
 // --info-close-bg-color-hover
 // --info-close-text-color
@@ -40,52 +56,110 @@
   padding: 8px 16px;
   border-radius: 4px;
   line-height: 1.5;
-  border: 1px solid transparent;
+  border-style: solid;
 
   background-color: var(--info-base-bg-color);
   border-color: var(--info-base-border-color);
+  border-width: var(--info-base-border-width, 1px);
   color: var(--info-base-text-color);
+  font-weight: var(--info-base-font-weight, normal);
 
   &--primary {
     background-color: var(--info-primary-bg-color);
     border-color: var(--info-primary-border-color);
+    border-width: var(
+      --info-primary-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-primary-text-color);
+    font-weight: var(
+      --info-primary-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--secondary {
     background-color: var(--info-secondary-bg-color);
     border-color: var(--info-secondary-border-color);
+    border-width: var(
+      --info-secondary-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-secondary-text-color);
+    font-weight: var(
+      --info-secondary-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--success {
     background-color: var(--info-success-bg-color);
     border-color: var(--info-success-border-color);
+    border-width: var(
+      --info-success-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-success-text-color);
+    font-weight: var(
+      --info-success-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--danger {
     background-color: var(--info-danger-bg-color);
     border-color: var(--info-danger-border-color);
+    border-width: var(
+      --info-danger-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-danger-text-color);
+    font-weight: var(
+      --info-danger-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--warning {
     background-color: var(--info-warning-bg-color);
     border-color: var(--info-warning-border-color);
+    border-width: var(
+      --info-warning-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-warning-text-color);
+    font-weight: var(
+      --info-warning-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--light {
     background-color: var(--info-light-bg-color);
     border-color: var(--info-light-border-color);
+    border-width: var(
+      --info-light-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-light-text-color);
+    font-weight: var(
+      --info-light-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--dark {
     background-color: var(--info-dark-bg-color);
     border-color: var(--info-dark-border-color);
+    border-width: var(
+      --info-dark-border-width,
+      var(--info-base-border-width, 1px)
+    );
     color: var(--info-dark-text-color);
+    font-weight: var(
+      --info-dark-font-weight,
+      var(--info-base-font-weight, normal)
+    );
   }
 
   &--closable {
