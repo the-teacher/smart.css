@@ -7,6 +7,7 @@ export type IconType =
   | "eye-off"
   | "eye"
   | "home"
+  | "history"
   | "refresh"
   | "search"
   | "settings"
