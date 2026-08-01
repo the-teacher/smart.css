@@ -49,5 +49,7 @@ Spacing values: `0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 2
 ## Theming
 
 CSS variables use `--sss-{component}-{variant}-{property}-{modifier}` pattern.
-Themes: `themes/default/`, `themes/gold/`, `themes/dark/`. Default loaded via `UI.scss`.
+Themes: `themes/default/`, `themes/gold/`, `themes/dark/`. `UI.scss` contains
+components and utilities; the host application loads its selected theme after
+the UI entry.
 Variable definitions are in each SCSS source file's header comments.
