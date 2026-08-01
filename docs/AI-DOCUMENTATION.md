@@ -29,7 +29,7 @@ Spacing values: `0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 2
 
 ## Components
 
-**Button**: `.btn` + `.btn--{primary|secondary|light|success|warning|danger|info|ghost}` · Sizes: `.btn--{small|medium|large|jumbo}` · `.btn--icon`, `.btn--icon-text`
+**Button**: `.btn` resets native appearance and supplies themed base colors; add `.btn--{primary|secondary|light|success|warning|danger|info|ghost}` · Sizes: `.btn--{small|medium|large|jumbo}` · `.btn--icon`, `.btn--icon-text`
 **Link**: `<a>` styled globally. Disabled: `.disabled` or `[disabled]`
 **Checkbox**: `.checkbox` > `.checkbox--input` + `.checkbox--label` · Sizes: `.checkbox--{small|large|jumbo}` · States: `.checkbox--{error|success}`
 **Switch**: `.switch` > `.switch--toggle` > `.switch--input` + `.switch--slider`, `.switch--label` · Sizes: `.switch--{small|large}` · States: `.switch--{error|success}`
@@ -39,7 +39,7 @@ Spacing values: `0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 2
 **Form Label**: `.form--label`
 **Form Group**: `.form-group`, `.form-group--actions`, `.form-group--icon`, `.form-group__with-icon`
 
-**Card**: `.card` > `.card--header`, `.card--title`, `.card--subtitle`, `.card--footer` · `.card__centered`
+**Card**: `.card` > `.card--header`, `.card--title`, `.card--subtitle`, `.card--footer` · `.card__centered`; surfaces, borders and shadows come from theme variables
 **Info Block**: `.info` + `.info--{primary|secondary|success|danger|warning|light|dark}` · `.info--closable` + `.info__close`
 **Data Display**: `.data-display` > `.data-display--field`, `.data-display--label`, `.data-display--value`, `.data-display--actions` · `.data-display__{with-action|monospace|multiline|link}`
 **Table**: `.table` > `.table--header`, `.table--row`, `.table--cell`, `.table--header-cell` · `.table--{compact|striped}` · `.table--col-{xs|sm|md|lg|xl}` · `.table--cell-{center|right}`
@@ -51,5 +51,6 @@ Spacing values: `0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 2
 CSS variables use `--sss-{component}-{variant}-{property}-{modifier}` pattern.
 Themes: `themes/default/`, `themes/gold/`, `themes/dark/`. `UI.scss` contains
 components and utilities; the host application loads its selected theme after
-the UI entry.
+the UI entry. Monochrome SVG files rendered through `<img>` use the theme's
+`--sss-icon-filter` where the component applies it.
 Variable definitions are in each SCSS source file's header comments.

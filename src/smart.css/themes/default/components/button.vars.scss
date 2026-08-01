@@ -8,6 +8,13 @@
 :root {
   // Base button colors
   // ------------------------------------------------------------
+  --sss-btn-base-bg-color: #{$color-white};
+  --sss-btn-base-bg-color-hover: #{$color-light};
+  --sss-btn-base-bg-color-active: #{color.scale(
+      $color-light,
+      $lightness: -5%
+    )};
+  --sss-btn-base-text-color: #{$color-text};
   --sss-btn-base-bg-color-disabled: #{$color-disabled};
   --sss-btn-base-text-color-disabled: #{$color-text};
 

@@ -43,6 +43,10 @@ Apply the font:
 
 Base class `.btn` with variant and size modifiers:
 
+The base class resets native button appearance and always gets its background
+and text color from the active theme. This also applies to an icon-only button
+without an additional color variant.
+
 ```html
 <button class="btn btn--primary">Primary</button>
 <button class="btn btn--secondary">Secondary</button>
@@ -209,6 +213,9 @@ Base class `.btn` with variant and size modifiers:
 
 <div class="card card__centered">Centered card (max 600px)</div>
 ```
+
+Card background, text, border, shadow and interactive background states are
+defined by the active theme's `card.vars.scss`.
 
 ## Info Blocks
 
@@ -421,6 +428,7 @@ Wrapper for rendered HTML (articles, user-generated content):
 Components use CSS custom properties (`--sss-*` prefix). Define them in a theme file.
 Built-in themes: `themes/default/`, `themes/gold/`, `themes/dark/`.
 
-The default theme is loaded automatically via `UI.scss`.
+`UI.scss` contains components and utilities only. The host must load one theme
+entry explicitly after it.
 
 For the full list of required CSS variables, see [AI-DOCUMENTATION.md](./AI-DOCUMENTATION.md#6-required-css-variables).

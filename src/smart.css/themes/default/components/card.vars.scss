@@ -8,7 +8,11 @@
 :root {
   // Card background and borders
   --card-base-bg-color: #{$color-white};
+  --card-base-bg-color-hover: #{$color-light};
+  --card-base-bg-color-active: #{color.scale($color-light, $lightness: -5%)};
   --card-base-text-color: #{$color-text};
+  --card-base-border-color: #{color.scale($color-light, $lightness: -10%)};
+  --card-base-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   --card-header-border-color: #{color.scale($color-light, $lightness: -10%)};
   --card-footer-border-color: #{color.scale($color-light, $lightness: -10%)};
 

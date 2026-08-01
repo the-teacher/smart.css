@@ -1,0 +1,13 @@
+@use "../colors" as *;
+
+:root {
+  --app-layout-body-bg: #{$color-white};
+  --app-layout-header-bg: #{$color-white};
+  --app-layout-main-bg: #{$color-white};
+  --app-layout-container-bg: #{$color-white};
+  --app-layout-aside-bg: #{$color-white};
+  --app-layout-content-bg: #{$color-white};
+  --app-layout-footer-bg: #{$color-white};
+  --app-layout-border-color: #{$color-disabled};
+  --app-layout-sticky-shadow-color: rgba(255, 255, 255, 0.9);
+}
