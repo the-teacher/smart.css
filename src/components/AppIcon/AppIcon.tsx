@@ -2,12 +2,14 @@ import React from "react";
 
 export type IconSize = 12 | 16 | 20 | 24 | 28 | 32;
 export type IconType =
+  | "arrow-left"
   | "circle-plus"
   | "clipboard-check"
   | "eye-off"
   | "eye"
   | "home"
   | "history"
+  | "pencil"
   | "refresh"
   | "search"
   | "settings"
